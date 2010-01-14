@@ -1,0 +1,26 @@
+Test asserts - Message, bool, etc.
+Tuples - syntax
+Pattern Matching
+Functions returning functions
+Functions taking functions
+if expressions
+for comprehensions
+immutability/side effects
+state identity lifetime
+collections array, list
+map, reduce, filter
+classes
+lists / cons
+memoization
+lazy sequences
+recursion
+traits / mixins
+recrusive list processing
+lambda
+currying / pfa
+null option types
+mutation
+type signatures
+reflection
+scala properties - set date / use earlier date
+                    
