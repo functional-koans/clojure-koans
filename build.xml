@@ -1,0 +1,22 @@
+<project name="functional-koans" default="test">
+  <description>
+    functional-koans
+  </description>
+  
+  <path id="classpath">
+    <path location="src"/>
+    <fileset dir="lib">
+      <include name="*.jar"/>
+    </fileset>
+  </path>
+  
+  <target name="test" description="Run tests">
+    <java fork="true" classname="clojure.main" failonerror="true">
+      <classpath>
+        <path refid="classpath"/>
+        <path location="koans"/>
+      </classpath>
+      <arg value="koans/path_to_enlightenment.clj"/>
+    </java>
+  </target>
+</project>
