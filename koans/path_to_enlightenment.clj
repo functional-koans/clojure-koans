@@ -1,12 +1,14 @@
 (load "about-asserts")
 
-(defn meditate-on
+(defmacro meditate-on
   "Runs tests but exits if an assertion fails"
-  [test]
-  (try
-   (test)
-   (catch Throwable t
-     (println (str "Metadata zen\n" "test name failed"))
+  [test-function]
+  `(try
+   (~test-function)
+   (catch Throwable t#
+     (println (str (:zen (meta #'~test-function)) "\n"
+                   (:name (meta #'~test-function))
+                   " returned " t#))
      (System/exit 1))))
 
 (meditate-on test-truth)
