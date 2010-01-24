@@ -14,6 +14,6 @@ which will download all dependencies you need to run the clojure koans.
 
 To run the koans, simply run
 
-`ant`
+path_to_englightenment
 
-which will run all the files in the koans directory.
+which will start path_to_enlightenment.clj.
