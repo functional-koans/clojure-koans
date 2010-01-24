@@ -1,20 +1,14 @@
-(use 'clojure.contrib.find-namespaces
-     'clojure.test)
+(load "about-asserts")
 
-(def exit-code (atom 0))
+(defn meditate-on
+  "Runs tests but exits if an assertion fails"
+  [test]
+  (try
+   (test)
+   (catch Throwable t
+     (println (str "Metadata zen\n" "test name failed"))
+     (System/exit 1))))
 
-(defn find-tests []
-  (filter
-   #(re-find #"-test" (str %)) (find-namespaces-in-dir (java.io.File. "."))))
-
-(defn require-tests []
-  
-  (doseq [test (find-tests)]
-    (require test)))
-
-(require-tests)
-(let [results (apply merge-with + (map test-ns (find-tests)))]
-  (if (or (> (results :fail) 0)
-          (> (results :error) 0))
-    (System/exit -1)
-    (System/exit 0)))
+(meditate-on test-truth)
+(meditate-on test-assert-equality)
+(println "You have achieved clojure zen. Go out into the universe and spread your newfound knowledge.")

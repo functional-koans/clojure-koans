@@ -1,0 +1,9 @@
+#!/bin/sh
+
+CLASSPATH=koans
+
+for f in lib/*.jar; do
+  CLASSPATH=$CLASSPATH:$f
+done
+
+java -cp $CLASSPATH clojure.main -i koans/path_to_enlightenment.clj
