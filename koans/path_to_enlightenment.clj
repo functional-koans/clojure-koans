@@ -13,4 +13,5 @@
 
 (meditate-on test-truth)
 (meditate-on test-assert-equality)
+(meditate-on test-fill-in-values)
 (println "You have achieved clojure zen. Go out into the universe and spread your newfound knowledge.")
