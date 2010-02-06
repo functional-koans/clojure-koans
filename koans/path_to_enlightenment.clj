@@ -1,24 +1,15 @@
-(load "about_asserts")
-(load "about_vectors")
+(ns koans.path-to-enlightenment
+  (:use clojure.test))
 
-(defmacro meditate-on
-  "Runs tests but exits if an assertion fails"
-  [test-function]
-  `(try
-   (~test-function)
-   (catch Throwable t#
-     (println (str "\n\"" (:zen (meta #'~test-function)) "\"\n"
-                   "[FAILURE] - "(:name (meta #'~test-function))
-                   " failed\n" t# "\n"))
-     (System/exit 1))))
+(def __ nil)
 
-(meditate-on test-truth)
-(meditate-on test-assert-equality)
-(meditate-on test-fill-in-values)
+(defmacro meditations [& forms]
+  (let [pairs (partition 2 forms)]
+    `(do
+       ~@(doall (map
+                 (fn [[doc# code#]]
+                   `(when-not (is ~code# ~doc#)
+                     (System/exit 1)))
+                 pairs)))))
 
-(meditate-on test-creating-vectors)
-(meditate-on test-vector-literals)
-(meditate-on test-accessing-vector-elements)
-(meditate-on test-vectors-and-ranges)
-
-(println "You have achieved clojure zen. Go out into the universe and spread your newfound knowledge.")
+(load "about_equalities")

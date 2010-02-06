@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CLASSPATH=koans
+CLASSPATH=.
 
 for f in lib/*.jar; do
   CLASSPATH=$CLASSPATH:$f
