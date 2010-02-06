@@ -13,3 +13,5 @@
                  pairs)))))
 
 (load "about_equalities")
+(load "about_vectors")
+(println "You have acheived clojure enlightenment. Namaste.")
