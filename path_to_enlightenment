@@ -1,9 +1,0 @@
-#!/bin/sh
-
-CLASSPATH=.
-
-for f in lib/*.jar; do
-  CLASSPATH=$CLASSPATH:$f
-done
-
-java -cp $CLASSPATH clojure.main -i koans/path_to_enlightenment.clj

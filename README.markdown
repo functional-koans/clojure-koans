@@ -14,6 +14,4 @@ which will download all dependencies you need to run the clojure koans.
 
 To run the koans, simply run
 
-path_to_englightenment
-
-which will start path_to_enlightenment.clj.
+lein run
