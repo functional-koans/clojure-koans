@@ -16,4 +16,5 @@
 (load "about_vectors")
 (load "about_sets")
 (load "about_maps")
+(load "about_functions")
 (println "You have acheived clojure enlightenment. Namaste.")
