@@ -18,4 +18,5 @@
 (load "about_maps")
 (load "about_functions")
 (load "about_conditionals")
+(load "about_higher_order_functions")
 (println "You have acheived clojure enlightenment. Namaste.")
