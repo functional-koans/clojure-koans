@@ -20,4 +20,5 @@
 (load "about_conditionals")
 (load "about_higher_order_functions")
 (load "about_runtime_polymorphism")
+(load "about_sequence_comprehensions")
 (println "You have acheived clojure enlightenment. Namaste.")
