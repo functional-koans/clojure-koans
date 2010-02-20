@@ -13,6 +13,7 @@
                  pairs)))))
 
 (load "about_equalities")
+(load "about_lists")
 (load "about_vectors")
 (load "about_sets")
 (load "about_maps")
