@@ -9,4 +9,4 @@
  (= __ (+ 1 1))
 
  "You can test equality of many things"
- (= (+ 3 4) __ (+ 2 _)))
+ (= (+ 3 4) __ (+ 2 __)))
