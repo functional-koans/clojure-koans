@@ -1,6 +1,6 @@
 (defproject functional-koans "0.0.1"
   :description "The functional koans"
-  :script "path_to_enlightenment.clj"
+  :main "path_to_enlightenment"
   :dependencies [[org.clojure/clojure "1.1.0"]
                  [org.clojure/clojure-contrib "1.0-SNAPSHOT"]
                  [org.clojure/swank-clojure "1.0"]

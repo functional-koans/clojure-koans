@@ -1,2 +1,4 @@
+bin
 lib
+*.jar
 .DS_Store
