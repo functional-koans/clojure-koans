@@ -6,11 +6,11 @@
 (defmacro meditations [& forms]
   (let [pairs (partition 2 forms)]
     `(do
-       ~@(doall (map
-                 (fn [[doc# code#]]
-                   `(when-not (is ~code# ~doc#)
-                     (System/exit 0)))
-                 pairs)))))
+      ~@(map
+          (fn [[doc# code#]]
+            `(when-not (is ~code# ~doc#)
+              (System/exit 0)))
+          pairs))))
 
 (load "about_equalities")
 (load "about_lists")
@@ -22,4 +22,4 @@
 (load "about_higher_order_functions")
 (load "about_runtime_polymorphism")
 (load "about_sequence_comprehensions")
-(println "You have acheived clojure enlightenment. Namaste.")
+(println "You have achieved clojure enlightenment. Namaste.")
