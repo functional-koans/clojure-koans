@@ -1,16 +1,10 @@
 Tuples - syntax
 Pattern Matching
-Functions returning functions
-Functions taking functions
-if expressions
-for comprehensions
 immutability/side effects
 state identity lifetime
-map, reduce, filter
-lists / cons
 memoization
 lazy sequences
 recursion
-recrusive list processing
+recursive list processing
 currying / pfa
 reflection
