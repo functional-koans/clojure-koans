@@ -17,5 +17,5 @@
           4 5))
 
   "Higher-order functions take function arguments"
-  (= 25 ((fn [f] (f 5))
-          (fn [n] (__ __ __)))))
+  (= 25 (___
+          (fn [n] (* n n)))))
