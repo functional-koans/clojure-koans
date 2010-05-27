@@ -12,9 +12,9 @@
   (= __ (#(Math/pow % 10) __))
 
   "One function can beget another"
-  (= __ (((fn []
-            (fn [a b] __ a b)))
-          4 5))
+  (= __ ((fn []
+            ((fn [a b] (__ a b))
+              4 5))))
 
   "Higher-order functions take function arguments"
   (= 25 (___
