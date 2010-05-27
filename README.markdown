@@ -2,9 +2,15 @@
 
 ### Getting Started
 
-To download the dependencies, install leiningen
-(http://github.com/technomancy/leiningen). After you have leiningen
-installed run 
+The only things you need to run the Clojure Koans are:
+
+- JRE 1.5 or higher
+- clojure-1.1.0.jar (available in the Downloads tab on the GitHub project)
+
+You can also use leiningen (http://github.com/technomancy/leiningen) to install
+the clojure-1.1.0.jar.
+
+After you have leiningen installed run
 
 `lein deps`
 
@@ -14,4 +20,8 @@ which will download all dependencies you need to run the clojure koans.
 
 To run the koans, simply run
 
-lein run
+`./run.sh`
+
+or, on Windows,
+
+`run.bat`
