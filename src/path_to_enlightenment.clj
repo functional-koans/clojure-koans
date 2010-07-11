@@ -13,14 +13,15 @@
               (System/exit 0)))
           pairs))))
 
-(load "about_equalities")
-(load "about_lists")
-(load "about_vectors")
-(load "about_sets")
-(load "about_maps")
-(load "about_functions")
-(load "about_conditionals")
-(load "about_higher_order_functions")
-(load "about_runtime_polymorphism")
-(load "about_sequence_comprehensions")
+(load "about_equalities"
+      "about_lists"
+      "about_vectors"
+      "about_sets"
+      "about_maps"
+      "about_functions"
+      "about_conditionals"
+      "about_higher_order_functions"
+      "about_runtime_polymorphism"
+      "about_sequence_comprehensions")
+
 (println "You have achieved clojure enlightenment. Namaste.")
