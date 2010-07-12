@@ -1,4 +1,4 @@
-(ns koans.path-to-enlightenment
+(ns path-to-enlightenment
   (:use clojure.test))
 
 (def __ nil)
@@ -27,7 +27,7 @@
       "partial_functions"])
 
 (defn run []
-  (apply load ordered-koans)
+  (apply load (map (partial str "koans/") ordered-koans))
   (println "You have achieved clojure enlightenment. Namaste."))
 
 (run)
