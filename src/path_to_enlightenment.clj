@@ -13,7 +13,8 @@
               (System/exit 0)))
           pairs))))
 
-(load "equalities"
+(def ordered-koans
+     ["equalities"
       "lists"
       "vectors"
       "sets"
@@ -23,6 +24,10 @@
       "higher_order_functions"
       "runtime_polymorphism"
       "sequence_comprehensions"
-      "partial_functions")
+      "partial_functions"])
 
-(println "You have achieved clojure enlightenment. Namaste.")
+(defn run []
+  (apply load ordered-koans)
+  (println "You have achieved clojure enlightenment. Namaste."))
+
+(run)
