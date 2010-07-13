@@ -27,7 +27,5 @@
       "partial_functions"])
 
 (defn run []
-  (apply load (map (partial str "koans/") ordered-koans))
+  (apply load (doall (map (partial str "koans/") ordered-koans)))
   (println "You have achieved clojure enlightenment. Namaste."))
-
-(run)
