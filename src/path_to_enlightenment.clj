@@ -2,7 +2,7 @@
   (:use clojure.test))
 
 (def __ nil)
-(def ___ (fn [& args] args))
+(def ___ (fn [& args] nil))
 
 (defmacro meditations [& forms]
   (let [pairs (partition 2 forms)]
