@@ -24,7 +24,7 @@
   (= __ ({2006 "Torino" 2010 "Vancouver" 2014 "Sochi"} 2010))
 
   "You may not be able to find an entry for a key"
-  (= nil (get {:a 1 :b 2} :c))
+  (= __ (get {:a 1 :b 2} :c))
 
   "You can find out if a key is present"
   (= __ (contains? {:a nil :b nil} :b))
