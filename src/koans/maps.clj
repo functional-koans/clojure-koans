@@ -1,9 +1,9 @@
 (meditations
-  "Maps in clojure associate keys with values"
-  (= __ (.size (hash-map)))
-
   "There are two ways to create maps"
   (= {} (hash-map))
+
+  "Maps in clojure associate keys with values"
+  (= __ (.size (hash-map)))
 
   "A value must be supplied for each key"
   (= {:a 1} (hash-map :a __))
@@ -33,7 +33,7 @@
   (= __ (contains? {:a nil :b nil} :c))
 
   "Maps are immutable, but you can create a new, 'changed' version"
-  (= {1 "January" 2 __} (assoc {1 "January" 2 "Febuary"} 2 "February"))
+  (= {1 "January" 2 __} (assoc {1 "January" } 2 "February"))
 
   "You can also 'remove' an entry"
   (= {__ __} (dissoc {1 "January" 2 "February"} 2))
