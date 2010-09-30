@@ -1,2 +1,2 @@
-java -jar lib/clojure-1.2.0-RC2.jar
+java -jar lib/clojure-1.2.0.jar
 echo

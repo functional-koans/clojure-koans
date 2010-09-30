@@ -6,5 +6,36 @@ memoization
 lazy sequences
 recursion
 recursive list processing
+trampolining
 currying / pfa
 reflection
+Destructuring
+Metadata
+Java interop
+Protocols
+Datatypes
+Records
+Types
+Macros
+Refs
+Agents
+Atoms
+Vars
+Pre and Post conditions of functions
+
+vector-of
+case
+flatten
+frequencies
+group-by
+keep
+keep-indexed
+map-indexed
+partition-all
+partition-by
+rand-nth
+range
+reductions
+repeatedly
+shuffle
+
