@@ -6,13 +6,13 @@
 The only things you need to run the Clojure Koans are:
 
 - JRE 1.5 or higher
-- clojure-1.2.0-RC2.jar
-  (http://github.com/downloads/relevance/functional-koans/clojure-1.2.0-RC2.jar)
+- clojure-1.2.0.jar
+  (http://github.com/downloads/relevance/functional-koans/clojure-1.2.0.jar)
 
-clojure-1.2.0-RC2.jar needs to be placed in a directory `lib` under this project.
+clojure-1.2.0.jar needs to be placed in a directory `lib` under this project.
 
 You can also use leiningen (http://github.com/technomancy/leiningen) to
-automatically install the clojure-1.2.0-RC2.jar in the right place.
+automatically install the clojure-1.2.0.jar in the right place.
 
 After you have leiningen installed, run
 
