@@ -1,12 +1,15 @@
 (meditations
   "You can use vectors in clojure to create an 'Array' like structure"
-  (= __ (.size (vec nil)))
+  (= __ (.size []))
 
-  "You can create a vector in two ways"
+  "You can create a vector in several ways"
   (= __ (vec nil))
 
   "And populate it in either of these ways"
   (= __ (vec '(1)))
+
+  "There is another way as well"
+  (= __ (vector nil))
 
   "But you can populate it with any number of elements at once"
   (= [1 __] (vec '(1 2)))

@@ -19,8 +19,12 @@
                   "\"No dice!\""
                   "()"]}
    "vectors" {"__" [0
+                    []
+                    [1]
+                    [nil]
                     2
                     [333]
+                    :peanut
                     :jelly
                     :jelly
                     [:butter :and]]}
@@ -35,6 +39,7 @@
                  1
                  1
                  "\"Vancouver\""
+                 nil
                  true
                  false
                  "\"February\""
