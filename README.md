@@ -1,4 +1,8 @@
-# Functional Koans
+# Clojure Koans
+
+The Clojure Koans are a fun and easy way to get started with Clojure - no
+experience assumed or required.  Just follow the instructions below to start
+making tests pass!
 
 
 ### Getting Started
@@ -30,4 +34,25 @@ To run the koans, simply run
 or, on Windows,
 
 `run.bat`
+
+
+### Contributors (in order of appearance)
+
+- Aaron Bedra
+- Colin Jones
+- Eric Lavigne
+- Nuno Marquez
+
+
+### Credits
+
+These exercises were started by [Aaron Bedra](http://github.com/abedra) of
+[Relevance, Inc.](http://github.com/relevance) in early 2010, as a learning
+tool for newcomers to functional programming. Aaron's macro-fu makes these
+koans extremely simple and fun to use, and to improve upon, and Relevance's
+initiative
+
+Using the [koans](http://en.wikipedia.org/wiki/koan) metaphor as a tool for
+learning a programming language started with the
+[Ruby Koans](http://rubykoans.com) by [EdgeCase](http://github.com/edgecase).
 
