@@ -6,12 +6,13 @@
 The only things you need to run the Clojure Koans are:
 
 - JRE 1.5 or higher
-- clojure-1.2.0.jar
+- clojure-1.3.0-alpha1.jar
 
-clojure-1.2.0.jar needs to be placed in a directory `lib` under this project.
+clojure-1.3.0-alpha1.jar needs to be placed in a directory `lib` under this
+project.
 
-You can use leiningen (http://github.com/technomancy/leiningen) to
-automatically install the clojure-1.2.0.jar in the right place.
+You can use Leiningen (http://github.com/technomancy/leiningen) to
+automatically install the Clojure jar in the right place.
 
 After you have leiningen installed, run
 
@@ -24,8 +25,9 @@ which will download all dependencies you need to run the clojure koans.
 
 To run the koans, simply run
 
-`./run.sh`
+`run.sh`
 
 or, on Windows,
 
 `run.bat`
+

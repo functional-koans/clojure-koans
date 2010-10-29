@@ -1,15 +1,15 @@
-(defn raise-to-the-tenth-power [n]
-  (Math/pow n 10))
+(defn multiply-by-ten [n]
+  (* 10 n))
 
 (meditations
   "Functions are often defined before they are used"
-  (= __ (raise-to-the-tenth-power 2))
+  (= __ (multiply-by-ten 2))
 
   "But they can also be defined inline"
-  (= __ ((fn [n] (Math/pow n __)) 2))
+  (= __ ((fn [n] (* __ n)) 2))
 
   "Or using even shorter syntax"
-  (= __ (#(Math/pow % 10) __))
+  (= __ (#(* 15 %) __))
 
   "One function can beget another"
   (= __ ((fn []

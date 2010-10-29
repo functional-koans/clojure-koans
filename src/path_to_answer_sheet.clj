@@ -47,9 +47,9 @@
                  1 "\"January\""
                  2006 2010 2014
                  "\"Vancouver\""]}
-   "functions" {"__" [1024
-                      32 5
-                      1024 2
+   "functions" {"__" [20
+                      10 5
+                      30 2
                       20 "*"]
                 "___" ["(fn [f] (f 5))"]}
    "conditionals" {"__" [:a

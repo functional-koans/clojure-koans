@@ -1,5 +1,6 @@
 (ns path-to-enlightenment
-  (:use clojure.test))
+  (:use [clojure.test])
+  (:require [clojure.set]))
 
 (def __ nil)
 (def ___ (fn [& args] nil))
