@@ -36,6 +36,15 @@ or, on Windows,
 `run.bat`
 
 
+
+### Contributing
+
+Patches are encouraged!  Make sure the answer sheet still passes (`test.sh`, or
+`test.bat` on Windows), and send a pull request.
+
+The file ideaboard.txt has lots of good places to start
+
+
 ### Contributors (in order of appearance)
 
 - Aaron Bedra
