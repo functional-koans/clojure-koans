@@ -21,7 +21,7 @@
                   [:b :c :d :e]
                   "\"No dice!\""
                   "()"]}
-   "vectors" {"__" [0
+   "vectors" {"__" [1
                     []
                     [1]
                     [nil]
@@ -31,7 +31,7 @@
                     :jelly
                     :jelly
                     [:butter :and]]}
-   "sets" {"__" [0
+   "sets" {"__" [3
                  #{1 2 3 4 5}
                  #{1 2 3 4 5}
                  #{2 3}

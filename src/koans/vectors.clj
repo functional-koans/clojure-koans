@@ -1,6 +1,6 @@
 (meditations
   "You can use vectors in clojure to create an 'Array' like structure"
-  (= __ (.size []))
+  (= __ (count [42]))
 
   "You can create a vector in several ways"
   (= __ (vec nil))

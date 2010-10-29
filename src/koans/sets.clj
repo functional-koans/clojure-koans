@@ -3,7 +3,7 @@
   (= #{} (set nil))
 
   "They are another important data structure in clojure"
-  (= __ (.size #{}))
+  (= __ (count #{1 2 3}))
 
   "Remember that a set is a 'set'"
   (= __ (set '(1 1 2 2 3 3 4 4 5 5)))

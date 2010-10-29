@@ -3,13 +3,13 @@
   (= {} (hash-map))
 
   "Maps in clojure associate keys with values"
-  (= __ (.size (hash-map)))
+  (= __ (count (hash-map)))
 
   "A value must be supplied for each key"
   (= {:a 1} (hash-map :a __))
 
   "The size is the number of entries"
-  (= __ (.size {:a 1 :b 2}))
+  (= __ (count {:a 1 :b 2}))
 
   "You can look up the value for a given key"
   (= __ (get {:a 1 :b 2} :b))
