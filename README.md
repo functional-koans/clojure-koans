@@ -22,7 +22,7 @@ After you have leiningen installed, run
 
 `lein deps`
 
-which will download all dependencies you need to run the clojure koans.
+which will download all dependencies you need to run the Clojure koans.
 
 
 ### Running The Koans
@@ -35,6 +35,26 @@ or, on Windows,
 
 `run.bat`
 
+You'll see something like this:
+
+    FAIL in clojure.lang.PersistentList$EmptyList@1 (equalities.clj:1)
+    We shall contemplate truth by testing reality, via equality.
+    expected: (= __ true)
+      actual: (not (= nil true))
+
+The output is telling you that you have a failing test in equalities.clj.
+So open that file up and make it pass!  In general, you just fill in the
+blanks to make tests pass.  Sometimes there are several (or even an infinite
+number) of correct answers: any of them will work in these cases.
+
+The koans differ from normal TDD in that the tests are already written for you,
+so you'll have to pay close attention to the failure messages, because up until
+the very end, making a test pass just means that the next failure message comes
+up.
+
+While it's very easy (especially at first) to just fill in the blanks making
+things pass, you should work slowly, making sure you understand why the answer
+is what it is.  Enjoy your path to Clojure enlightenment!
 
 
 ### Contributing
