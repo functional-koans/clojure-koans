@@ -103,8 +103,8 @@ The file ideaboard.txt has lots of good places to start
 These exercises were started by [Aaron Bedra](http://github.com/abedra) of
 [Relevance, Inc.](http://github.com/relevance) in early 2010, as a learning
 tool for newcomers to functional programming. Aaron's macro-fu makes these
-koans extremely simple and fun to use, and to improve upon, and Relevance's
-initiative
+koans extremely simple and fun to use, and to improve upon, and without
+Relevance's initiative, this project would not exist.
 
 Using the [koans](http://en.wikipedia.org/wiki/koan) metaphor as a tool for
 learning a programming language started with the
