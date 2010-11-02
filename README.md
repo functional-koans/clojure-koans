@@ -57,6 +57,31 @@ things pass, you should work slowly, making sure you understand why the answer
 is what it is.  Enjoy your path to Clojure enlightenment!
 
 
+### Trying more things out
+
+There's a REPL (Read-Evaluate-Print Loop) included in the Clojure Koans. Just
+run:
+
+`script/repl` on Mac/\*nix
+
+`script\repl` on Windows
+
+Here are some interesting commands you might try, once you're in a running REPL:
+
+    (find-doc "vec")
+    (find-doc #"vec$")
+    (doc vec)
+
+And if those still don't make sense:
+
+    (doc doc)
+    (doc find-doc)
+
+will show you what those commands mean.
+
+You can exit the REPL with `CTRL-d` on any OS.
+
+
 ### Contributing
 
 Patches are encouraged!  Make sure the answer sheet still passes (`test.sh`, or
