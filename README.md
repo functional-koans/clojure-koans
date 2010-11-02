@@ -16,7 +16,9 @@ clojure-1.3.0-alpha1.jar needs to be placed in a directory `lib` under this
 project.
 
 You can use Leiningen (http://github.com/technomancy/leiningen) to
-automatically install the Clojure jar in the right place.
+automatically install the Clojure jar in the right place. Leiningen will also
+get you a couple more jarfiles, including JLine, which allows you some of the
+functionality of readline (command-line history, for example).
 
 After you have leiningen installed, run
 

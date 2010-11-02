@@ -1,2 +1,13 @@
 @echo off
-java -jar lib\clojure-1.3.0-alpha1.jar
+setLocal EnableDelayedExpansion
+set CLASSPATH="
+for /R ./lib %%a in (*.jar) do (
+   set CLASSPATH=!CLASSPATH!;%%a
+)
+set CLASSPATH=!CLASSPATH!"
+set CLASSPATH=%CLASSPATH%;src
+
+set JLINE=jline.ConsoleRunner
+
+java -Xmx1G -cp "%CLASSPATH%" %JLINE% clojure.main
+
