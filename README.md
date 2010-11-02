@@ -31,11 +31,9 @@ which will download all dependencies you need to run the Clojure koans.
 
 To run the koans, simply run
 
-`run.sh`
+`script/run` on Mac/\*nix
 
-or, on Windows,
-
-`run.bat`
+`script\run` on Windows
 
 You'll see something like this:
 
