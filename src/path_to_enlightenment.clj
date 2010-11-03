@@ -25,7 +25,8 @@
       "higher_order_functions"
       "runtime_polymorphism"
       "sequence_comprehensions"
-      "partial_functions"])
+      "partial_functions"
+      "recursion"])
 
 (defn run []
   (apply load (doall (map (partial str "koans/") ordered-koans)))
