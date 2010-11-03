@@ -1,6 +1,8 @@
 (defn multiply-by-ten [n]
   (* 10 n))
 
+(defn square [n] (* n n))
+
 (meditations
   "Functions are often defined before they are used"
   (= __ (multiply-by-ten 2))
@@ -18,4 +20,7 @@
 
   "Higher-order functions take function arguments"
   (= 25 (___
-          (fn [n] (* n n)))))
+          (fn [n] (* n n))))
+
+  "But they are often better written using the names of functions"
+  (= 25 (___ square)))

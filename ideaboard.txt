@@ -7,7 +7,6 @@ lazy sequences
 recursion
 recursive list processing
 trampolining
-currying / pfa
 reflection
 Destructuring
 Metadata
