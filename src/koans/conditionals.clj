@@ -17,6 +17,12 @@
                 :doom
                 __))
 
+  "You may have a multitude of possible paths"
+  (let [x 5]
+    (= :your_road (cond (= x __) :road_not_taken
+                        (= x __) :another_road_not_taken
+                        :else __)))
+
   "Or your fate may be sealed"
   (= __ (if-not (zero? __)
                 'doom
