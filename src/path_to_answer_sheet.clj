@@ -1,7 +1,6 @@
 (ns path-to-answer-sheet
   (:use [path-to-enlightenment :exclude (run)]
-        [clojure.string :only (join split)]
-        clojure.test))
+        [clojure.string :only (join split)]))
 
 (def answers
   {"equalities" {"__" [true
@@ -32,7 +31,7 @@
                     :jelly
                     :jelly
                     [:butter :and]]
-              "___" ["="]}
+              "___" ['=]}
    "sets" {"__" [3
                  #{1 2 3 4 5}
                  #{1 2 3 4 5}
@@ -56,8 +55,8 @@
                       10 5
                       30 2
                       20 "*"]
-                "___" ["(fn [f] (f 5))"
-                       "(fn [f] 25)"]}
+                "___" ['(fn [f] (f 5))
+                       '(fn [f] 25)]}
    "conditionals" {"__" [:a
                          []
                          0
@@ -65,35 +64,35 @@
                          4 6 :your_road
                          "'doom" 0 ]}
    "higher_order_functions" {"__" [4 8 12
-                                   "(* x x)"
+                                   '(* x x)
                                    [false false true false false]
                                    "()"
                                    true
-                                   "(< x 31)"
-                                   "(* 10 x)" "(< x 4)"
+                                   '(< x 31)
+                                   '(* 10 x) '(< x 4)
                                    24
                                    100
-                                   "(count a)" "(count b)"]}
-   "runtime_polymorphism" {"__" ["(str (:name a) \" eats veggies.\")"
-                                 "(str (:name a) \" eats animals.\")"
-                                 "(str \"I don't know what \" (:name a) \" eats.\")"
+                                   '(count a) '(count b)]}
+   "runtime_polymorphism" {"__" ['(str (:name a) " eats veggies.")
+                                 '(str (:name a) " eats animals.")
+                                 '(str "I don't know what " (:name a) " eats.")
                                  "\"Hello World!\""
                                  "\"Hello, you silly world.\""
                                  "\"Hello to this group: Peter, Paul, Mary!\"" ]}
    "sequence_comprehensions" {"__" [[0 1 2 3 4 5]
-                                    "(* index index)"
-                                    "(range 10)"
-                                    "(odd? index)" "(* index index)"
-                                    "[row column]"
+                                    '(* index index)
+                                    '(range 10)
+                                    '(odd? index) '(* index index)
+                                    '[row column]
                                     ]}
    "partial_functions" {"__" [4
                               :a :b :c :d
                               :c :d]
                         "___" ["multiply-by-5"]}
-   "recursion" {"__" ["(loop [n n acc 1]
+   "recursion" {"__" ['(loop [n n acc 1]
                          (if (zero? n)
                              acc
-                             (recur (dec n) (* acc n))))"]}
+                             (recur (dec n) (* acc n))))]}
    })
 
 (defn replace-with [s k replacements]
