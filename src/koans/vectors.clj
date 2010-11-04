@@ -27,4 +27,7 @@
   (= __ (nth [:peanut :butter :and :jelly] 3))
 
   "You can also slice a vector"
-  (= __ (subvec [:peanut :butter :and :jelly] 1 3)))
+  (= __ (subvec [:peanut :butter :and :jelly] 1 3))
+
+  "Equality with collections is in terms of values"
+  (___ (list 1 2 3) (vector 1 2 3)))

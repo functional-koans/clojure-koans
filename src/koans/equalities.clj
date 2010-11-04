@@ -15,4 +15,7 @@
   (= __ (= 2 2.0))
 
   "But a looser equality is also possible"
-  (== 2.0 2 __))
+  (== 2.0 2 __)
+
+  "When things cannot be equal, they must be different"
+  (not= nil __))
