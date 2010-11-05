@@ -13,6 +13,9 @@
   "Or using even shorter syntax"
   (= __ (#(* 15 %) __))
 
+  "Short anonymous functions may take multiple arguments"
+  (= __ (#(+ %1 %2 %3) 4 5 6))
+
   "One function can beget another"
   (= __ ((fn []
             ((fn [a b] (__ a b))
