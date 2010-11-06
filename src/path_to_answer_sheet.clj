@@ -94,6 +94,7 @@
                          (if (zero? n)
                              acc
                              (recur (dec n) (* acc n))))]}
+   "destructuring" {"__" ["\":bar:foo\""]}
    })
 
 (defn replace-with [s k replacements]

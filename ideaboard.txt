@@ -4,7 +4,6 @@ immutability/side effects
 state identity lifetime
 memoization
 lazy sequences
-recursion
 recursive list processing
 trampolining
 reflection
