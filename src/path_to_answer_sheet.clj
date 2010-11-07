@@ -55,7 +55,7 @@
                       10 5
                       30 2
                       15
-                      20 "*"]
+                      20 '*]
                 "___" ['(fn [f] (f 5))
                        '(fn [f] 25)]}
    "conditionals" {"__" [:a
@@ -63,7 +63,7 @@
                          0
                          :glory
                          4 6 :your_road
-                         "'doom" 0 ]}
+                         ''doom 0 ]}
    "higher_order_functions" {"__" [4 8 12
                                    '(* x x)
                                    [false false true false false]
@@ -90,10 +90,12 @@
                               :a :b :c :d
                               :c :d]
                         "___" ["multiply-by-5"]}
-   "recursion" {"__" ['(loop [n n acc 1]
+   "recursion" {"__" [true 'acc
+                      '(loop [n n acc 1]
                          (if (zero? n)
                              acc
-                             (recur (dec n) (* acc n))))]}
+                             (recur (dec n) (* acc n))))]
+                "___" ['not]}
    "destructuring" {"__" ["\":bar:foo\""]}
    })
 
