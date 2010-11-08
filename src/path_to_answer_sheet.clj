@@ -96,7 +96,8 @@
                              acc
                              (recur (dec n) (* acc n))))]
                 "___" ['not]}
-   "destructuring" {"__" ["\":bar:foo\""]}
+   "destructuring" {"__" ["\":bar:foo\""
+                          '(format "First comes %s, then comes %s, then comes %s with the baby carriage" a b c) ]}
    })
 
 (defn replace-with [s k replacements]
