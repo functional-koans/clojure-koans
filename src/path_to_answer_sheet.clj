@@ -1,6 +1,6 @@
 (ns path-to-answer-sheet
   (:use [path-to-enlightenment :exclude (run)]
-        [clojure.string :only (join split)]))
+        [clojure.string :only (join split trim)]))
 
 (def answers
   {"equalities" {"__" [true
@@ -97,7 +97,20 @@
                              (recur (dec n) (* acc n))))]
                 "___" ['not]}
    "destructuring" {"__" ["\":bar:foo\""
-                          '(format "First comes %s, then comes %s, then comes %s with the baby carriage" a b c) ]}
+                          '(format (str "First comes %s, "
+                                        "then comes %s, "
+                                        "then comes %s with the baby carriage")
+                                   a b c)
+                          '(trim
+                             (apply str
+                               (interleave
+                                 (apply list
+                                    first-name
+                                    last-name
+                                    (interleave (repeat "aka") aliases))
+                                 (repeat " "))))
+                          '{:original-parts full-name
+                            :named-parts {:first first-name :last last-name}} ]}
    })
 
 (defn replace-with [s k replacements]
