@@ -84,10 +84,12 @@ You can exit the REPL with `CTRL-d` on any OS.
 
 ### Contributing
 
-Patches are encouraged!  Make sure the answer sheet still passes (`test.sh`, or
-`test.bat` on Windows), and send a pull request.
+Patches are encouraged!  Make sure the answer sheet still passes (`script/test`,
+or `script\test` on Windows), and send a pull request.
 
-The file ideaboard.txt has lots of good places to start
+The file ideaboard.txt has lots of good places to start.  In general, patches are
+easiest if you start on a brand new idea, unless there are obvious flaws or
+omissions for existing koans.
 
 
 ### Contributors (in order of appearance)
