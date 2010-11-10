@@ -1,26 +1,30 @@
+Concepts / Language Features
+=====
+Destructuring
+Refs
+Agents
+Atoms
+Vars
+state identity lifetime
+lazy sequences
+Metadata
 Tuples - syntax
 Pattern Matching
 immutability/side effects
-state identity lifetime
 memoization
-lazy sequences
 recursive list processing
 trampolining
 reflection
-Destructuring
-Metadata
 Java interop
 Protocols
 Datatypes
 Records
 Types
 Macros
-Refs
-Agents
-Atoms
-Vars
 Pre and Post conditions of functions
 
+Particular Functions
+=====
 vector-of
 case
 flatten
