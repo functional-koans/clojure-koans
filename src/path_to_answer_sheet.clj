@@ -111,6 +111,12 @@
                                  (repeat " "))))
                           '{:original-parts full-name
                             :named-parts {:first first-name :last last-name}} ]}
+   "refs" {"__" ["\"hello\""
+                 "\"hello\""
+                 "\"better\""
+                 "\"better!!!\""
+                 ]
+           "___" ['(comp exclamator exclamator exclamator)]}
    })
 
 (defn replace-with [s k replacements]
