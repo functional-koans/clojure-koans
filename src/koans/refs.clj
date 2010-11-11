@@ -24,4 +24,12 @@
   (= "better!!!!!!" (letfn [(exclamator [x] (str x "!"))]
           (dosync
             (alter the-world ___))
-          @the-world)))
+          @the-world))
+
+  "Don't forget to do your work in a transaction!"
+  (= 0 (do __
+         @the-world))
+
+  "Functions passed to alter may depend on the data in the ref"
+  (= 20 (do
+          (dosync (alter the-world ___)))))

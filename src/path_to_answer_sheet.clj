@@ -115,8 +115,11 @@
                  "\"hello\""
                  "\"better\""
                  "\"better!!!\""
+                 '(dosync (ref-set the-world 0))
+
                  ]
-           "___" ['(comp exclamator exclamator exclamator)]}
+           "___" ['(comp exclamator exclamator exclamator)
+                  '(fn [x] (+ 20 x))]}
    })
 
 (defn replace-with [s k replacements]
