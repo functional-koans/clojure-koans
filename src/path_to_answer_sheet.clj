@@ -110,13 +110,20 @@
                                     (interleave (repeat "aka") aliases))
                                  (repeat " "))))
                           '{:original-parts full-name
-                            :named-parts {:first first-name :last last-name}} ]}
+                            :named-parts {:first first-name :last last-name}}
+                          '(str street-address ", " city ", " state)
+                          'city 'state
+                            '(str street-address ", " city ", " state)]
+                    "___" ['(fn [[fname lname]
+                                 {:keys [street-address city state]}]
+                              (str fname " " lname ", "
+                                   street-address ", " city ", " state))
+                           ]}
    "refs" {"__" ["\"hello\""
                  "\"hello\""
                  "\"better\""
                  "\"better!!!\""
                  '(dosync (ref-set the-world 0))
-
                  ]
            "___" ['(comp exclamator exclamator exclamator)
                   '(fn [x] (+ 20 x))]}
