@@ -1,6 +1,5 @@
 Concepts / Language Features
 =====
-Destructuring
 Refs
 Agents
 Atoms
