@@ -24,13 +24,11 @@
   (= 25 (let [inc-and-square (comp square inc)]
           (inc-and-square __)))
 
-  "Have a go on a tripple dec-er"
+  "Have a go on a double dec-er"
   (= __ (let [double-dec (comp dec dec)]
           (double-dec 10)))
 
-  "Becareful the order in which you mix your functions"
+  "Be careful the order in which you mix your functions"
   (= 99 (let [square-and-dec ___]
-           (square-and-dec 10)))
-  )
-
+           (square-and-dec 10))))
 

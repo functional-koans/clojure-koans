@@ -98,6 +98,7 @@ omissions for existing koans.
 - Colin Jones
 - Eric Lavigne
 - Nuno Marquez
+- Micah Martin
 
 
 ### Credits
