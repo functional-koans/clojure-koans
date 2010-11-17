@@ -25,7 +25,7 @@
       "higher_order_functions"
       "runtime_polymorphism"
       "sequence_comprehensions"
-      "partial_functions"
+      "creating_functions"
       "recursion"
       "destructuring"
       "refs"])

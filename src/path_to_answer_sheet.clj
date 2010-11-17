@@ -86,10 +86,15 @@
                                     '(odd? index) '(* index index)
                                     '[row column]
                                     ]}
-   "partial_functions" {"__" [4
+   "creating_functions" {"__" [true false true
+                               4
                               :a :b :c :d
-                              :c :d]
-                        "___" ["multiply-by-5"]}
+                              :c :d
+                              4
+                              8]
+                        "___" ['(complement nil?)
+                               "multiply-by-5"
+                               '(comp dec square)]}
    "recursion" {"__" [true 'acc
                       '(loop [n n acc 1]
                          (if (zero? n)
