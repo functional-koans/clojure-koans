@@ -99,6 +99,7 @@ omissions for existing koans.
 - Eric Lavigne
 - Nuno Marquez
 - Micah Martin
+- Michael Kohl
 
 
 ### Credits
