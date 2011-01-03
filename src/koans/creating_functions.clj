@@ -20,7 +20,7 @@
      (let [ab-adder (partial concat [:a :b])]
        (ab-adder [__ __])))
 
-  "Functions can joins forces as one 'composed' function"
+  "Functions can join forces as one 'composed' function"
   (= 25 (let [inc-and-square (comp square inc)]
           (inc-and-square __)))
 
@@ -28,7 +28,7 @@
   (= __ (let [double-dec (comp dec dec)]
           (double-dec 10)))
 
-  "Be careful the order in which you mix your functions"
+  "Be careful about the order in which you mix your functions"
   (= 99 (let [square-and-dec ___]
            (square-and-dec 10))))
 
