@@ -18,7 +18,7 @@
   (= false (is-even? 1))
 
   "Having too many stack frames requires explicit tail calls with recur"
-  (= false (is-even-bigint? 100003N))
+  (= false (is-even-bigint? (bigint 100003)))
 
   "Simple things may appear simple."
   (= 1 (factorial 1))
@@ -33,7 +33,7 @@
   (= 24 (factorial 4))
 
   "You can even deal with very large numbers"
-  (= (factorial 1000N) (factorial 1000N))
+  (= (factorial (bigint 1000)) (factorial (bigint 1000)))
 
   "But what happens when the machine limits you?"
-  (= (factorial 10000N) (factorial 10000N)))
+  (= (factorial (bigint 10000)) (factorial (bigint 10000))))
