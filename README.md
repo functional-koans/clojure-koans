@@ -10,12 +10,12 @@ making tests pass!
 The only things you need to run the Clojure Koans are:
 
 - JRE 1.5 or higher
-- clojure-1.3.0-alpha3.jar
+- [clojure-1.3.0-alpha3.jar](https://github.com/downloads/clojure/clojure/clojure-1.3.0-alpha3.zip)
 
 clojure-1.3.0-alpha3.jar needs to be placed in a directory `lib` under this
 project.
 
-You can use Leiningen (http://github.com/technomancy/leiningen) to
+You can use [Leiningen](http://github.com/technomancy/leiningen) to
 automatically install the Clojure jar in the right place. Leiningen will also
 get you a couple more jarfiles, including JLine, which allows you some of the
 functionality of readline (command-line history, for example).
