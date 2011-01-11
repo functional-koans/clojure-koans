@@ -30,6 +30,14 @@
       "destructuring"
       "refs"])
 
+(defn require-version [[required-major required-minor]]
+  (let [{:keys [major minor]} *clojure-version*]
+    (if (or (< major required-major)
+        (and (== major required-major) (< minor required-minor)))
+      (throw (Exception. (str "Clojure version " required-major "."
+                              required-minor " or higher required."))))))
+
 (defn run []
+  (require-version [1 3])
   (apply load (doall (map (partial str "koans/") ordered-koans)))
   (println "You have achieved clojure enlightenment. Namaste."))
