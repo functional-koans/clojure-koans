@@ -100,6 +100,7 @@ omissions for existing koans.
 - Nuno Marquez
 - Micah Martin
 - Michael Kohl
+- Ben Lickly
 
 
 ### Credits
