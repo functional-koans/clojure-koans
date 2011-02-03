@@ -1,6 +1,6 @@
 (meditations
   "Lists can be expressed by function or a quoted form"
-  (= '(__) (list 1 2 3 4 5))
+  (= '(__ __ __ __ __) (list 1 2 3 4 5))
 
   "They are Clojure seqs (sequences), so they allow access to the first"
   (= __ (first '(1 2 3 4 5)))

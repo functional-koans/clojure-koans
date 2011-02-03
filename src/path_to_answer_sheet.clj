@@ -11,16 +11,16 @@
                        false
                        6/3
                        3]}
-   "lists" {"__" ["1 2 3 4 5"
+   "lists" {"__" [1 2 3 4 5
                   1
                   [2 3 4 5]
-                  "()"
+                  ()
                   [:a :b :c :d :e]
                   [0 :a :b :c :d :e]
                   :a
                   [:b :c :d :e]
-                  "\"No dice!\""
-                  "()"]}
+                  "No dice!"
+                  ()]}
    "vectors" {"__" [1
                     []
                     [1]
@@ -43,14 +43,14 @@
                  2
                  1
                  1
-                 "\"Vancouver\""
-                 nil
+                 "Vancouver"
+                 :key-not-found
                  true
                  false
-                 "\"February\""
-                 1 "\"January\""
+                 "February"
+                 1 "January"
                  2006 2010 2014
-                 "\"Vancouver\""]}
+                 "Vancouver"]}
    "functions" {"__" [20
                       10 5
                       30 2
@@ -67,7 +67,7 @@
    "higher_order_functions" {"__" [4 8 12
                                    '(* x x)
                                    [false false true false false]
-                                   "()"
+                                   ()
                                    true
                                    '(< x 31)
                                    '(* 10 x) '(< x 4)
@@ -77,9 +77,9 @@
    "runtime_polymorphism" {"__" ['(str (:name a) " eats veggies.")
                                  '(str (:name a) " eats animals.")
                                  '(str "I don't know what " (:name a) " eats.")
-                                 "\"Hello World!\""
-                                 "\"Hello, you silly world.\""
-                                 "\"Hello to this group: Peter, Paul, Mary!\"" ]}
+                                 "Hello World!"
+                                 "Hello, you silly world."
+                                 "Hello to this group: Peter, Paul, Mary!" ]}
    "sequence_comprehensions" {"__" [[0 1 2 3 4 5]
                                     '(* index index)
                                     '(range 10)
@@ -93,7 +93,7 @@
                               4
                               8]
                         "___" ['(complement nil?)
-                               "multiply-by-5"
+                               'multiply-by-5
                                '(comp dec square)]}
    "recursion" {"__" [true 'acc
                       '(loop [n n acc 1]
@@ -101,7 +101,7 @@
                              acc
                              (recur (dec n) (* acc n))))]
                 "___" ['not]}
-   "destructuring" {"__" ["\":bar:foo\""
+   "destructuring" {"__" [":bar:foo"
                           '(format (str "First comes %s, "
                                         "then comes %s, "
                                         "then comes %s with the baby carriage")
@@ -124,10 +124,10 @@
                               (str fname " " lname ", "
                                    street-address ", " city ", " state))
                            ]}
-   "refs" {"__" ["\"hello\""
-                 "\"hello\""
-                 "\"better\""
-                 "\"better!!!\""
+   "refs" {"__" ["hello"
+                 "hello"
+                 "better"
+                 "better!!!"
                  '(dosync (ref-set the-world 0))
                  ]
            "___" ['(comp exclamator exclamator exclamator)
@@ -140,7 +140,7 @@
       (butlast
         (interleave
           unreplaced-texts
-          (concat replacements (repeat k)))))))
+          (concat (map pr-str replacements) (repeat k)))))))
 
 (defn koan-text [koan]
   (slurp (str "src/koans/" koan ".clj")))
