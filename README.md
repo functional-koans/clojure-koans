@@ -101,6 +101,7 @@ omissions for existing koans.
 - Micah Martin
 - Michael Kohl
 - Ben Lickly
+- Alex Robbins
 
 
 ### Credits
