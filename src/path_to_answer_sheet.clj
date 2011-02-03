@@ -44,6 +44,7 @@
                  1
                  1
                  "Vancouver"
+                 nil
                  :key-not-found
                  true
                  false

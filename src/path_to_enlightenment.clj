@@ -3,8 +3,8 @@
   (:require [clojure.set]
             [clojure.string]))
 
-(def __ nil)
-(def ___ (fn [& args] nil))
+(def __ :fill-in-the-blank)
+(def ___ (fn [& args] __))
 
 (defmacro meditations [& forms]
   (let [pairs (partition 2 forms)]

@@ -24,6 +24,9 @@
   (= __ ({2006 "Torino" 2010 "Vancouver" 2014 "Sochi"} 2010))
 
   "You may not be able to find an entry for a key"
+  (= __ (get {:a 1 :b 2} :c))
+
+  "But you can provide your own default"
   (= __ (get {:a 1 :b 2} :c :key-not-found))
 
   "You can find out if a key is present"
