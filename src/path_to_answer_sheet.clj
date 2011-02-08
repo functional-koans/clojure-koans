@@ -133,6 +133,16 @@
                  ]
            "___" ['(comp exclamator exclamator exclamator)
                   '(fn [x] (+ 20 x))]}
+
+      "macros" {"__" ['~(first form)
+                   '~(nth form 2)
+                   10
+                   ''(+ 9 1)
+                   ''(* 10 2)
+                   ''(+ 10 (2 * 3))
+                   16
+                   ]
+             }
    })
 
 (defn replace-with [s k replacements]

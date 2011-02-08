@@ -29,7 +29,8 @@
       "creating_functions"
       "recursion"
       "destructuring"
-      "refs"])
+      "refs"
+      "macros"])
 
 (defn require-version [[required-major required-minor]]
   (let [{:keys [major minor]} *clojure-version*]
