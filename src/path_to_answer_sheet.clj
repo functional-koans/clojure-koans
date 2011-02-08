@@ -162,36 +162,41 @@
 (defn fill-in-answers [text koan sym]
   (replace-with text sym (answers-for koan sym)))
 
-(defn ensure-failing-tests []
-  (let [wtr (java.io.PrintWriter. (java.io.ByteArrayOutputStream.))]
-    (binding [path-to-enlightenment/handle-problem (constantly nil)
-              clojure.test/*test-out* wtr]
-      (dorun
-        (map
-          (fn [koan]
-            (let [form (koan-text koan)
-                  result (load-string form)]
-              (when (= :pass result)
-                (println (str "\n" koan ".clj is passing without filling in the blanks")))))
+(defn print-non-failing-error [koan]
+  (println (str "\n" koan ".clj is passing without filling in the blanks")))
 
-        ordered-koans)))))
+(defn ensure-failing-without-answers []
+  (binding [path-to-enlightenment/handle-problem
+              (constantly :correctly-failing-test)
+            clojure.test/*test-out*
+              (java.io.PrintWriter. (java.io.ByteArrayOutputStream.))]
+    (dorun (map
+      (fn [koan]
+        (let [form (koan-text koan)
+              result (load-string form)]
+          (when (= :pass result)
+            (print-non-failing-error koan))))
 
-(defn run []
+      ordered-koans))))
+
+(defn ensure-passing-with-answers []
   (try
-    (ensure-failing-tests)
-    (dorun
-      (map
-        (fn [koan]
-          (load-string
-            (-> (koan-text koan)
-                (fill-in-answers koan "__")
-                (fill-in-answers koan "___"))))
-        ordered-koans))
-
+    (dorun (map
+      (fn [koan]
+        (load-string
+          (-> (koan-text koan)
+              (fill-in-answers koan "__")
+              (fill-in-answers koan "___"))))
+      ordered-koans))
     (println "\nAll tests pass when the answers are filled in.")
 
     (catch Exception e
       (println "\nAnswer sheet fail: " e)
       (.printStackTrace e)
       (println "Answer sheet fail"))))
+
+(defn run []
+  (ensure-failing-without-answers)
+  (ensure-passing-with-answers))
+
 
