@@ -30,8 +30,8 @@
                     :peanut
                     :jelly
                     :jelly
-                    [:butter :and]]
-              "___" ['=]}
+                    [:butter :and]
+                    3]}
    "sets" {"__" [3
                  #{1 2 3 4 5}
                  #{1 2 3 4 5}

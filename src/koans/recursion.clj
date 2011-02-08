@@ -1,5 +1,6 @@
 (defn is-even? [n]
-  (if (= n 0) __
+  (if (= n 0)
+      __
       (___ (is-even? (dec n)))))
 
 (defn is-even-bigint? [n]
@@ -33,7 +34,7 @@
   (= 24 (factorial 4))
 
   "You can even deal with very large numbers"
-  (= (factorial 1000N) (factorial 1000N))
+  (< 1000000000000000000000000N (factorial 1000N))
 
   "But what happens when the machine limits you?"
-  (= (factorial 10000N) (factorial 10000N)))
+  (< 1000000000000000000000000N (factorial 10000N)))

@@ -30,4 +30,4 @@
   (= __ (subvec [:peanut :butter :and :jelly] 1 3))
 
   "Equality with collections is in terms of values"
-  (___ (list 1 2 3) (vector 1 2 3)))
+  (= (list 1 2 3) (vector 1 2 __)))
