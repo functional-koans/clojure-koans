@@ -141,7 +141,7 @@
                       ''(+ 9 1)
                       ''(* 10 2)
                       ''(+ 10 (2 * 3))
-                      16]}
+                      36]}
    })
 
 (defn replace-with [s k replacements]

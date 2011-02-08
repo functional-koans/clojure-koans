@@ -10,14 +10,17 @@
     __ ))
 
 (defmacro r-infix [form]
-  (list (second form)
-        (if (instance? clojure.lang.PersistentList (first form))
-            `(r-infix ~(first form))
-            (first form))
-        (if (instance? clojure.lang.PersistentList (nth form 2))
-            `(r-infix ~(nth form 2))
-            (nth form 2))
-        ))
+  (cond (not (seq? form))
+          form
+        (= 1 (count form))
+          `(r-infix ~(first form))
+        :else
+          (let [operator (second form)
+                first-arg (first form)
+                others (drop 2 form)]
+            `(~operator
+              (r-infix ~first-arg)
+              (r-infix ~others)))))
 
 
 (meditations
@@ -37,5 +40,5 @@
  (= __ (macroexpand '(infix-better ( 10 + (2 * 3)))))
 
  "Really, you dont understand recursion until you understand recursion"
- (= __ (r-infix (10 + (2 * 3)))))
+ (= __ (r-infix (10 + (2 * 3) + (4 * 5)))))
 
