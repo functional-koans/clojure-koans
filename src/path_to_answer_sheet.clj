@@ -162,8 +162,23 @@
 (defn fill-in-answers [text koan sym]
   (replace-with text sym (answers-for koan sym)))
 
+(defn ensure-failing-tests []
+  (let [wtr (java.io.PrintWriter. (java.io.ByteArrayOutputStream.))]
+    (binding [path-to-enlightenment/handle-problem (constantly nil)
+              clojure.test/*test-out* wtr]
+      (dorun
+        (map
+          (fn [koan]
+            (let [form (koan-text koan)
+                  result (load-string form)]
+              (when (= :pass result)
+                (println (str "\n" koan ".clj is passing without filling in the blanks")))))
+
+        ordered-koans)))))
+
 (defn run []
   (try
+    (ensure-failing-tests)
     (dorun
       (map
         (fn [koan]
@@ -173,7 +188,7 @@
                 (fill-in-answers koan "___"))))
         ordered-koans))
 
-    (println "\nThe answer key checks out!")
+    (println "\nAll tests pass when the answers are filled in.")
 
     (catch Exception e
       (println "\nAnswer sheet fail: " e)
