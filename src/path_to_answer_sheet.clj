@@ -136,12 +136,13 @@
 
       "macros" {"__" ['~(first form)
                       '~(nth form 2)
+                      'form
+                      '(drop 2 form)
                       "Hello, Macros!"
                       10
                       ''(+ 9 1)
                       ''(* 10 2)
-                      ''(+ 10 (2 * 3))
-                      36]}
+                      ''(+ 10 (2 * 3))]}
    })
 
 (defn replace-with [s k replacements]
