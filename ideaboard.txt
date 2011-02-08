@@ -1,6 +1,5 @@
 Concepts / Language Features
 =====
-Refs
 Agents
 Atoms
 Vars
@@ -16,10 +15,8 @@ trampolining
 reflection
 Java interop
 Protocols
-Datatypes
-Records
-Types
-Macros
+Deftypes
+DefRecords
 Pre and Post conditions of functions
 
 Particular Functions
@@ -35,7 +32,6 @@ map-indexed
 partition-all
 partition-by
 rand-nth
-range
 reductions
 constantly
 repeatedly

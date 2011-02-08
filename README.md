@@ -102,6 +102,8 @@ omissions for existing koans.
 - Michael Kohl
 - Ben Lickly
 - Alex Robbins
+- Jaskirat Singh Veen
+
 
 
 ### Credits
