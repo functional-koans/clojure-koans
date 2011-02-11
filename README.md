@@ -49,7 +49,7 @@ You'll see something like this:
     FAIL in clojure.lang.PersistentList$EmptyList@1 (equalities.clj:1)
     We shall contemplate truth by testing reality, via equality.
     expected: (= __ true)
-      actual: (not (= nil true))
+      actual: (not (= :fill-in-the-blank true))
 
 The output is telling you that you have a failing test in equalities.clj.
 So open that file up and make it pass!  In general, you just fill in the
