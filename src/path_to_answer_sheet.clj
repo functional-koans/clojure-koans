@@ -143,6 +143,17 @@
                       ''(+ 9 1)
                       ''(* 10 2)
                       ''(+ 10 (2 * 3))]}
+      "datatypes" {"__" ['(print
+                            (str "You're really the "
+                                 (.category this)
+                                 ", " recipient "... sorry."))
+                         "peace"
+                         "literature"
+                         "physics"
+                         nil
+                         [true false]
+                         "Congratulations on your Best Picture Oscar, Evil Alien Conquerors!"
+                         ]}
    })
 
 (defn replace-with [s k replacements]

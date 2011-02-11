@@ -34,7 +34,8 @@
       "recursion"
       "destructuring"
       "refs"
-      "macros"])
+      "macros"
+      "datatypes"])
 
 (defn require-version [[required-major required-minor]]
   (let [{:keys [major minor]} *clojure-version*]
