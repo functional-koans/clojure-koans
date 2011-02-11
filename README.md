@@ -7,7 +7,17 @@ making tests pass!
 
 ### Getting Started
 
-The only things you need to run the Clojure Koans are:
+The easiest and fastest way to get the koans up and running is to [download the
+latest zip file from Github] (https://github.com/functional-koans/clojure-koans/downloads).
+This way, you'll have all the dependencies you need, including Clojure itself
+and JLine, and you can skip the rest of this section (skip to "Running the
+Koans").
+
+If you're starting from a cloned or forked repo, that's cool too. This way
+you'll be able to track your progress in Git, and see how your answers compare
+to others, by checking out the project's Network tab.
+
+The only things you'll need to run the Clojure Koans are:
 
 - JRE 1.5 or higher
 - [clojure-1.3.0-alpha4.jar](https://github.com/downloads/clojure/clojure/clojure-1.3.0-alpha4.zip)
@@ -26,7 +36,7 @@ After you have leiningen installed, run
 which will download all dependencies you need to run the Clojure koans.
 
 
-### Running The Koans
+### Running the Koans
 
 To run the koans, simply run
 
