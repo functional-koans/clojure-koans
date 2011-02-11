@@ -10,10 +10,9 @@ making tests pass!
 The only things you need to run the Clojure Koans are:
 
 - JRE 1.5 or higher
-- [clojure-1.3.0-alpha3.jar](https://github.com/downloads/clojure/clojure/clojure-1.3.0-alpha3.zip)
+- [clojure-1.3.0-alpha4.jar](https://github.com/downloads/clojure/clojure/clojure-1.3.0-alpha4.zip)
 
-clojure-1.3.0-alpha3.jar needs to be placed in a directory `lib` under this
-project.
+clojure-1.3.0-alpha4.jar needs to be in a directory `lib` under this project.
 
 You can use [Leiningen](http://github.com/technomancy/leiningen) to
 automatically install the Clojure jar in the right place. Leiningen will also
