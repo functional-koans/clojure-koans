@@ -7,8 +7,7 @@ making tests pass!
 
 ### Getting Started
 
-The easiest and fastest way to get the koans up and running is to [download the
-latest zip file from Github] (https://github.com/functional-koans/clojure-koans/downloads).
+The easiest and fastest way to get the koans up and running is to [download the latest zip file from Github] (https://github.com/functional-koans/clojure-koans/downloads).
 This way, you'll have all the dependencies you need, including Clojure itself
 and JLine, and you can skip the rest of this section (skip to "Running the
 Koans").
