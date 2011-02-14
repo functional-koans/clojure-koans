@@ -99,15 +99,18 @@ You can exit the REPL with `CTRL-d` on any OS.
 Patches are encouraged!  Make sure the answer sheet still passes (`script/test`,
 or `script\test` on Windows), and send a pull request.
 
-The file ideaboard.txt has lots of good places to start.  In general, patches are
-easiest if you start on a brand new idea, unless there are obvious flaws or
-omissions for existing koans.
+The file ideaboard.txt has lots of good ideas for new koans to start, or things
+to add to existing koans.  So write some fun exercises, add your answers to
+`src/path_to_answer_sheet.clj`, and we'll get them in there!
+
+Feel free to contact me (Colin Jones / trptcolin) on Github or elsewhere if you
+have any questions or want more direction before you start pitching in.
 
 
 ### Contributors (in order of appearance)
 
 - Aaron Bedra
-- Colin Jones
+- Colin Jones (maintainer)
 - Eric Lavigne
 - Nuno Marquez
 - Micah Martin
@@ -115,7 +118,6 @@ omissions for existing koans.
 - Ben Lickly
 - Alex Robbins
 - Jaskirat Singh Veen
-
 
 
 ### Credits
