@@ -107,14 +107,12 @@
                                         "then comes %s, "
                                         "then comes %s with the baby carriage")
                                    a b c)
-                          '(trim
-                             (apply str
-                               (interleave
+                          '(apply str
+                               (interpose " "
                                  (apply list
                                     first-name
                                     last-name
-                                    (interleave (repeat "aka") aliases))
-                                 (repeat " "))))
+                                    (interleave (repeat "aka") aliases))))
                           '{:original-parts full-name
                             :named-parts {:first first-name :last last-name}}
                           '(str street-address ", " city ", " state)
