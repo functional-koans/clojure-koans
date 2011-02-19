@@ -15,7 +15,10 @@ Koans").
 
 If you're starting from a cloned or forked repo, that's cool too. This way
 you'll be able to track your progress in Git, and see how your answers compare
-to others, by checking out the project's Network tab.
+to others, by checking out the project's Network tab. You might want to create your
+own branch - that way if you pull back the latest koans from master, it'll be a bit
+easier to manage the inevitable conflicts if we make changes to exercises you've already
+completed.
 
 The only things you'll need to run the Clojure Koans are:
 
