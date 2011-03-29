@@ -5,5 +5,9 @@ for f in lib/*.jar; do
   CLASSPATH=$CLASSPATH:$f
 done
 
+if [ "$OSTYPE" = "cygwin" ]; then
+	CLASSPATH=`cygpath -wp $CLASSPATH`
+fi
+
 java -cp "$CLASSPATH" clojure.main -i script/test.clj
 echo
