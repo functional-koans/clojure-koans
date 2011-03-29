@@ -118,6 +118,7 @@ have any questions or want more direction before you start pitching in.
 - Ben Lickly
 - Alex Robbins
 - Jaskirat Singh Veen
+- Mark Simpson
 
 
 ### Credits
