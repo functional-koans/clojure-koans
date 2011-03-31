@@ -140,9 +140,9 @@
                  "better"
                  "better!!!"
                  '(dosync (ref-set the-world 0))
+                 '(map :jerry [@the-world @bizarro-world])
                  ]
-           "___" ['(comp exclamator exclamator exclamator)
-                  '(fn [x] (+ 20 x))]}
+           "___" ['(fn [x] (+ 20 x))]}
 
    "macros" {"__" ['~(first form)
                    '~(nth form 2)
