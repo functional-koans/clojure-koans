@@ -29,6 +29,7 @@
       "conditionals"
       "higher_order_functions"
       "runtime_polymorphism"
+      "lazy_sequences"
       "sequence_comprehensions"
       "creating_functions"
       "recursion"

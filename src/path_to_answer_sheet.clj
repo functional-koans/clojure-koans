@@ -90,6 +90,14 @@
                                  "Hello, you silly world."
                                  "Hello to this group: Peter, Paul, Mary!" ]}
 
+   "lazy_sequences" {"__" [[1 2 3 4]
+                           [0 1 2 3 4]
+                           10
+                           95
+                           '(range 20)
+                           :a]
+                     "___" ['(fn [x] :foo)]}
+
    "sequence_comprehensions" {"__" [[0 1 2 3 4 5]
                                     '(* index index)
                                     '(range 10)
