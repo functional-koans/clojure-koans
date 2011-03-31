@@ -34,6 +34,7 @@
       "recursion"
       "destructuring"
       "refs"
+      "atoms"
       "macros"
       "datatypes"])
 

@@ -1,7 +1,6 @@
 Concepts / Language Features
 =====
 Agents
-Atoms
 Vars
 state identity lifetime
 lazy sequences

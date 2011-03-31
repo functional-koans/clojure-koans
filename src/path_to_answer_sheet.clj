@@ -144,6 +144,14 @@
                  ]
            "___" ['(fn [x] (+ 20 x))]}
 
+   "atoms" {"__" [0
+                  1
+                  '(swap! atomic-clock (partial + 4))
+                  20
+                  20
+                  'atomic-clock 20 :fin
+                  ]}
+
    "macros" {"__" ['~(first form)
                    '~(nth form 2)
                    'form
