@@ -115,8 +115,15 @@
                                'multiply-by-5
                                '(comp dec square)]}
 
-   "recursion" {"__" [true 'acc
-                      '(loop [n n acc 1]
+   "recursion" {"__" [true
+                      'acc
+                      '(loop [coll coll
+                              acc ()]
+                         (if (seq coll)
+                           (recur (rest coll) (conj acc (first coll)))
+                           acc))
+                      '(loop [n n
+                              acc 1]
                          (if (zero? n)
                              acc
                              (recur (dec n) (* acc n))))]

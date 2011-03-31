@@ -3,13 +3,11 @@ Concepts / Language Features
 Agents
 Vars
 state identity lifetime
-lazy sequences
 Metadata
 Tuples - syntax
 Pattern Matching
 immutability/side effects
 memoization
-recursive list processing
 trampolining
 reflection
 Java interop
