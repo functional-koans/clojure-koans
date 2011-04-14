@@ -54,6 +54,7 @@
                             (drop 3)
                             (apply hash-map)
                             :dependencies
+                            (map (fn [xs] (vec (take 2 xs))))
                             (into {})
                             ('org.clojure/clojure))]
     (map read-string
