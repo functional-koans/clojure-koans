@@ -1,7 +1,8 @@
 (ns path-to-enlightenment
   (:use [clojure.test])
   (:require [clojure.set]
-            [clojure.string]))
+            [clojure.string]
+            [clojure.test]))
 
 (def __ :fill-in-the-blank)
 (def ___ (fn [& args] __))
@@ -10,14 +11,16 @@
   (System/exit 0))
 
 (defmacro meditations [& forms]
-  (let [pairs (partition 2 forms)]
-    `(do
-      ~@(map
-          (fn [[doc# code#]]
-            `(if (is ~code# ~doc#)
-              :pass
-              (handle-problem)))
-          pairs))))
+  (let [pairs (partition 2 forms)
+        pairs (conj pairs
+                    ["Bootstrap for file/line reporting"
+                     '(clojure.test/is (= 0 0))])
+        tests (map (fn [[doc# code#]]
+                     `(if (is ~code# ~doc#)
+                       :pass
+                       (handle-problem)))
+                   pairs)]
+    `(do ~@tests)))
 
 (def ordered-koans
      ["equalities"
@@ -62,5 +65,5 @@
 
 (defn run []
   (require-version (parse-required-version))
-  (apply load (doall (map (partial str "koans/") ordered-koans)))
+  (doall (map (comp load (partial str "koans/")) ordered-koans))
   (println "You have achieved clojure enlightenment. Namaste."))
