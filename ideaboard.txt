@@ -19,7 +19,6 @@ Pre and Post conditions of functions
 Particular Functions
 =====
 vector-of
-case
 flatten
 frequencies
 group-by

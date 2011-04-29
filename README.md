@@ -119,6 +119,7 @@ have any questions or want more direction before you start pitching in.
 - Alex Robbins
 - Jaskirat Singh Veen
 - Mark Simpson
+- Mike Jansen
 
 
 ### Credits

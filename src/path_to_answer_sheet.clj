@@ -70,7 +70,9 @@
                          0
                          :glory
                          4 6 :your_road
-                         ''doom 0 ]}
+                         ''doom 0
+                         :cocked-pistol
+                         :say-what?]}
 
    "higher_order_functions" {"__" [4 8 12
                                    '(* x x)

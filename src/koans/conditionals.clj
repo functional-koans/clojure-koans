@@ -1,3 +1,12 @@
+(defn explain-defcon-level [exercise-term]
+  (case exercise-term
+        :fade-out          :you-and-what-army
+        :double-take       :call-me-when-its-important
+        :round-house       :o-rly
+        :fast-pace         :thats-pretty-bad
+        :cocked-pistol     :sirens
+        :say-what?))
+
 (meditations
   "You will face many decisions"
   (= __ (if (false? (= 4 5))
@@ -8,7 +17,7 @@
   (= __ (if (> 4 3)
             []))
 
-  "And in such a case you may have nothing"
+  "And in such a situation you may have nothing"
   (= nil (if (nil? __)
              [:a :b :c]))
 
@@ -26,5 +35,13 @@
   "Or your fate may be sealed"
   (= __ (if-not (zero? __)
                 'doom
-                'doom)))
+                'doom))
+
+  "In case of emergency, sound the alarms"
+  (= :sirens
+     (explain-defcon-level __))
+
+  "But admit it when you don't know what to do"
+  (= __
+     (explain-defcon-level :yo-mama)))
 
