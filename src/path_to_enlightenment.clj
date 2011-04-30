@@ -1,26 +1,23 @@
 (ns path-to-enlightenment
-  (:use [clojure.test])
+  (:use [fresh.core :only [clj-files-in freshener]]
+        [clojure.java.io :only [file]])
   (:require [clojure.set]
             [clojure.string]
-            [clojure.test]))
+            [clojure.test])
+  (:import
+    [java.util.concurrent ScheduledThreadPoolExecutor TimeUnit]))
 
 (def __ :fill-in-the-blank)
 (def ___ (fn [& args] __))
 
-(defn ^:dynamic handle-problem []
-  (System/exit 0))
-
 (defmacro meditations [& forms]
-  (let [pairs (partition 2 forms)
-        pairs (conj pairs
+  (let [pairs (conj (partition 2 forms)
                     ["Bootstrap for file/line reporting"
                      '(clojure.test/is (= 0 0))])
         tests (map (fn [[doc# code#]]
-                     `(if (is ~code# ~doc#)
-                       :pass
-                       (handle-problem)))
+                     `(clojure.test/is ~code# ~doc#))
                    pairs)]
-    `(do ~@tests)))
+    `(and ~@tests)))
 
 (def ordered-koans
      ["equalities"
@@ -63,7 +60,54 @@
     (map read-string
          (take 3 (clojure.string/split version-string #"[\.\-]")))))
 
+(defn files-to-keep-fresh []
+  (clj-files-in (file "src" "koans")))
+
+(defn- tests-pass? [file-path]
+  (use 'path-to-enlightenment)
+  (load-file file-path))
+
+(defn- among-paths? [files]
+  (into #{} (map #(.getCanonicalPath %) files)))
+
+(defn- ordered-koan-paths  []
+  (map (fn [koan-name]
+           (.getCanonicalPath (file "src" "koans" (str koan-name ".clj"))))
+       ordered-koans))
+
+(defn- next-koan-path [last-koan-path]
+  (loop [[this-koan & more :as koan-paths] (ordered-koan-paths)]
+    (when (seq more)
+      (if (= last-koan-path this-koan)
+        (first more)
+        (recur more)))))
+
+(defn namaste []
+  (println "\nYou have achieved clojure enlightenment. Namaste."))
+
+(defn report-refresh [report]
+  (when-let [refreshed-files (seq (:reloaded report))]
+    (let [these-koans (filter
+                        (among-paths? refreshed-files)
+                        (ordered-koan-paths))]
+      (println "Refreshing:" these-koans)
+      (when (every? tests-pass? these-koans)
+        (if-let [next-koan-file (file (next-koan-path (last these-koans)))]
+          (report-refresh {:reloaded [next-koan-file]})
+          (namaste))))
+    (println))
+  :refreshed)
+
+(def refresh! (freshener files-to-keep-fresh report-refresh))
+
+(def scheduler (ScheduledThreadPoolExecutor. 1))
+
+(defn setup-freshener []
+  (.scheduleWithFixedDelay scheduler refresh! 0 500 TimeUnit/MILLISECONDS)
+  (.awaitTermination scheduler Long/MAX_VALUE TimeUnit/SECONDS))
+
 (defn run []
   (require-version (parse-required-version))
-  (doall (map (comp load (partial str "koans/")) ordered-koans))
-  (println "You have achieved clojure enlightenment. Namaste."))
+  (setup-freshener))
+
+

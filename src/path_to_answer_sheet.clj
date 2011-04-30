@@ -212,18 +212,17 @@
   (println (str "\n" koan ".clj is passing without filling in the blanks")))
 
 (defn ensure-failing-without-answers []
-  (binding [path-to-enlightenment/handle-problem
-              (constantly :correctly-failing-test)
-            clojure.test/*test-out*
+  (binding [clojure.test/*test-out*
               (java.io.PrintWriter. (java.io.ByteArrayOutputStream.))]
-    (dorun (map
-      (fn [koan]
-        (let [form (koan-text koan)
-              result (load-string form)]
-          (when (= :pass result)
-            (print-non-failing-error koan))))
-
-      ordered-koans))))
+    (if (every?
+          (fn [koan]
+            (let [form (koan-text koan)
+                  result (load-string form)]
+              (if result
+                (print-non-failing-error koan)
+                :pass)))
+          ordered-koans)
+      (println "\nTests all fail before the answers are filled in."))))
 
 (defn ensure-passing-with-answers []
   (try
@@ -234,7 +233,7 @@
               (fill-in-answers koan "__")
               (fill-in-answers koan "___"))))
       ordered-koans))
-    (println "\nAll tests pass when the answers are filled in.")
+    (println "\nAll tests pass after the answers are filled in.")
 
     (catch Exception e
       (println "\nAnswer sheet fail: " e)
