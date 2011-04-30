@@ -1,6 +1,8 @@
 (ns path-to-answer-sheet
-  (:use [path-to-enlightenment :exclude (run)]
-        [clojure.string :only (join split trim)]))
+  (:use [runner.koans :only [ordered-koans]]
+        [path-to-enlightenment :only [meditations __ ___]]
+        [clojure.string :only [join split trim]]
+        [clojure.test :only [*test-out*]]))
 
 (def answers
   {"equalities" {"__" [true
