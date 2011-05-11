@@ -38,7 +38,12 @@
 
 (defn tests-pass? [file-path]
   (use '[path-to-enlightenment :only [meditations __ ___]])
-  (load-file file-path))
+  (try
+    (load-file file-path)
+    (catch Exception e
+      (println)
+      (println e)
+      false)))
 
 (defn namaste []
   (println "\nYou have achieved clojure enlightenment. Namaste."))
