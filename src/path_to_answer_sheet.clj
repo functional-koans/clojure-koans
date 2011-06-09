@@ -69,7 +69,7 @@
 
    "conditionals" {"__" [:a
                          []
-                         0
+                         nil 
                          :glory
                          4 6 :your_road
                          ''doom 0
