@@ -18,7 +18,7 @@
             []))
 
   "And in such a situation you may have nothing"
-  (= nil (if (nil? __)
+  (= __ (if (nil? 0)
              [:a :b :c]))
 
   "In others your alternative may be interesting"
