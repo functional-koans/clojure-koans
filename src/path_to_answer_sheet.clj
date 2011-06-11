@@ -37,13 +37,15 @@
                     [:butter :and]
                     3]}
 
-   "sets" {"__" [3
+   "sets" {"__" [nil
+                 3
                  #{1 2 3 4 5}
                  #{1 2 3 4 5}
                  #{2 3}
                  #{1 4}]}
 
-   "maps" {"__" [0
+   "maps" {"__" [{}
+                 0
                  1
                  2
                  2
@@ -69,7 +71,7 @@
 
    "conditionals" {"__" [:a
                          []
-                         nil 
+                         nil
                          :glory
                          4 6 :your_road
                          ''doom 0

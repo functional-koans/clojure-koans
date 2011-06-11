@@ -1,6 +1,6 @@
 (meditations
   "There are two ways to create maps"
-  (= {} (hash-map))
+  (= __ (hash-map))
 
   "Maps in clojure associate keys with values"
   (= __ (count (hash-map)))
