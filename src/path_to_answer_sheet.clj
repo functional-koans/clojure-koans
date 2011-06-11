@@ -1,8 +1,7 @@
 (ns path-to-answer-sheet
   (:use [runner.koans :only [ordered-koans]]
         [path-to-enlightenment :only [meditations __ ___]]
-        [clojure.string :only [join split trim]]
-        [clojure.test :only [*test-out*]]))
+        [clojure.string :only [join split trim]]))
 
 (def answers
   {"equalities" {"__" [true
@@ -216,17 +215,23 @@
   (println (str "\n" koan ".clj is passing without filling in the blanks")))
 
 (defn ensure-failing-without-answers []
-  (binding [clojure.test/*test-out*
-              (java.io.PrintWriter. (java.io.ByteArrayOutputStream.))]
-    (if (every?
-          (fn [koan]
-            (let [form (koan-text koan)
-                  result (load-string form)]
-              (if result
-                (print-non-failing-error koan)
-                :pass)))
-          ordered-koans)
-      (println "\nTests all fail before the answers are filled in."))))
+  (if (every?
+        (fn [koan]
+          (let [form (koan-text koan)
+                fake-err (java.io.PrintStream. (java.io.ByteArrayOutputStream.))
+                real-err System/err
+                result (try
+                         (System/setErr fake-err)
+                         (load-string form)
+                         true
+                         (catch AssertionError e false)
+                         (catch Exception e false)
+                         (finally (System/setErr real-err)))]
+            (if result
+              (print-non-failing-error koan)
+              :pass)))
+        ordered-koans)
+    (println "\nTests all fail before the answers are filled in.")))
 
 (defn ensure-passing-with-answers []
   (try

@@ -1,18 +1,15 @@
 (ns path-to-enlightenment
   (:use [runner.freshness :only [setup-freshener]])
   (:require [clojure.set]
-            [clojure.string]
-            [clojure.test]))
+            [clojure.string]))
 
 (def __ :fill-in-the-blank)
 (def ___ (fn [& args] __))
 
 (defmacro meditations [& forms]
-  (let [pairs (conj (partition 2 forms)
-                    ["Bootstrap for file/line reporting"
-                     '(clojure.test/is (= 0 0))])
+  (let [pairs (partition 2 forms)
         tests (map (fn [[doc# code#]]
-                     `(clojure.test/is ~code# ~doc#))
+                     `(assert ~code# ~doc#))
                    pairs)]
     `(and ~@tests)))
 

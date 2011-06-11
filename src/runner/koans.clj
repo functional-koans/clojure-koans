@@ -42,7 +42,12 @@
     (load-file file-path)
     (catch Exception e
       (println)
-      (println e)
+      (println "Problem in " file-path)
+      (println "---------------------")
+      (println "Assertion failed!")
+      (println (.replaceFirst (.getMessage (.getCause e))
+                              "^Assert failed: "
+                              ""))
       false)))
 
 (defn namaste []
