@@ -17,7 +17,6 @@
     (let [these-koans (filter
                         (among-paths? refreshed-files)
                         (ordered-koan-paths))]
-      (println "Refreshing:" these-koans)
       (when (every? tests-pass? these-koans)
         (if-let [next-koan-file (file (next-koan-path (last these-koans)))]
           (report-refresh {:reloaded [next-koan-file]})
@@ -30,5 +29,6 @@
 (def scheduler (ScheduledThreadPoolExecutor. 1))
 
 (defn setup-freshener []
+  (println "Starting auto-runner...")
   (.scheduleWithFixedDelay scheduler refresh! 0 500 TimeUnit/MILLISECONDS)
   (.awaitTermination scheduler Long/MAX_VALUE TimeUnit/SECONDS))

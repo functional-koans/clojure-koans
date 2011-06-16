@@ -47,12 +47,16 @@ To run the koans, simply run
 
 `script\run` on Windows
 
+It's an auto-runner, so as you save your files with the correct answers, it will
+advance you to the next koan or file.
+
 You'll see something like this:
 
-    FAIL in clojure.lang.PersistentList$EmptyList@1 (equalities.clj:1)
+    Problem in  /home/colin/Projects/clojure-koans/src/koans/equalities.clj
+    ---------------------
+    Assertion failed!
     We shall contemplate truth by testing reality, via equality.
-    expected: (= __ true)
-      actual: (not (= :fill-in-the-blank true))
+    (= __ true)
 
 The output is telling you that you have a failing test in equalities.clj.
 So open that file up and make it pass!  In general, you just fill in the
@@ -64,9 +68,9 @@ so you'll have to pay close attention to the failure messages, because up until
 the very end, making a test pass just means that the next failure message comes
 up.
 
-While it's very easy (especially at first) to just fill in the blanks making
-things pass, you should work slowly, making sure you understand why the answer
-is what it is.  Enjoy your path to Clojure enlightenment!
+While it might be easy (especially at first) to just fill in the blanks making
+things pass, you should work thoughtfully, making sure you understand why the
+answer is what it is.  Enjoy your path to Clojure enlightenment!
 
 
 ### Trying more things out
