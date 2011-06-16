@@ -11,7 +11,7 @@
         tests (map (fn [[doc# code#]]
                      `(assert ~code# ~doc#))
                    pairs)]
-    `(and ~@tests)))
+    `(do ~@tests)))
 
 (defn require-version [[required-major required-minor]]
   (let [{:keys [major minor]} *clojure-version*]
