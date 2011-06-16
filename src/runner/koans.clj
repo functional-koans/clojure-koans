@@ -40,6 +40,7 @@
   (use '[path-to-enlightenment :only [meditations __ ___]])
   (try
     (load-file file-path)
+    true
     (catch Exception e
       (println)
       (println "Problem in " file-path)
