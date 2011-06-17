@@ -43,7 +43,7 @@
     true
     (catch Exception e
       (println)
-      (println "Problem in " file-path)
+      (println "Problem in" file-path)
       (println "---------------------")
       (println "Assertion failed!")
       (println (.replaceFirst (.getMessage (.getCause e))
