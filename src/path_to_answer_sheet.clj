@@ -192,7 +192,18 @@
                       nil
                       [true false]
                       (str "Congratulations on your Best Picture Oscar, "
-                           "Evil Alien Conquerors!")]}})
+                           "Evil Alien Conquerors!")]}
+
+   "java_interop" {"__" ['java.lang.String
+                         "SELECT * FROM"
+                         10
+                         1024
+                         ]
+                   "___" ['#(.toUpperCase %)
+                          ]
+                   }
+
+   })
 
 (defn replace-with [s k replacements]
   (let [unreplaced-texts (split s (re-pattern (str "\\b" k "\\b")))]

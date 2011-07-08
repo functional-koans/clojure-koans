@@ -19,7 +19,8 @@
       "refs"
       "atoms"
       "macros"
-      "datatypes"])
+      "datatypes"
+      "java_interop"])
 
 (defn ordered-koan-paths  []
   (map (fn [koan-name]
