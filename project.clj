@@ -1,4 +1,4 @@
-(defproject functional-koans "0.4.0"
+(defproject functional-koans "0.4.1"
   :description "The functional koans"
   :dependencies [[org.clojure/clojure "1.3.0-master-SNAPSHOT"]
                  [fresh "1.0.1"]
