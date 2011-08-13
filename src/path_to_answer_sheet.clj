@@ -1,7 +1,7 @@
 (ns path-to-answer-sheet
   (:use [runner.koans :only [ordered-koans]]
-        [path-to-enlightenment :only [meditations __ ___]]
-        [clojure.string :only [join split trim]]))
+        [path-to-enlightenment :only [meditations fancy-assert __ ___]]
+        [clojure.string :only [join split trim] :as string]))
 
 (def answers
   {"equalities" {"__" [true
@@ -225,22 +225,34 @@
 (defn print-non-failing-error [koan]
   (println (str "\n" koan ".clj is passing without filling in the blanks")))
 
+(defmacro ensure-failure [& forms]
+  (let [pairs (partition 2 forms)
+        tests (map (fn [[doc# code#]]
+                     `(if (try
+                           (fancy-assert ~code# ~doc#)
+                           false
+                           (catch AssertionError e# true)
+                           (catch Exception e# true))
+                       :pass
+                       (throw (AssertionError. (pr-str ~doc# ~code#)))))
+                   pairs)]
+    `(do ~@tests)))
+
 (defn ensure-failing-without-answers []
   (if (every?
         (fn [koan]
           (let [form (koan-text koan)
+                form (string/replace form "(meditations" "(ensure-failure")
                 fake-err (java.io.PrintStream. (java.io.ByteArrayOutputStream.))
                 real-err System/err
                 result (try
-                         (System/setErr fake-err)
                          (load-string form)
                          true
-                         (catch AssertionError e false)
-                         (catch Exception e false)
-                         (finally (System/setErr real-err)))]
+                         (catch AssertionError e (prn e) false)
+                         (catch Exception e (prn e) false))]
             (if result
-              (print-non-failing-error koan)
-              :pass)))
+              :pass
+              (print-non-failing-error koan))))
         ordered-koans)
     (println "\nTests all fail before the answers are filled in.")))
 
