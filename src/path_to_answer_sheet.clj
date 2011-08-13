@@ -81,7 +81,7 @@
                                    '(* x x)
                                    [false false true false false]
                                    ()
-                                   true
+                                   [:anything :goes :here]
                                    '(< x 31)
                                    '(* 10 x) '(< x 4)
                                    24
