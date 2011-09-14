@@ -23,9 +23,9 @@ completed.
 The only things you'll need to run the Clojure Koans are:
 
 - JRE 1.5 or higher
-- [clojure-1.3.0-beta2.jar](https://github.com/downloads/clojure/clojure/clojure-1.3.0-beta2.zip)
+- [clojure-1.3.0-RC0.jar](http://repo1.maven.org/maven2/org/clojure/clojure/1.3.0-RC0/clojure-1.3.0-RC0.zip)
 
-clojure-1.3.0-beta2-SNAPSHOT.jar needs to be in a directory `lib` under this project.
+clojure-1.3.0-RC0.jar needs to be in a directory `lib` under this project.
 
 You can use [Leiningen](http://github.com/technomancy/leiningen) to
 automatically install the Clojure jar in the right place. Leiningen will also
