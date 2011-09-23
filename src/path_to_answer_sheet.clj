@@ -72,7 +72,7 @@
                          []
                          nil
                          :glory
-                         4 6 :your_road
+                         4 6 :your-road
                          ''doom 0
                          :cocked-pistol
                          :say-what?]}
