@@ -28,8 +28,8 @@
 
   "You may have a multitude of possible paths"
   (let [x 5]
-    (= :your_road (cond (= x __) :road_not_taken
-                        (= x __) :another_road_not_taken
+    (= :your-road (cond (= x __) :road-not-taken
+                        (= x __) :another-road-not-taken
                         :else __)))
 
   "Or your fate may be sealed"
