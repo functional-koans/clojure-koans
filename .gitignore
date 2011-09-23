@@ -3,3 +3,4 @@ classes
 lib
 *.jar
 .DS_Store
+clojure-koans*.zip
