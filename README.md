@@ -84,14 +84,18 @@ run:
 
 Here are some interesting commands you might try, once you're in a running REPL:
 
-    (find-doc "vec")
-    (find-doc #"vec$")
-    (doc vec)
+```clojure
+(find-doc "vec")
+(find-doc #"vec$")
+(doc vec)
+```
 
 And if those still don't make sense:
 
-    (doc doc)
-    (doc find-doc)
+```clojure
+(doc doc)
+(doc find-doc)
+```
 
 will show you what those commands mean.
 
