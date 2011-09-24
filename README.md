@@ -125,6 +125,7 @@ have any questions or want more direction before you start pitching in.
 - Mark Simpson
 - Mike Jansen
 - Caleb Phillips
+- Doug South
 
 
 ### Credits
