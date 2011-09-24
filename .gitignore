@@ -1,6 +1,6 @@
 bin
 classes
 lib
+releases
 *.jar
 .DS_Store
-clojure-koans*.zip
