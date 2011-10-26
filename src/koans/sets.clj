@@ -16,4 +16,3 @@
 
   "But don't forget about the difference"
   (= __ (clojure.set/difference #{1 2 3 4 5} #{2 3 5})))
-

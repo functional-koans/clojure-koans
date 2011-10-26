@@ -11,17 +11,16 @@
 
 (defmacro r-infix [form]
   (cond (not (seq? form))
-          __
+        __
         (= 1 (count form))
-          `(r-infix ~(first form))
+        `(r-infix ~(first form))
         :else
-          (let [operator (second form)
-                first-arg (first form)
-                others __]
-            `(~operator
-              (r-infix ~first-arg)
-              (r-infix ~others)))))
-
+        (let [operator (second form)
+              first-arg (first form)
+              others __]
+          `(~operator
+            (r-infix ~first-arg)
+            (r-infix ~others)))))
 
 (meditations
   "Macros are like functions created at compile time"
@@ -41,4 +40,3 @@
 
   "Really, you dont understand recursion until you understand recursion"
   (= 36 (r-infix (10 + (2 * 3) + (4 * 5)))))
-

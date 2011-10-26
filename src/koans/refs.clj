@@ -16,14 +16,14 @@
   "Alter where you need not replace"
   (= __ (let [exclamator (fn [x] (str x "!"))]
           (dosync
-            (alter the-world exclamator)
-            (alter the-world exclamator)
-            (alter the-world exclamator))
+           (alter the-world exclamator)
+           (alter the-world exclamator)
+           (alter the-world exclamator))
           @the-world))
 
   "Don't forget to do your work in a transaction!"
   (= 0 (do __
-         @the-world))
+           @the-world))
 
   "Functions passed to alter may depend on the data in the ref"
   (= 20 (do
@@ -31,10 +31,9 @@
 
   "Two worlds are better than one"
   (= ["Real Jerry" "Bizarro Jerry"]
-     (do
-       (dosync
-         (ref-set the-world {})
-         (alter the-world assoc :jerry "Real Jerry")
-         (alter bizarro-world assoc :jerry "Bizarro Jerry")
-         __))))
-
+       (do
+         (dosync
+          (ref-set the-world {})
+          (alter the-world assoc :jerry "Real Jerry")
+          (alter bizarro-world assoc :jerry "Bizarro Jerry")
+          __))))
