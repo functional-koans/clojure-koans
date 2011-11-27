@@ -1,6 +1,6 @@
 (defproject functional-koans "0.4.5"
-  :description "The functional koans"
+  :description "The functional koans."
   :dependencies [[org.clojure/clojure "1.3.0"]
-                 [fresh "1.0.2"]
-                 [jline "0.9.94" :exclusions [junit]]]
-  :dev-dependencies [[swank-clojure "1.3.0" :exclusions [org.clojure/clojure]]])
+                 [koan-engine "0.1.0"]]
+  :dev-dependencies [[swank-clojure "1.3.0" :exclusions [org.clojure/clojure]]
+                     [lein-koan "0.1.0"]])

@@ -1,4 +1,4 @@
-(load "path_to_enlightenment")
+(load "koan_engine/runner")
 (do
-  (in-ns 'path-to-enlightenment)
-  (run))
+  (in-ns 'koan-engine.runner)
+  (exec "run"))

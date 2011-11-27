@@ -1,7 +1,8 @@
 #!/bin/sh
 CLASSPATH=src
 
-for f in lib/*.jar; do
+
+for f in lib/*.jar lib/dev/*.jar resources/; do
   CLASSPATH=$CLASSPATH:$f
 done
 
