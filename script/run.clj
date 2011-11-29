@@ -1,4 +1,2 @@
-(load "koan_engine/runner")
-(do
-  (in-ns 'koan-engine.runner)
-  (exec "run"))
+(require 'koan-engine.runner)
+(koan-engine.runner/exec "run")
