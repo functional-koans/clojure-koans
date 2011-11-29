@@ -2,7 +2,7 @@
 setLocal EnableDelayedExpansion
 
 set CLASSPATH="
-for %%j in (".\lib\*.jar") do (
+for %%j in (".\lib\*.jar", ".\lib\dev\*.jar") do (
   set CLASSPATH=!CLASSPATH!;%%~fj
 )
 set CLASSPATH=!CLASSPATH!"
