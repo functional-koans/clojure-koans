@@ -48,4 +48,4 @@
   (< 1000000000000000000000000N (factorial 1000N))
 
   "But what happens when the machine limits you?"
-  (< 1000000000000000000000000N (factorial 10000N)))
+  (< 1000000000000000000000000N (factorial 100003N)))
