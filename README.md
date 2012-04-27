@@ -115,21 +115,9 @@ Feel free to contact me (Colin Jones / trptcolin) on Github or elsewhere if you
 have any questions or want more direction before you start pitching in.
 
 
-### Contributors (in order of appearance)
+### Contributors
 
-- Aaron Bedra
-- Colin Jones (maintainer)
-- Eric Lavigne
-- Nuno Marquez
-- Micah Martin
-- Michael Kohl
-- Ben Lickly
-- Alex Robbins
-- Jaskirat Singh Veen
-- Mark Simpson
-- Mike Jansen
-- Caleb Phillips
-- Doug South
+https://github.com/functional-koans/clojure-koans/contributors
 
 
 ### Credits
