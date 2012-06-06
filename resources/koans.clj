@@ -1,4 +1,4 @@
-[["equalities" {"__" [true
+[["01-equalities" {"__" [true
                       2
                       7
                       5
@@ -7,7 +7,7 @@
                       6/3
                       3]}]
 
- ["lists" {"__" [1 2 3 4 5
+ ["02-lists" {"__" [1 2 3 4 5
                  1
                  [2 3 4 5]
                  ()
@@ -18,7 +18,7 @@
                  "No dice!"
                  ()]}]
 
- ["vectors" {"__" [1
+ ["03-vectors" {"__" [1
                    []
                    [1]
                    [nil]
@@ -30,14 +30,14 @@
                    [:butter :and]
                    3]}]
 
- ["sets" {"__" [nil
+ ["04-sets" {"__" [nil
                 3
                 #{1 2 3 4 5}
                 #{1 2 3 4 5}
                 #{2 3}
                 #{1 4}]}]
 
- ["maps" {"__" [{}
+ ["05-maps" {"__" [{}
                 0
                 1
                 2
@@ -54,7 +54,7 @@
                 2006 2010 2014
                 "Vancouver"]}]
  
- ["functions" {"__" [20
+ ["06-functions" {"__" [20
                      10 5
                      30 2
                      15
@@ -62,7 +62,7 @@
                "___" [(fn [f] (f 5))
                       (fn [f] (f 5))]}]
 
- ["conditionals" {"__" [:a
+ ["07-conditionals" {"__" [:a
                         []
                         nil
                         :glory
@@ -71,7 +71,7 @@
                         :cocked-pistol
                         :say-what?]}]
 
- ["higher_order_functions" {"__" [4 8 12
+ ["08-higher_order_functions" {"__" [4 8 12
                                   (* x x)
                                   [false false true false false]
                                   ()
@@ -82,14 +82,14 @@
                                   100
                                   (count a) (count b)]}]
 
- ["runtime_polymorphism" {"__" [(str (:name a) " eats veggies.")
+ ["09-runtime_polymorphism" {"__" [(str (:name a) " eats veggies.")
                                 (str (:name a) " eats animals.")
                                 (str "I don't know what " (:name a) " eats.")
                                 "Hello World!"
                                 "Hello, you silly world."
                                 "Hello to this group: Peter, Paul, Mary!" ]}]
 
- ["lazy_sequences" {"__" [[1 2 3 4]
+ ["10-lazy_sequences" {"__" [[1 2 3 4]
                           [0 1 2 3 4]
                           10
                           95
@@ -97,14 +97,14 @@
                           :a]
                     "___" [(fn [x] :foo)]}]
 
- ["sequence_comprehensions" {"__" [[0 1 2 3 4 5]
+ ["11-sequence_comprehensions" {"__" [[0 1 2 3 4 5]
                                    (* index index)
                                    (range 10)
                                    (odd? index) (* index index)
                                    [row column]
                                    ]}]
 
- ["creating_functions" {"__" [true false true
+ ["12-creating_functions" {"__" [true false true
                               4
                               :a :b :c :d
                               :c :d
@@ -114,7 +114,7 @@
                                multiply-by-5
                                (comp dec square)]}]
 
- ["recursion" {"__" [true
+ ["13-recursion" {"__" [true
                      acc
                      (loop [coll coll
                             acc ()]
@@ -128,7 +128,7 @@
                          (recur (dec n) (* acc n))))]
                "___" [not]}]
 
- ["destructuring" {"__" [":bar:foo"
+ ["14-destructuring" {"__" [":bar:foo"
                          (format (str "First comes %s, "
                                       "then comes %s, "
                                       "then comes %s with the baby carriage")
@@ -150,7 +150,7 @@
                                  street-address ", " city ", " state))
                           ]}]
 
- ["refs" {"__" ["hello"
+ ["15-refs" {"__" ["hello"
                 "hello"
                 "better"
                 "better!!!"
@@ -159,7 +159,7 @@
                 ]
           "___" [(fn [x] (+ 20 x))]}]
 
- ["atoms" {"__" [0
+ ["16-atoms" {"__" [0
                  1
                  (swap! atomic-clock (partial + 4))
                  20
@@ -167,7 +167,7 @@
                  atomic-clock 20 :fin
                  ]}]
 
- ["macros" {"__" [~(first form)
+ ["17-macros" {"__" [~(first form)
                   ~(nth form 2)
                   form
                   (drop 2 form)
@@ -177,7 +177,7 @@
                   '(* 10 2)
                   '(+ 10 (2 * 3))]}]
 
- ["datatypes" {"__" [(print
+ ["18-datatypes" {"__" [(print
                       (str "You're really the "
                            (.category this)
                            ", " recipient "... sorry."))
@@ -189,7 +189,7 @@
                      (str "Congratulations on your Best Picture Oscar, "
                           "Evil Alien Conquerors!")]}]
 
- ["java_interop" {"__" [java.lang.String
+ ["19-java_interop" {"__" [java.lang.String
                         "SELECT * FROM"
                         10
                         1024
