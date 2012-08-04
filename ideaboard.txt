@@ -15,7 +15,6 @@ Particular Functions
 fnil - creating_a_function
 juxt - creating_a_function
 constantly - creating_a_function
-partition
 flatten
 
 frequencies
