@@ -2,6 +2,7 @@ bin
 classes
 lib
 releases
+target
 *.jar
 .DS_Store
 .lein-deps-sum
