@@ -1,20 +1,20 @@
 (meditations
  (let [agent-example (agent 10)]
 
-   "Creating an Agent is as simple as assigning it a value"
+   "Creating an Agent is as simple as assigning a value to it"
    (= __ (instance? clojure.lang.Agent agent-example))
 
    "To get agent's value you dereference it"
    (= __ @agent-example)
 
-   "To change agent's value you use send function - you pass action and action's arguments to it.
-   Send function, returns immediately, but the action is prccessed in a separate thread and it's the result,
-   of that action that gets assigned to agent's state"
+   "To change agent's value you can use 'send' function. Send takes as parameters, agent, action and arguments,
+    it returns immediately but the action is prccessed in a separate thread and it's the result, of action,
+    that gets assigned to agent's state"
    (= __ (do
            (send agent-example + 2)
            @agent-example))
 
-   "You can't just send a value to agent"
+   "You can't just send a value to agent it needs to be a function"
    (= __ (do
            (set-error-mode! agent-example :continue)
            (send agent-example 20)
