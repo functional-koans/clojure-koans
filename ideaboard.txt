@@ -1,7 +1,6 @@
 Concepts / Language Features
 =====
 new record syntax
-Agents
 Vars
 state identity lifetime
 Metadata
