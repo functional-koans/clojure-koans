@@ -16,6 +16,9 @@
 (defn factorial [n]
   __)
 
+(defn factorial-bigint [n]
+  __)
+
 (meditations
   "Recursion ends with a base case"
   (= true (is-even? 0))
@@ -45,7 +48,7 @@
   (= 24 (factorial 4))
 
   "You can even deal with very large numbers"
-  (< 1000000000000000000000000N (factorial 1000N))
+  (< 1000000000000000000000000N (factorial-bigint 1000N))
 
   "But what happens when the machine limits you?"
-  (< 1000000000000000000000000N (factorial 100003N)))
+  (< 1000000000000000000000000N (factorial-bigint 100003N)))
