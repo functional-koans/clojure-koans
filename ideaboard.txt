@@ -5,7 +5,6 @@ Agents
 Vars
 state identity lifetime
 Metadata
-Tuples - syntax
 immutability / side effects
 type hints
 Pre and Post conditions of functions
