@@ -25,14 +25,13 @@ The only things you'll need to run the Clojure Koans are:
 - JRE 1.5 or higher
 - [clojure-1.3.0.jar](http://repo1.maven.org/maven2/org/clojure/clojure/1.3.0/clojure-1.3.0.zip)
 
-clojure-1.3.0.jar needs to be in a directory `lib` under this project.
+You can use [Leiningen](http://github.com/technomancy/leiningen) version 1 (not
+the latest and greatest) to automatically install the Clojure jar in the right
+place. Leiningen will also get you a couple more jarfiles, including JLine,
+which allows you some of the functionality of readline (command-line history,
+for example).
 
-You can use [Leiningen](http://github.com/technomancy/leiningen) to
-automatically install the Clojure jar in the right place. Leiningen will also
-get you a couple more jarfiles, including JLine, which allows you some of the
-functionality of readline (command-line history, for example).
-
-After you have leiningen installed, run
+After you have leiningen (version 1) installed, run
 
 `lein deps`
 
@@ -41,11 +40,15 @@ which will download all dependencies you need to run the Clojure koans.
 
 ### Running the Koans
 
-To run the koans, simply run
+If you're running from the zipfile or using lein 1, simply run
 
 `script/run` on Mac/\*nix
 
 `script\run` on Windows
+
+If you're running from a checkout using lein 2, run the koans via
+
+`lein koan run`
 
 It's an auto-runner, so as you save your files with the correct answers, it will
 advance you to the next koan or file.
@@ -82,6 +85,8 @@ run:
 
 `script\repl` on Windows
 
+If you're on lein 2, `lein repl` is what you want instead.
+
 Here are some interesting commands you might try, once you're in a running REPL:
 
 ```clojure
@@ -104,8 +109,9 @@ You can exit the REPL with `CTRL-d` on any OS.
 
 ### Contributing
 
-Patches are encouraged!  Make sure the answer sheet still passes (`script/test`,
-or `script\test` on Windows), and send a pull request.
+Patches are encouraged!  Make sure the answer sheet still passes
+(`script/test`, or `script\test` on Windows, or `lein koan test` on lein2), and
+send a pull request.
 
 The file ideaboard.txt has lots of good ideas for new koans to start, or things
 to add to existing koans.  So write some fun exercises, add your answers to
