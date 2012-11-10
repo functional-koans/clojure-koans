@@ -6,3 +6,4 @@ target
 *.jar
 .DS_Store
 .lein-deps-sum
+.lein-plugins
