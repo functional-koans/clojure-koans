@@ -51,17 +51,18 @@ If you're running from a checkout using lein 2, run the koans via
 `lein koan run`
 
 It's an auto-runner, so as you save your files with the correct answers, it will
-advance you to the next koan or file.
+advance you to the next koan or file (conveniently, all files are prefixed with
+the sequence that you should follow).
 
 You'll see something like this:
 
-    Problem in  /home/colin/Projects/clojure-koans/src/koans/equalities.clj
+    Problem in  /home/colin/Projects/clojure-koans/src/koans/01_equalities.clj
     ---------------------
     Assertion failed!
     We shall contemplate truth by testing reality, via equality.
     (= __ true)
 
-The output is telling you that you have a failing test in equalities.clj.
+The output is telling you that you have a failing test in 01_equalities.clj.
 So open that file up and make it pass!  In general, you just fill in the
 blanks to make tests pass.  Sometimes there are several (or even an infinite
 number) of correct answers: any of them will work in these cases.
