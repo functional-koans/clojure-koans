@@ -26,17 +26,17 @@
   "Macros are like functions created at compile time"
   (= __ (hello "Macros!"))
 
-  "Can I haz some infix?"
+  "I can haz infix?"
   (= __ (infix (9 + 1)))
 
   "Remember, these are nothing but code transformations"
   (= __ (macroexpand '(infix (9 + 1))))
 
-  "You can do better than that, hand crafting ftw!"
+  "You can do better than that - hand crafting FTW!"
   (= __ (macroexpand '(infix-better (10 * 2))))
 
-  "Things dont always work as you would like them to... "
+  "Things don't always work as you would like them to... "
   (= __ (macroexpand '(infix-better ( 10 + (2 * 3)))))
 
-  "Really, you dont understand recursion until you understand recursion"
+  "Really, you don't understand recursion until you understand recursion"
   (= 36 (r-infix (10 + (2 * 3) + (4 * 5)))))
