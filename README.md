@@ -56,16 +56,17 @@ the sequence that you should follow).
 
 You'll see something like this:
 
-    Problem in  /home/colin/Projects/clojure-koans/src/koans/01_equalities.clj
+    Now meditate on /home/colin/Projects/clojure-koans/src/koans/01_equalities.clj:3
     ---------------------
     Assertion failed!
     We shall contemplate truth by testing reality, via equality.
     (= __ true)
 
-The output is telling you that you have a failing test in 01_equalities.clj.
-So open that file up and make it pass!  In general, you just fill in the
-blanks to make tests pass.  Sometimes there are several (or even an infinite
-number) of correct answers: any of them will work in these cases.
+The output is telling you that you have a failing test in the file named
+`01_equalities.clj`, on line 3. So you just need to open that file up and make
+it pass!  You'll always be filling in the blanks to make tests pass.
+Sometimes there could be several correct answers (or even an infinite number):
+any of them will work in these cases.
 
 The koans differ from normal TDD in that the tests are already written for you,
 so you'll have to pay close attention to the failure messages, because up until
