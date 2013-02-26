@@ -2,7 +2,7 @@
   "To split a collection you can use the partition function"
   (= '((0 1) (2 3)) (__ 2 (range 4)))
 
-  "But watch out if there is not enough elements to form n sequences"
+  "But watch out if there are not enough elements to form n sequences"
   (= '(__) (partition 3 [:a :b :c :d :e]))
 
   "You can use partition-all to also get partitions with less then n elements"
