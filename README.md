@@ -15,23 +15,25 @@ Koans").
 
 If you're starting from a cloned or forked repo, that's cool too. This way
 you'll be able to track your progress in Git, and see how your answers compare
-to others, by checking out the project's Network tab. You might want to create your
-own branch - that way if you pull back the latest koans from master, it'll be a bit
-easier to manage the inevitable conflicts if we make changes to exercises you've already
-completed.
+to others, by checking out the project's Network tab. You might want to create
+your own branch - that way if you pull back the latest koans from master, it'll
+be a bit easier to manage the inevitable conflicts if we make changes to
+exercises you've already completed.
 
 The only things you'll need to run the Clojure Koans are:
 
 - JRE 1.5 or higher
 - [clojure-1.3.0.jar](http://repo1.maven.org/maven2/org/clojure/clojure/1.3.0/clojure-1.3.0.zip)
 
-You can use [Leiningen](http://github.com/technomancy/leiningen) version 1 (not
-the latest and greatest) to automatically install the Clojure jar in the right
-place. Leiningen will also get you a couple more jarfiles, including JLine,
-which allows you some of the functionality of readline (command-line history,
-for example).
+You can use [Leiningen](http://github.com/technomancy/leiningen) to
+automatically install the Clojure jar in the right place. Leiningen will also
+get you a couple more jarfiles, including JLine, which allows you some of the
+functionality of readline (command-line history, for example).
 
-After you have leiningen (version 1) installed, run
+### Installing dependencies
+
+Dependencies are installed automatically with lein 2, but if you are still
+using lein 1 run
 
 `lein deps`
 
