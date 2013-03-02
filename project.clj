@@ -1,6 +1,6 @@
-(defproject clojure-koans "0.4.7"
+(defproject clojure-koans "0.4.8"
   :description "The Clojure koans."
-  :dependencies [[org.clojure/clojure "1.3.0"]
+  :dependencies [[org.clojure/clojure "1.5.0"]
                  [koan-engine "0.1.3"]]
   :dev-dependencies [[lein-koan "0.1.2"]]
   :profiles {:dev {:dependencies [[lein-koan "0.1.2"]]}}
