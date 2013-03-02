@@ -23,7 +23,7 @@ exercises you've already completed.
 The only things you'll need to run the Clojure Koans are:
 
 - JRE 1.5 or higher
-- [clojure-1.3.0.jar](http://repo1.maven.org/maven2/org/clojure/clojure/1.3.0/clojure-1.3.0.zip)
+- [clojure-1.5.0.jar](http://repo1.maven.org/maven2/org/clojure/clojure/1.5.0/clojure-1.5.0.zip)
 
 You can use [Leiningen](http://github.com/technomancy/leiningen) to
 automatically install the Clojure jar in the right place. Leiningen will also
