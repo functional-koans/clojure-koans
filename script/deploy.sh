@@ -1,20 +1,16 @@
 #!/bin/sh
 
 mkdir -p releases
+lein1 deps
 zip -r releases/clojure-koans-`date +"%Y-%m-%d_%H-%M"`.zip \
     . \
     -x "./.git/*" \
     -x "releases/*"
 
 echo
-echo "Don't forget to upload the zipfile"
-echo "  to https://github.com/functional-koans/clojure-koans/downloads"
+echo "Don't forget to upload the zipfile (somewhere...)"
 echo `ls -t releases/clojure-koans-*.zip | head -n1`
 echo "git push"
 echo "git push --tags"
 echo
 
-# TODO: use http://developer.github.com/v3/repos/downloads/
-#       to do the upload automatically
-#       GET example:
-#         curl https://api.github.com/repos/functional-koans/clojure-koans/downloads
