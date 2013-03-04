@@ -24,7 +24,7 @@
                    [1]
                    [nil nil]
                    2
-                   [333]
+                   [111 222 333]
                    :peanut
                    :jelly
                    :jelly

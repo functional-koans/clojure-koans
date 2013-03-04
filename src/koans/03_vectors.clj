@@ -11,8 +11,8 @@
   "But you can populate it with any number of elements at once"
   (= [1 __] (vec '(1 2)))
 
-  "And add to it as well"
-  (= __ (conj (vec nil) 333))
+  "Conjoining to a vector is different than to a list"
+  (= __ (conj [111 222] 333))
 
   "You can get the first element of a vector like so"
   (= __ (first [:peanut :butter :and :jelly]))
