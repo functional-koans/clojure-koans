@@ -1,10 +1,9 @@
 [["01_equalities" {"__" [true
                       2
-                      7
                       5
-                      4/2
+                      true
                       false
-                      6/3
+                      true
                       3]}]
 
  ["02_lists" {"__" [1 2 3 4 5
