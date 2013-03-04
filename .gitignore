@@ -7,3 +7,5 @@ target
 .DS_Store
 .lein-deps-sum
 .lein-plugins
+.lein-repl-history
+
