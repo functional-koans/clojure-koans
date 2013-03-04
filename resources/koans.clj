@@ -4,6 +4,7 @@
                       true
                       false
                       true
+                      true
                       3]}]
 
  ["02_lists" {"__" [1 2 3 4 5
@@ -20,9 +21,8 @@
                  ()]}]
 
  ["03_vectors" {"__" [1
-                   []
                    [1]
-                   [nil]
+                   [nil nil]
                    2
                    [333]
                    :peanut
