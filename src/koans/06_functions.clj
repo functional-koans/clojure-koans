@@ -4,26 +4,31 @@
 (defn square [n] (* n n))
 
 (meditations
-  "Functions are often defined before they are used"
+  "Calling a function is like giving it a hug with parentheses"
+  (= __ (square 9))
+
+  "Functions are usually defined before they are used"
   (= __ (multiply-by-ten 2))
 
   "But they can also be defined inline"
-  (= __ ((fn [n] (* __ n)) 2))
+  (= __ ((fn [n] (* 5 n)) 2))
 
-  "Or using even shorter syntax"
-  (= __ (#(* 15 %) __))
+  "Or using an even shorter syntax"
+  (= __ (#(* 15 %) 4))
 
-  "Short anonymous functions may take multiple arguments"
+  "Even anonymous functions may take multiple arguments"
   (= __ (#(+ %1 %2 %3) 4 5 6))
 
   "One function can beget another"
-  (= __ ((fn []
-           ((fn [a b] (__ a b))
-            4 5))))
+  (= 9 (((fn [] ___)) 4 5))
+
+  "Functions can also take other functions as input"
+  (= 20 ((fn [f] (f 4 5))
+           ___))
 
   "Higher-order functions take function arguments"
   (= 25 (___
-         (fn [n] (* n n))))
+          (fn [n] (* n n))))
 
   "But they are often better written using the names of functions"
   (= 25 (___ square)))
