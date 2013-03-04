@@ -8,14 +8,20 @@
   "As well as the rest"
   (= __ (rest '(1 2 3 4 5)))
 
-  "The rest when nothing is left is empty"
+  "Count your blessings"
+  (= __ (count '(dracula dooku chocula)))
+
+  "Before they are gone"
+  (= __ (count '()))
+
+  "The rest, when nothing is left, is empty"
   (= __ (rest '(100)))
 
-  "And construction by adding an element to the front is simple"
+  "Construction by adding an element to the front is easy"
   (= __ (cons :a '(:b :c :d :e)))
 
-  "Conjoining an element to a list can be done in the reverse order"
-  (= __ (conj '(:a :b :c :d :e) 0))
+  "Conjoining an element to a list isn't hard either"
+  (= __ (conj '(:a :b :c :d) :e))
 
   "You can use a list like a stack to get the first element"
   (= __ (peek '(:a :b :c :d :e)))
@@ -26,9 +32,12 @@
   "But watch out if you try to pop nothing"
   (= __ (try
           (pop '())
-          (catch IllegalStateException e "No dice!")))
+          (catch IllegalStateException e
+            "No dice!")))
 
   "The rest of nothing isn't so strict"
   (= __ (try
           (rest '())
-          (catch IllegalStateException e "No dice!"))))
+          (catch IllegalStateException e
+            "No dice!"))))
+
