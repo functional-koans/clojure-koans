@@ -32,16 +32,16 @@
   "Or if it is missing"
   (= __ (contains? {:a nil :b nil} :c))
 
-  "Maps are immutable, but you can create a new, 'changed' version"
+  "Maps are immutable, but you can create a new and improved version"
   (= {1 "January" 2 __} (assoc {1 "January" } 2 "February"))
 
-  "You can also 'remove' an entry"
+  "You can also create a new version with an entry removed"
   (= {__ __} (dissoc {1 "January" 2 "February"} 2))
 
-  "Often you will need to get the keys (which will be in hash order)"
+  "Often you will need to get the keys, but the order is undependable"
   (= (list __ __ __)
      (sort (keys {2006 "Torino" 2010 "Vancouver" 2014 "Sochi"})))
 
-  "Or the values"
+  "You can get the values in a similar way"
   (= (list "Sochi" "Torino" __)
      (sort (vals {2006 "Torino" 2010 "Vancouver" 2014 "Sochi"}))))
