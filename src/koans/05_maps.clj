@@ -1,9 +1,6 @@
 (meditations
-  "There are two ways to create maps"
-  (= __ (hash-map))
-
-  "Maps in clojure associate keys with values"
-  (= __ (count (hash-map)))
+  "Don't get lost when creating a map"
+  (= {:a 1 :b 2} (hash-map :a 1 __ __))
 
   "A value must be supplied for each key"
   (= {:a 1} (hash-map :a __))
@@ -14,7 +11,7 @@
   "You can look up the value for a given key"
   (= __ (get {:a 1 :b 2} :b))
 
-  "Maps can be used as lookup functions"
+  "Maps can be used as functions to do lookups"
   (= __ ({:a 1 :b 2} :a))
 
   "And so can keywords"

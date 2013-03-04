@@ -1,5 +1,8 @@
 Concepts / Language Features
 =====
+
+Quoting
+
 new record syntax
 Agents
 Vars
