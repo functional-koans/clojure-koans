@@ -17,7 +17,7 @@
      (for [index __ :when (odd? index)]
        index))
 
-  "Combinations these transformations is trivial"
+  "Combinations of these transformations is trivial"
   (= '(1 9 25 49 81)
      (map (fn [index] (* index index))
           (filter odd? (range 10)))
