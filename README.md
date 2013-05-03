@@ -23,7 +23,7 @@ exercises you've already completed.
 The only things you'll need to run the Clojure Koans are:
 
 - JRE 1.5 or higher
-- [clojure-1.5.0.jar](http://repo1.maven.org/maven2/org/clojure/clojure/1.5.0/clojure-1.5.0.zip)
+- [clojure-1.5.1.jar](http://repo1.maven.org/maven2/org/clojure/clojure/1.5.1/clojure-1.5.1.zip)
 
 You can use [Leiningen](http://github.com/technomancy/leiningen) to
 automatically install the Clojure jar in the right place. Leiningen will also
@@ -68,8 +68,8 @@ The output is telling you that you have a failing test in the file named
 `01_equalities.clj`, on line 3. So you just need to open that file up and make
 it pass!  You'll always be filling in the blanks to make tests pass.
 Sometimes there could be several correct answers (or even an infinite number):
-any of them will work in these cases. Some tests will pass even if you replace 
-the blanks with whitespace (or nothing) instead of the expected answer. Make sure 
+any of them will work in these cases. Some tests will pass even if you replace
+the blanks with whitespace (or nothing) instead of the expected answer. Make sure
 you give one correct expression to replace each blank.
 
 The koans differ from normal TDD in that the tests are already written for you,
