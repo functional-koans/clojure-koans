@@ -29,7 +29,7 @@
   "Reversing directions is easy when you have not gone far"
   (= '(1) (recursive-reverse [1]))
 
-  "Yet more difficult the more steps you take"
+  "Yet it becomes more difficult the more steps you take"
   (= '(5 4 3 2 1) (recursive-reverse [1 2 3 4 5]))
 
   "Simple things may appear simple."
