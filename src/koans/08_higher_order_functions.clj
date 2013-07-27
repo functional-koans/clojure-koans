@@ -17,6 +17,9 @@
   "Or somewhere in between"
   (= [10 20 30] (filter (fn [x] __) [10 20 30 40 50 60 70 80]))
 
+  "It all depends on what you want, you can also use a prefined function"
+  (= __ (filter even? [1 2 3 4 5 6 7 8]))
+
   "Maps and filters may be combined"
   (= [10 20 30] (map (fn [x] __) (filter (fn [x] __) [1 2 3 4 5 6 7 8])))
 
