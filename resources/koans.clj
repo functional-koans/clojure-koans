@@ -209,4 +209,18 @@
                         5
                         :hello
                         (6 :this :are)
-                        ]}]]
+                        ]}]
+ ["21_scoring_project" {"__" [(let [group (group-by identity dic)]
+                                (reduce + (map #(let [coun (count (get % 1))
+                                                      nu (get % 0)]
+                                                  (case nu
+                                                    1 (cond (= coun 3) 1000
+                                                            (< coun 3) (* 100 coun)
+                                                            (> coun 3) (+ 1000 (* 100 (- coun 3))))
+                                                    5 (cond (= coun 3) 500
+                                                            (< coun 3) (* coun 50)
+                                                            (> coun 3) (+ 500 (* (- coun 3) 50)))
+                                                    (if (>= coun 3)
+                                                      (* nu 100)
+                                                      0)))
+                                               group)))]}]]
