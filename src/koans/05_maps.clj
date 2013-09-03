@@ -40,8 +40,8 @@
 
   "Often you will need to get the keys, but the order is undependable"
   (= (list __ __ __)
-     (sort (keys {2006 "Torino" 2010 "Vancouver" 2014 "Sochi"})))
+     (sort (keys {2010 "Vancouver" 2006 "Torino" 2014 "Sochi"})))
 
   "You can get the values in a similar way"
-  (= (list "Sochi" "Torino" __)
+  (= (list __ __ __)
      (sort (vals {2006 "Torino" 2010 "Vancouver" 2014 "Sochi"}))))
