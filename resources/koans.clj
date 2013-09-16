@@ -209,4 +209,14 @@
                         5
                         :hello
                         (6 :these :are)
-                        ]}]]
+                        ]}]
+ ["21_group_by" {"__" [odd?
+                       {5 ["hello" "world"] 3 ["foo" "bar"]}
+                       {1 [{:name "Bob" :id 1}
+                           {:last-name "Smith" :id 1}]
+                        2 [{:name "Mike" :id 2}]}
+                       nil
+                       {:nauty-list [{:name "Jimmy" :bad true}
+                                     {:name "Joe" :bad true}]
+                        :nice-list [{:name "Jack" :bad false}]}]}]
+]
