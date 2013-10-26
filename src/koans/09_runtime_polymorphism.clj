@@ -30,6 +30,10 @@
   (= "Simba eats animals."
      (diet {:species "lion" :name "Simba" :age 1 :eater :carnivore}))
 
+  "Animals have different names"
+  (= "Thumper eats veggies."
+    (diet {:species "rabbit" :name "Thumper" :age 1 :eater :herbivore}))
+
   "You may use a default method when no others match"
   (= "I don't know what Rich Hickey eats."
      (diet {:name "Rich Hickey"})))
