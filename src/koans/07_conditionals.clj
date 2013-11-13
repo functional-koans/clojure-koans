@@ -4,7 +4,7 @@
         :double-take       :call-me-when-its-important
         :round-house       :o-rly
         :fast-pace         :thats-pretty-bad
-        :cocked-pistol     :sirens
+        :cooked-pistol     :sirens
         :say-what?))
 
 (meditations
