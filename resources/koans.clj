@@ -73,7 +73,7 @@
                         nil
                         :glory
                         4 6 :your-road
-                        'doom 0
+                        1
                         :cocked-pistol
                         :say-what?]}]
 
@@ -208,5 +208,5 @@
                         '((0 1 2) (3 4))
                         5
                         :hello
-                        (6 :this :are)
+                        (6 :these :are)
                         ]}]]
