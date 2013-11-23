@@ -101,7 +101,7 @@
                           95
                           (range 20)
                           :a]
-                    "___" [(fn [x] :foo)]}]
+                    "___" [(fn [x] x)]}]
 
  ["11_sequence_comprehensions" {"__" [[0 1 2 3 4 5]
                                    (* index index)
