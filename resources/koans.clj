@@ -104,9 +104,9 @@
                     "___" [(fn [x] x)]}]
 
  ["11_sequence_comprehensions" {"__" [[0 1 2 3 4 5]
-                                   (* index index)
+                                   (* x x)
                                    (range 10)
-                                   (odd? index) (* index index)
+                                   (odd? x) (* x x)
                                    [row column]
                                    ]}]
 
