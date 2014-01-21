@@ -32,17 +32,18 @@ functionality of readline (command-line history, for example).
 
 ### Installing dependencies
 
-Dependencies are installed automatically with lein 2, but if you are still
-using lein 1 run
+Dependencies are installed automatically with lein 2, but if for some reason
+you're on lein 1 and can't upgrade, you'll need to run
 
 `lein deps`
 
 which will download all dependencies you need to run the Clojure koans.
 
+I strongly recommend that you upgrade to lein 2 instead!
 
 ### Running the Koans
 
-If you're running from the zipfile or using lein 1, simply run
+If you're running from the zipfile, simply run
 
 `script/run` on Mac/\*nix
 
@@ -116,12 +117,16 @@ You can exit the REPL with `CTRL-d` on any OS.
 ### Contributing
 
 Patches are encouraged!  Make sure the answer sheet still passes
-(`script/test`, or `script\test` on Windows, or `lein koan test` on lein2), and
-send a pull request.
+(`lein koan test`), and send a pull request.
 
 The file ideaboard.txt has lots of good ideas for new koans to start, or things
 to add to existing koans.  So write some fun exercises, add your answers to
 `resources/koans.clj`, and we'll get them in there!
+
+Please follow the guidelines in
+http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html for
+commmit messages, and put your code in a feature branch (not master) before
+making the pull request. This makes patches easier to review.
 
 Feel free to contact me (Colin Jones / trptcolin) on Github or elsewhere if you
 have any questions or want more direction before you start pitching in.
