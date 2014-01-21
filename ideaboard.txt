@@ -21,7 +21,6 @@ flatten
 
 frequencies
 reductions
-group-by
 keep
 keep-indexed
 map-indexed
