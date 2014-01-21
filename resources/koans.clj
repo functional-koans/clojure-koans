@@ -216,7 +216,7 @@
                            {:last-name "Smith" :id 1}]
                         2 [{:name "Mike" :id 2}]}
                        nil
-                       {:nauty-list [{:name "Jimmy" :bad true}
-                                     {:name "Joe" :bad true}]
+                       {:naughty-list [{:name "Jimmy" :bad true}
+                                       {:name "Joe" :bad true}]
                         :nice-list [{:name "Jack" :bad false}]}]}]
 ]
