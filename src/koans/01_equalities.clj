@@ -17,8 +17,11 @@
   "But a looser equality is also possible"
   (= __ (== 2.0 2))
 
+  "When things cannot be equal, they must be different"
+  (not= :fill-in-the-blank __)
+
   "Something is not equal to nothing"
-  (= __ (not (= 1 nil)))
+  (= __ (not= 1 nil))
 
   "Strings, and keywords, and symbols: oh my!"
   (= __ (= "foo" :foo 'foo))
@@ -27,7 +30,4 @@
   (= :foo (keyword __))
 
   "Symbolism is all around us"
-  (= 'foo (symbol __))
-
-  "When things cannot be equal, they must be different"
-  (not= :fill-in-the-blank __))
+  (= 'foo (symbol __)))
