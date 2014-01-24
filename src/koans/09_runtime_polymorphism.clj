@@ -1,3 +1,6 @@
+(ns koans.09-runtime-polymorphism
+  (:require (koan-engine [core :refer [meditations __]])))
+
 (defn hello
   ([] "Hello World!")
   ([a] (str "Hello, you silly " a "."))

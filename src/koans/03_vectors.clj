@@ -1,3 +1,6 @@
+(ns koans.03-vectors
+  (:require (koan-engine [core :refer [meditations __]])))
+
 (meditations
   "You can use vectors in clojure as array-like structures"
   (= __ (count [42]))

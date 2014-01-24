@@ -1,3 +1,6 @@
+(ns koans.10-lazy-sequences
+  (:require (koan-engine [core :refer [meditations __]])))
+
 (meditations
   "There are many ways to generate a sequence"
   (= __ (range 1 5))

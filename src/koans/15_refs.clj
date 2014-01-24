@@ -1,3 +1,6 @@
+(ns koans.15-refs
+  (:require (koan-engine [core :refer [meditations __ ___]])))
+
 (def the-world (ref "hello"))
 (def bizarro-world (ref {}))
 

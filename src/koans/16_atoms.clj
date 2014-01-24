@@ -1,3 +1,6 @@
+(ns koans.16-atoms
+  (:require (koan-engine [core :refer [meditations __]])))
+
 (def atomic-clock (atom 0))
 
 (meditations

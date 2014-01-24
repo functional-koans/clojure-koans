@@ -1,3 +1,6 @@
+(ns koans.08-higher-order-functions
+  (:require (koan-engine [core :refer [meditations __]])))
+
 (meditations
   "The map function relates a sequence to another"
   (= [__ __ __] (map (fn [x] (* 4 x)) [1 2 3]))

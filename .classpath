@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src"/>
+  <classpathentry kind="lib" path="/Users/gary/ena/talk/2014-01-18-clojure-full-day/workspace/clojure-koans/target/classes"/>
+  <classpathentry kind="lib" path="/Users/gary/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar"/>
+  <classpathentry kind="lib" path="/Users/gary/.m2/repository/clj-time/clj-time/0.5.0/clj-time-0.5.0.jar"/>
+  <classpathentry kind="lib" path="/Users/gary/.m2/repository/fresh/fresh/1.0.2/fresh-1.0.2.jar"/>
+  <classpathentry kind="lib" path="/Users/gary/.m2/repository/koan-engine/koan-engine/0.2.0/koan-engine-0.2.0.jar"/>
+  <classpathentry kind="lib" path="/Users/gary/.m2/repository/org/clojure/tools.nrepl/0.2.3/tools.nrepl-0.2.3.jar"/>
+  <classpathentry kind="lib" path="/Users/gary/.m2/repository/spyscope/spyscope/0.1.4/spyscope-0.1.4.jar"/>
+  <classpathentry kind="lib" path="/Users/gary/.m2/repository/org/clojure/clojure/1.5.1/clojure-1.5.1.jar"/>
+  <classpathentry kind="lib" path="/Users/gary/.m2/repository/clojure-complete/clojure-complete/0.2.3/clojure-complete-0.2.3.jar"/>
+  <classpathentry kind="lib" path="/Users/gary/.m2/repository/lein-koan/lein-koan/0.1.2/lein-koan-0.1.2.jar"/>
+  <classpathentry kind="lib" path="/Users/gary/.m2/repository/joda-time/joda-time/2.2/joda-time-2.2.jar"/>
+  <classpathentry kind="src" path="resources"/>
+  <classpathentry path="org.eclipse.jdt.launching.JRE_CONTAINER" kind="con"/>
+  <classpathentry kind="output" path="target/classes"/>
+</classpath>

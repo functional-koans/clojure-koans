@@ -1,3 +1,6 @@
+(ns koans.14-destructuring
+  (:require (koan-engine [core :refer [meditations __ ___]])))
+
 (def test-address
   {:street-address "123 Test Lane"
    :city "Testerville"

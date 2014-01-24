@@ -1,3 +1,6 @@
+(ns koans.20-partition
+  (:require (koan-engine [core :refer [meditations __]])))
+
 (meditations
   "To split a collection you can use the partition function"
   (= '((0 1) (2 3)) (__ 2 (range 4)))
