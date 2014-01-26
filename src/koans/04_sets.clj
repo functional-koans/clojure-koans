@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.04-sets (:use koan-engine.core))
+
 (meditations
   "You can create a set by converting another collection"
   (= #{3} (set __))

@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.02-lists (:use koan-engine.core))
+
 (meditations
   "Lists can be expressed by function or a quoted form"
   (= '(__ __ __ __ __) (list 1 2 3 4 5))

@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.10-lazy-sequences (:use koan-engine.core))
+
 (meditations
   "There are many ways to generate a sequence"
   (= __ (range 1 5))

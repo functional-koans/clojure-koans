@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.01-equalities (:use koan-engine.core))
+
 (meditations
   "We shall contemplate truth by testing reality, via equality"
   (= __ true)

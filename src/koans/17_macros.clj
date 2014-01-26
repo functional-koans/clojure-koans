@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.17-macros (:use koan-engine.core))
+
 (defmacro hello [x]
   (str "Hello, " x))
 

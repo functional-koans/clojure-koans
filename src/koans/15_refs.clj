@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.15-refs (:use koan-engine.core))
+
 (def the-world (ref "hello"))
 (def bizarro-world (ref {}))
 

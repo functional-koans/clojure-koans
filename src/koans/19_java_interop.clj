@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.19-java-interop (:use koan-engine.core))
+
 (meditations
   "You may have done more with Java than you know"
   (= __ (class "warfare")) ; hint: try typing (javadoc "warfare") in the REPL
