@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.11-sequence-comprehensions (:use koan-engine.core))
+
 (meditations
   "Sequence comprehensions can bind each element in turn to a symbol"
   (= __

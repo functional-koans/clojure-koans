@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.05-maps (:use koan-engine.core))
+
 (meditations
   "Don't get lost when creating a map"
   (= {:a 1 :b 2} (hash-map :a 1 __ __))

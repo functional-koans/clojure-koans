@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.21-group-by (:use koan-engine.core))
+
 (defn get-odds-and-evens [coll]
   (let [{odds true evens false} (group-by __ coll)]
     [odds evens]))
