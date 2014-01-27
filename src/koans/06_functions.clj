@@ -1,3 +1,6 @@
+(ns koans.06-functions
+  (:require (koan-engine [core :refer [meditations __ ___]])))
+
 (defn multiply-by-ten [n]
   (* 10 n))
 
