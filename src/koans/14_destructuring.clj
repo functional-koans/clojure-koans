@@ -22,8 +22,8 @@
        __))
 
   "You can regain the full argument if you like arguing"
-  (= {:original-parts ["Steven" "Hawking"] :named-parts {:first "Steven" :last "Hawking"}}
-     (let [[first-name last-name :as full-name] ["Steven" "Hawking"]]
+  (= {:original-parts ["Stephen" "Hawking"] :named-parts {:first "Stephen" :last "Hawking"}}
+     (let [[first-name last-name :as full-name] ["Stephen" "Hawking"]]
        __))
 
   "Break up maps by key"
