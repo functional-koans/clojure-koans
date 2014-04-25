@@ -33,7 +33,7 @@
   (= __ (contains? {:a nil :b nil} :c))
 
   "Maps are immutable, but you can create a new and improved version"
-  (= {1 "January" 2 __} (assoc {1 "January" } 2 "February"))
+  (= {1 "January" 2 __} (assoc {1 "January"} 2 "February"))
 
   "You can also create a new version with an entry removed"
   (= {__ __} (dissoc {1 "January" 2 "February"} 2))
