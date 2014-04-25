@@ -10,7 +10,7 @@
 
   "You can simulate filter + remove in one pass"
   (= (get-odds-and-evens [1 2 3 4 5])
-     ((partial (juxt filter remove) odd?) [1 2 3 4 5])
+     ((juxt filter remove) odd? [1 2 3 4 5])
      [[1 3 5] [2 4]])
 
   "You can also group by a primary key"
