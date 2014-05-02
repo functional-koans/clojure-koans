@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.01-equalities (:use koan-engine.core))
+(ns koans.01-equalities
+  (:require [koan-engine.core :refer :all]))
 
 (meditations
   "We shall contemplate truth by testing reality, via equality"

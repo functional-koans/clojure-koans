@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.09-runtime-polymorphism (:use koan-engine.core))
+(ns koans.09-runtime-polymorphism
+  (:require [koan-engine.core :refer :all]))
 
 (defn hello
   ([] "Hello World!")

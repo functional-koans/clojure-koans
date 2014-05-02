@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.05-maps (:use koan-engine.core))
+(ns koans.05-maps
+  (:require [koan-engine.core :refer :all]))
 
 (meditations
   "Don't get lost when creating a map"

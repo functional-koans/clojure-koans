@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.17-macros (:use koan-engine.core))
+(ns koans.17-macros
+  (:require [koan-engine.core :refer :all]))
 
 (defmacro hello [x]
   (str "Hello, " x))

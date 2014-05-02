@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.02-lists (:use koan-engine.core))
+(ns koans.02-lists
+  (:require [koan-engine.core :refer :all]))
 
 (meditations
   "Lists can be expressed by function or a quoted form"

@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.07-conditionals (:use koan-engine.core))
+(ns koans.07-conditionals
+  (:require [koan-engine.core :refer :all]))
 
 (defn explain-defcon-level [exercise-term]
   (case exercise-term

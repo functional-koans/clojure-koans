@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.18-datatypes (:use koan-engine.core))
+(ns koans.18-datatypes
+  (:require [koan-engine.core :refer :all]))
 
 (defrecord Nobel [prize])
 (deftype Pulitzer [prize])

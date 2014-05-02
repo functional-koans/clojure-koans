@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.16-atoms (:use koan-engine.core))
+(ns koans.16-atoms
+  (:require [koan-engine.core :refer :all]))
 
 (def atomic-clock (atom 0))
 

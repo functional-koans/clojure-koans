@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.20-partition (:use koan-engine.core))
+(ns koans.20-partition
+  (:require [koan-engine.core :refer :all]))
 
 (meditations
   "To split a collection you can use the partition function"

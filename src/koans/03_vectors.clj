@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.03-vectors (:use koan-engine.core))
+(ns koans.03-vectors
+  (:require [koan-engine.core :refer :all]))
 
 (meditations
   "You can use vectors in clojure as array-like structures"

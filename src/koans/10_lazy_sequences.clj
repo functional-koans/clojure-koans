@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.10-lazy-sequences (:use koan-engine.core))
+(ns koans.10-lazy-sequences
+  (:require [koan-engine.core :refer :all]))
 
 (meditations
   "There are many ways to generate a sequence"

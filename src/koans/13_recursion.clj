@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.13-recursion (:use koan-engine.core))
+(ns koans.13-recursion
+  (:require [koan-engine.core :refer :all]))
 
 (defn is-even? [n]
   (if (= n 0)

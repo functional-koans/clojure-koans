@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.19-java-interop (:use koan-engine.core))
+(ns koans.19-java-interop
+  (:require [koan-engine.core :refer :all]))
 
 (meditations
   "You may have done more with Java than you know"

@@ -1,5 +1,5 @@
-(ns koan-engine.runner)
-(ns koans.11-sequence-comprehensions (:use koan-engine.core))
+(ns koans.11-sequence-comprehensions
+  (:require [koan-engine.core :refer :all]))
 
 (meditations
   "Sequence comprehensions can bind each element in turn to a symbol"
