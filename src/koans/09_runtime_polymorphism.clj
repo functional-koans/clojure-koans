@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.09-runtime-polymorphism (:use koan-engine.core))
+
 (defn hello
   ([] "Hello World!")
   ([a] (str "Hello, you silly " a "."))

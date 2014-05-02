@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.06-functions (:use koan-engine.core))
+
 (defn multiply-by-ten [n]
   (* 10 n))
 

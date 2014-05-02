@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.12-creating-functions (:use koan-engine.core))
+
 (defn square [x] (* x x))
 
 (meditations

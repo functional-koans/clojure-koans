@@ -1,3 +1,6 @@
+(ns koan-engine.runner)
+(ns koans.16-atoms (:use koan-engine.core))
+
 (def atomic-clock (atom 0))
 
 (meditations
