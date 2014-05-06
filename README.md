@@ -41,6 +41,12 @@ which will download all dependencies you need to run the Clojure koans.
 
 I strongly recommend that you upgrade to lein 2 instead!
 
+### Installing on Nitrous.IO
+
+Start working with Clojure Koans instantly on [Nitrous.IO](https://www.nitrous.io/?utm_source=github.com&utm_campaign=functional-koans/clojure-koans&utm_medium=hackonnitrous):
+
+[![Hack functional-koans/clojure-koans on Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=functional-koans%2Fclojure-koans&file_to_open=README.nitrous.md)
+
 ### Running the Koans
 
 If you're running from the zipfile, simply run
