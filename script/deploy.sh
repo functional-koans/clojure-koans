@@ -4,6 +4,8 @@ mkdir -p releases
 lein1 deps
 zip -r releases/clojure-koans-`date +"%Y-%m-%d_%H-%M"`.zip \
     . \
+    -x "./.idea/*" \
+    -x "./.lein-plugins/*" \
     -x "./.git/*" \
     -x "releases/*"
 
