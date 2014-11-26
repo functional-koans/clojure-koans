@@ -21,7 +21,7 @@
   (= __ (:a {:a 1 :b 2}))
 
   "But map keys need not be keywords"
-  (= __ ({2006 "Torino" 2010 "Vancouver" 2014 "Sochi"} 2010))
+  (= __ ({2010 "Vancouver" 2014 "Sochi" 2018 "PyeongChang"} 2014))
 
   "You may not be able to find an entry for a key"
   (= __ (get {:a 1 :b 2} :c))
@@ -43,8 +43,8 @@
 
   "Often you will need to get the keys, but the order is undependable"
   (= (list __ __ __)
-     (sort (keys {2010 "Vancouver" 2014 "Sochi" 2006 "Torino"})))
+     (sort (keys { 2014 "Sochi" 2018 "PyeongChang" 2010 "Vancouver"})))
 
   "You can get the values in a similar way"
   (= (list __ __ __)
-     (sort (vals {2006 "Torino" 2010 "Vancouver" 2014 "Sochi"}))))
+     (sort (vals {2010 "Vancouver" 2014 "Sochi" 2018 "PyeongChang"}))))

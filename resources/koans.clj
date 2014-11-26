@@ -47,7 +47,7 @@
                 2
                 1
                 1
-                "Vancouver"
+                "Sochi"
                 nil
                 :key-not-found
                 true
@@ -55,7 +55,7 @@
                 "February"
                 1 "January"
                 2006 2010 2014
-                "Sochi" "Torino" "Vancouver"]}]
+                "PyeongChang" "Sochi" "Vancouver"]}]
 
  ["06_functions" {"__" [81
                      20
