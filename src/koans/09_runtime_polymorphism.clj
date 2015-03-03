@@ -6,7 +6,7 @@
   ([a] (str "Hello, you silly " a "."))
   ([a & more] (str "Hello to this group: "
                    (apply str
-                          (interpose ", " (concat (list a) more)))
+                          (interpose ", " (cons a more)))
                    "!")))
 
 (defmulti diet (fn [x] (:eater x)))
