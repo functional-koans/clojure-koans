@@ -3,11 +3,11 @@
 
 (defn explain-defcon-level [exercise-term]
   (case exercise-term
-        :fade-out          :you-and-what-army
-        :double-take       :call-me-when-its-important
-        :round-house       :o-rly
-        :fast-pace         :thats-pretty-bad
-        :cocked-pistol     :sirens
+        :defcon-five        :blue
+        :defcon-four        :green
+        :defcon-three       :yellow
+        :defcon-two         :red
+        :defcon-one         :white
         :say-what?))
 
 (meditations
@@ -41,9 +41,9 @@
           'more-doom))
 
   "In case of emergency, sound the alarms"
-  (= :sirens
+  (= :white
      (explain-defcon-level __))
 
   "But admit it when you don't know what to do"
   (= __
-     (explain-defcon-level :yo-mama)))
+     (explain-defcon-level :defcon-seven)))
