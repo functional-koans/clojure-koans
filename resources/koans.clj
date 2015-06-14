@@ -54,7 +54,7 @@
                 false
                 "February"
                 1 "January"
-                2006 2010 2014
+                2010 2014 2018
                 "PyeongChang" "Sochi" "Vancouver"]}]
 
  ["06_functions" {"__" [81
