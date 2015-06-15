@@ -1,14 +1,12 @@
 (ns koans.07-conditionals
   (:require [koan-engine.core :refer :all]))
 
-(defn explain-defcon-level [exercise-term]
+(defn explain-exercise-velocity [exercise-term]
   (case exercise-term
-        :fade-out          :you-and-what-army
-        :double-take       :call-me-when-its-important
-        :round-house       :o-rly
-        :fast-pace         :thats-pretty-bad
-        :cocked-pistol     :sirens
-        :say-what?))
+        :bicycling        "pretty fast"
+        :jogging          "not super fast"
+        :walking          "not fast at all"
+        "is that even exercise?"))
 
 (meditations
   "You will face many decisions"
@@ -40,10 +38,10 @@
           'doom
           'more-doom))
 
-  "In case of emergency, sound the alarms"
-  (= :sirens
-     (explain-defcon-level __))
+  "In case of emergency, go fast"
+  (= "pretty fast"
+     (explain-exercise-velocity __))
 
   "But admit it when you don't know what to do"
   (= __
-     (explain-defcon-level :yo-mama)))
+     (explain-exercise-velocity :watching-tv)))
