@@ -1,4 +1,4 @@
-= Pull Requests
+# Pull Requests
 
 This is a test of merging from a personal repo to
 
