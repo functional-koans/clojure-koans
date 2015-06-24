@@ -24,5 +24,5 @@
      (repeat 10 __))
 
   "Iteration can be used for repetition"
-  (= (repeat 100 :foo)
-     (take 100 (iterate ___ :foo))))
+  (= (repeat 100 :hello)
+     (take 100 (iterate ___ :hello))))
