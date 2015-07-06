@@ -6,8 +6,8 @@
                       true
                       true
                       false
-                      "foo"
-                      "foo"
+                      "hello"
+                      "hello"
                       3]}]
 
  ["02_lists" {"__" [1 2 3 4 5
@@ -74,8 +74,8 @@
                         :glory
                         4 6 :your-road
                         1
-                        :cocked-pistol
-                        :say-what?]}]
+                        :bicycling
+                        "is that even exercise?"]}]
 
  ["08_higher_order_functions" {"__" [4 8 12
                                   (* x x)
@@ -135,9 +135,9 @@
                "___" [not]}]
 
  ["14_destructuring" {"__" [":bar:foo"
-                         (format (str "First comes %s, "
-                                      "then comes %s, "
-                                      "then comes %s with the baby carriage")
+                         (format (str "An Oxford comma list of %s, "
+                                      "%s, "
+                                      "and %s.")
                                  a b c)
                          (apply str
                                 (interpose " "
@@ -214,9 +214,9 @@
                        {5 ["hello" "world"] 3 ["foo" "bar"]}
                        {1 [{:name "Bob" :id 1}
                            {:last-name "Smith" :id 1}]
-                        2 [{:name "Mike" :id 2}]}
+                        2 [{:name "Jennifer" :id 2}]}
                        nil
                        {:naughty-list [{:name "Jimmy" :bad true}
                                        {:name "Joe" :bad true}]
-                        :nice-list [{:name "Jack" :bad false}]}]}]
+                        :nice-list [{:name "Jane" :bad false}]}]}]
 ]

@@ -10,7 +10,6 @@
   "To categorize a collection by some function, use group-by."
   (= __ (group-by count ["hello" "world" "foo" "bar"]))
 
-
   "You can simulate filter + remove in one pass"
   (= (get-odds-and-evens [1 2 3 4 5])
      ((juxt filter remove) odd? [1 2 3 4 5])
@@ -34,5 +33,5 @@
   (= __
      (group-by #(if (:bad %) :naughty-list :nice-list)
                [{:name "Jimmy" :bad true}
-                {:name "Anna" :bad false}
+                {:name "Jane" :bad false}
                 {:name "Joe" :bad true}])))
