@@ -12,16 +12,16 @@
          [:foo :bar]))
 
   "Whether in function definitions"
-  (= (str "First comes love, "
-          "then comes marriage, "
-          "then comes Clojure with the baby carriage")
+  (= (str "An Oxford comma list of apples, "
+          "oranges, "
+          "and pears.")
      ((fn [[a b c]] __)
-      ["love" "marriage" "Clojure"]))
+      ["apples" "oranges" "pears"]))
 
   "Or in let expressions"
-  (= "Rich Hickey aka The Clojurer aka Go Time aka Macro Killah"
+  (= "Rich Hickey aka The Clojurer aka Go Time aka Lambda Guru"
      (let [[first-name last-name & aliases]
-           (list "Rich" "Hickey" "The Clojurer" "Go Time" "Macro Killah")]
+           (list "Rich" "Hickey" "The Clojurer" "Go Time" "Lambda Guru")]
        __))
 
   "You can regain the full argument if you like arguing"
