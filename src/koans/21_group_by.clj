@@ -6,7 +6,6 @@
     [odds evens]))
 
 (meditations
-
   "To categorize a collection by some function, use group-by."
   (= __ (group-by count ["hello" "world" "foo" "bar"]))
 
@@ -21,7 +20,7 @@
                     {:id 2 :name "Jennifer"}
                     {:id 1 :last-name "Smith"} ]))
 
-  "But be careful when you group by non-required key"
+  "But be careful when you group by a non-required key"
   (= {"Bob" [{:name "Bob" :id 1}]
       "Jennifer" [{:name "Jennifer" :id 2}]
       __ [{:last-name "Smith" :id 1}]}
