@@ -20,7 +20,7 @@
   (= __ (take 20 (iterate inc 0)))
 
   "Repetition is key"
-  (= [:a :a :a :a :a :a :a :a :a :a ]
+  (= [:a :a :a :a :a :a :a :a :a :a]
      (repeat 10 __))
 
   "Iteration can be used for repetition"
