@@ -219,4 +219,14 @@
                        {:naughty-list [{:name "Jimmy" :bad true}
                                        {:name "Joe" :bad true}]
                         :nice-list [{:name "Jane" :bad false}]}]}]
+ ["22_meta" {"__" [{:league "National League"}
+                   {:division "West"}
+                   "This doesn't implement the IObj interface"
+                   {:foo :bar}
+                   nil
+                   \C
+                   inc
+                   :park "AT&T Park"
+                   'Giants
+                   "Giants"]}]
 ]
