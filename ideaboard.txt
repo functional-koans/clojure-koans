@@ -3,11 +3,11 @@ Concepts / Language Features
 
 Quoting
 
+strings & character literals
 new record syntax
 Agents
 Vars
 state identity lifetime
-Metadata
 immutability / side effects
 type hints
 Pre and Post conditions of functions
