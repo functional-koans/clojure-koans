@@ -10,9 +10,29 @@
                       "hello"
                       3]}]
 
- ["02_strings" {"__" [
-                
-                ]}]
+ ["02_strings" {"__" ["hello"
+                "world"
+                "Cool "
+                "right?"
+                0
+                11
+                false
+                6 11
+                "123"
+                ", "
+                "1" "2" "3"
+                "olleh"
+                "hello"
+                13
+                -1
+                "hello world"
+                true
+                false
+                false
+                "a"
+                true
+                true
+                false]}]
 
  ["03_lists" {"__" [1 2 3 4 5
                  1
