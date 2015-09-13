@@ -1,4 +1,4 @@
-(ns koans.10-lazy-sequences
+(ns koans.11-lazy-sequences
   (:require [koan-engine.core :refer :all]))
 
 (meditations

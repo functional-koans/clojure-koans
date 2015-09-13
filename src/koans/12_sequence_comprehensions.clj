@@ -1,4 +1,4 @@
-(ns koans.11-sequence-comprehensions
+(ns koans.12-sequence-comprehensions
   (:require [koan-engine.core :refer :all]))
 
 (meditations

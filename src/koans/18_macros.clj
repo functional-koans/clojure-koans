@@ -1,4 +1,4 @@
-(ns koans.17-macros
+(ns koans.18-macros
   (:require [koan-engine.core :refer :all]))
 
 (defmacro hello [x]

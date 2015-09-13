@@ -1,4 +1,4 @@
-(ns koans.05-maps
+(ns koans.06-maps
   (:require [koan-engine.core :refer :all]))
 
 (meditations
