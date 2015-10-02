@@ -27,13 +27,13 @@
   "How about joining together elements in a list?"
   (= __ (string/join '(1 2 3)))
 
-  "What if you wanted to seperate them out?"
+  "What if you wanted to separate them out?"
   (= "1, 2, 3" (string/join __ '(1 2 3)))
 
-  "Maybe you want to seperate out all you're lines"
+  "Maybe you want to separate out all your lines"
   (= [__ __ __] (string/split-lines "1\n2\n3"))
 
-  "You may want to make sure you're words are backwards"
+  "You may want to make sure your words are backwards"
   (= __ (string/reverse "hello"))
 
   "Maybe you want to find the index of the first occurence of a substring"
