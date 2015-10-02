@@ -1,14 +1,7 @@
 *~
 bin
-classes
-lib
 releases
-target
 *.jar
-.DS_Store
-.lein-deps-sum
-.lein-plugins
-.lein-repl-history
 
 # Created by https://www.gitignore.io/api/clojure,osx,linux,windows,leiningen,intellij,eclipse,sublimetext
 
