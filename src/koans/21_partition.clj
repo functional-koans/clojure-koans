@@ -1,4 +1,4 @@
-(ns koans.20-partition
+(ns koans.21-partition
   (:require [koan-engine.core :refer :all]))
 
 (meditations

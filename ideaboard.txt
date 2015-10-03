@@ -3,7 +3,6 @@ Concepts / Language Features
 
 Quoting
 
-strings & character literals
 new record syntax
 Agents
 Vars
@@ -27,4 +26,3 @@ map-indexed
 partition-all
 partition-by
 repeatedly
-

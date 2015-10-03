@@ -10,7 +10,31 @@
                       "hello"
                       3]}]
 
- ["02_lists" {"__" [1 2 3 4 5
+ ["02_strings" {"__" ["hello"
+                "world"
+                "Cool "
+                "right?"
+                0
+                11
+                false
+                6 11
+                "123"
+                ", "
+                "1" "2" "3"
+                "olleh"
+                "hello"
+                13
+                -1
+                "hello world"
+                true
+                false
+                false
+                "a"
+                true
+                true
+                false]}]
+
+ ["03_lists" {"__" [1 2 3 4 5
                  1
                  [2 3 4 5]
                  3
@@ -23,7 +47,7 @@
                  "No dice!"
                  ()]}]
 
- ["03_vectors" {"__" [1
+ ["04_vectors" {"__" [1
                    [1]
                    [nil nil]
                    2
@@ -34,14 +58,14 @@
                    [:butter :and]
                    3]}]
 
- ["04_sets" {"__" [[3]
+ ["05_sets" {"__" [[3]
                 3
                 #{1 2 3 4 5}
                 #{1 2 3 4 5}
                 #{2 3}
                 #{1 4}]}]
 
- ["05_maps" {"__" [:b 2
+ ["06_maps" {"__" [:b 2
                 1
                 2
                 2
@@ -57,7 +81,7 @@
                 2010 2014 2018
                 "PyeongChang" "Sochi" "Vancouver"]}]
 
- ["06_functions" {"__" [81
+ ["07_functions" {"__" [81
                      20
                      10
                      60
@@ -68,7 +92,7 @@
                       (fn [f] (f 5))
                       (fn [f] (f 5))]}]
 
- ["07_conditionals" {"__" [:a
+ ["08_conditionals" {"__" [:a
                         []
                         nil
                         :glory
@@ -77,7 +101,7 @@
                         :bicycling
                         "is that even exercise?"]}]
 
- ["08_higher_order_functions" {"__" [4 8 12
+ ["09_higher_order_functions" {"__" [4 8 12
                                   (* x x)
                                   [false false true false false]
                                   ()
@@ -88,14 +112,14 @@
                                   100
                                   (count a) (count b)]}]
 
- ["09_runtime_polymorphism" {"__" [(str (:name a) " eats veggies.")
+ ["10_runtime_polymorphism" {"__" [(str (:name a) " eats veggies.")
                                 (str (:name a) " eats animals.")
                                 (str "I don't know what " (:name a) " eats.")
                                 "Hello World!"
                                 "Hello, you silly world."
                                 "Hello to this group: Peter, Paul, Mary!" ]}]
 
- ["10_lazy_sequences" {"__" [[1 2 3 4]
+ ["11_lazy_sequences" {"__" [[1 2 3 4]
                           [0 1 2 3 4]
                           10
                           95
@@ -103,14 +127,14 @@
                           :a]
                     "___" [(fn [x] x)]}]
 
- ["11_sequence_comprehensions" {"__" [[0 1 2 3 4 5]
+ ["12_sequence_comprehensions" {"__" [[0 1 2 3 4 5]
                                    (* x x)
                                    (range 10)
                                    (odd? x) (* x x)
                                    [row column]
                                    ]}]
 
- ["12_creating_functions" {"__" [true false true
+ ["13_creating_functions" {"__" [true false true
                               4
                               :a :b :c :d
                               :c :d
@@ -120,7 +144,7 @@
                                multiply-by-5
                                (comp dec square)]}]
 
- ["13_recursion" {"__" [true
+ ["14_recursion" {"__" [true
                      acc
                      (loop [coll coll
                             acc ()]
@@ -134,7 +158,7 @@
                          (recur (dec n) (* acc n))))]
                "___" [not]}]
 
- ["14_destructuring" {"__" [":bar:foo"
+ ["15_destructuring" {"__" [":bar:foo"
                          (format (str "An Oxford comma list of %s, "
                                       "%s, "
                                       "and %s.")
@@ -156,7 +180,7 @@
                                  street-address ", " city ", " state))
                           ]}]
 
- ["15_refs" {"__" ["hello"
+ ["16_refs" {"__" ["hello"
                 "hello"
                 "better"
                 "better!!!"
@@ -165,7 +189,7 @@
                 ]
           "___" [(fn [x] (+ 20 x))]}]
 
- ["16_atoms" {"__" [0
+ ["17_atoms" {"__" [0
                  1
                  (swap! atomic-clock (partial + 4))
                  20
@@ -173,7 +197,7 @@
                  atomic-clock 20 :fin
                  ]}]
 
- ["17_macros" {"__" [~(first form)
+ ["18_macros" {"__" [~(first form)
                   ~(nth form 2)
                   form
                   (drop 2 form)
@@ -183,7 +207,7 @@
                   '(* 10 2)
                   '(+ 10 (2 * 3))]}]
 
- ["18_datatypes" {"__" [(print
+ ["19_datatypes" {"__" [(print
                       (str "You're really the "
                            (.category this)
                            ", " recipient "... sorry."))
@@ -195,7 +219,7 @@
                      (str "Congratulations on your Best Picture Oscar, "
                           "Evil Alien Conquerors!")]}]
 
- ["19_java_interop" {"__" [java.lang.String
+ ["20_java_interop" {"__" [java.lang.String
                         "SELECT * FROM"
                         10
                         1024
@@ -203,14 +227,14 @@
                   "___" [#(.toUpperCase %)
                          ]
                   }]
- ["20_partition" {"__" [partition
+ ["21_partition" {"__" [partition
                         [:a :b :c]
                         '((0 1 2) (3 4))
                         5
                         :hello
                         (6 :these :are)
                         ]}]
- ["21_group_by" {"__" [odd?
+ ["22_group_by" {"__" [odd?
                        {5 ["hello" "world"] 3 ["foo" "bar"]}
                        {1 [{:name "Bob" :id 1}
                            {:last-name "Smith" :id 1}]
@@ -219,7 +243,7 @@
                        {:naughty-list [{:name "Jimmy" :bad true}
                                        {:name "Joe" :bad true}]
                         :nice-list [{:name "Jane" :bad false}]}]}]
- ["22_meta" {"__" [{:league "National League"}
+ ["23_meta" {"__" [{:league "National League"}
                    {:division "West"}
                    "This doesn't implement the IObj interface"
                    {:foo :bar}

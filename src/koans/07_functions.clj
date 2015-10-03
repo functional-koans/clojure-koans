@@ -1,4 +1,4 @@
-(ns koans.06-functions
+(ns koans.07-functions
   (:require [koan-engine.core :refer :all]))
 
 (defn multiply-by-ten [n]

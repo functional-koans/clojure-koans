@@ -1,4 +1,4 @@
-(ns koans.15-refs
+(ns koans.16-refs
   (:require [koan-engine.core :refer :all]))
 
 (def the-world (ref "hello"))
