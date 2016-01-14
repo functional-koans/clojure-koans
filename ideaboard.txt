@@ -10,6 +10,9 @@ state identity lifetime
 immutability / side effects
 type hints
 Pre and Post conditions of functions
+ex-info/ex-data
+reducers (?)
+transducers (?) - maybe just some basic ones, nothing too crazy
 
 Particular Functions
 =====
