@@ -8,7 +8,7 @@
   "But watch out if there are not enough elements to form n sequences"
   (= '(__) (partition 3 [:a :b :c :d :e]))
 
-  "You can use partition-all to also get partitions with less than n elements"
+  "You can use partition-all to also get partitions with less or equal to n elements"
   (= __ (partition-all 3 (range 5)))
 
   "If you need to, you can start each sequence with an offset"
