@@ -24,7 +24,7 @@
                 "olleh"
                 "hello"
                 13
-                -1
+                nil
                 "hello world"
                 true
                 false
