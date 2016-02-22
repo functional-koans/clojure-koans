@@ -253,4 +253,11 @@
                    :park "AT&T Park"
                    'Giants
                    "Giants"]}]
+  ["24_quote" {"__"[(1 2 3 4 5)
+                    (1 2 3 4 5)
+                    'age
+                    quote
+                    '(+ 2 3)
+                    1 2 3
+                    1 5]}]
 ]
