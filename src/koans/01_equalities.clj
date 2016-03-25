@@ -32,7 +32,7 @@
   "Symbolism is all around us"
   (= 'hello (symbol __))
 
-  "Introducing nil"
+  "What could be equivalent to nothing?"
   (= __ nil)
 
   "When things cannot be equal, they must be different"
