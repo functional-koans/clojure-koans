@@ -8,6 +8,7 @@
                       false
                       "hello"
                       "hello"
+                      nil
                       3]}]
 
  ["02_strings" {"__" ["hello"
@@ -253,7 +254,7 @@
                    :park "AT&T Park"
                    'Giants
                    "Giants"]}]
-  ["24_quote" {"__"[(1 2 3 4 5)
+ ["24_quote" {"__" ['(1 2 3 4 5)
                     (1 2 3 4 5)
                     'age
                     quote
