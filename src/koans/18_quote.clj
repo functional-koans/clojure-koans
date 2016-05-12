@@ -1,4 +1,4 @@
-(ns koans.24-quote
+(ns koans.18-quote
   (:require [koan-engine.core :refer :all]))
 
 
