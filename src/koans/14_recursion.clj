@@ -33,7 +33,7 @@
   (= '(1) (recursive-reverse [1]))
 
   "Yet it becomes more difficult the more steps you take"
-  (= '(5 4 3 2 1) (recursive-reverse [1 2 3 4 5]))
+  (= '(6 5 4 3 2) (recursive-reverse [2 3 4 5 6]))
 
   "Simple things may appear simple."
   (= 1 (factorial 1))
