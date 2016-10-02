@@ -80,8 +80,10 @@
                 "February"
                 1 "January"
                 :c 3 
+                2
                 2010 2014 2018
-                "PyeongChang" "Sochi" "Vancouver"]}]
+                "PyeongChang" "Sochi" "Vancouver"
+                2 3]}]
 
  ["07_functions" {"__" [81
                      20
