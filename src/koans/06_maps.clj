@@ -41,12 +41,12 @@
   "You can also create a new version with an entry removed"
   (= {__ __} (dissoc {1 "January" 2 "February"} 2))
 
-  "Create a new map by merging" 
+  "Create a new map by merging"
   (= {:a 1 :b 2 __ __} (merge {:a 1 :b 2} {:c 3}))
 
   "Specify how to handle entries with same keys when merging"
   (= {:a 1 :b __ :c 3} (merge-with + {:a 1 :b 1} {:b 1 :c 3}))
-  
+
   "Often you will need to get the keys, but the order is undependable"
   (= (list __ __ __)
      (sort (keys { 2014 "Sochi" 2018 "PyeongChang" 2010 "Vancouver"})))
@@ -59,5 +59,5 @@
   (= {:a __ :b __}
      (into {}
            (map
-            (fn[[k v]] [k (inc v)])
+            (fn [[k v]] [k (inc v)])
             {:a 1 :b 2})))
