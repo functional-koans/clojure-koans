@@ -113,6 +113,19 @@ will show you what those commands mean.
 
 You can exit the REPL with `CTRL-d` on any OS.
 
+### Docker
+
+To run koans:
+
+```
+docker run --rm -v $(pwd):/app -w /app clojure lein koan run
+```
+
+To execute REPL:
+
+```
+docker run --rm -it -v $(pwd):/app -w /app clojure lein repl
+```
 
 ### Contributing
 
