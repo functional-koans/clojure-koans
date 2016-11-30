@@ -36,7 +36,7 @@
   "You may want to make sure your words are backwards"
   (= __ (string/reverse "hello"))
 
-  "Maybe you want to find the index of the first occurence of a substring"
+  "Maybe you want to find the index of the first occurrence of a substring"
   (= 0 (string/index-of "hello world" __))
 
   "Or maybe the last index of the same"
