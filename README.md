@@ -5,6 +5,15 @@ experience assumed or required.  Just follow the instructions below to start
 making tests pass!
 
 
+### Getting Started: simpler version
+
+Install Vagrant and VirtualBox
+
+    vagrant up
+    vagrant ssh
+    cd /vagrant
+    lein koan run
+
 ### Getting Started
 
 The easiest and fastest way to get the koans up and running is to [download the
