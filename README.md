@@ -68,6 +68,10 @@ If you're running from a checkout using lein 2, run the koans via
 
 `lein koan run`
 
+If want to run directly from a REPL, once you are inside the `lein repl` prompt you can run the koans with
+
+`(exec "run")`
+
 It's an auto-runner, so as you save your files with the correct answers, it will
 advance you to the next koan or file (conveniently, all files are prefixed with
 the sequence that you should follow).
