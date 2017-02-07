@@ -5,7 +5,7 @@ experience assumed or required.  Just follow the instructions below to start
 making tests pass!
 
 
-### Getting Started
+## Getting Started
 
 The easiest and fastest way to get the koans up and running is to [download the
 latest zip file from Github](https://github.com/functional-koans/clojure-koans/releases).
@@ -20,6 +20,23 @@ your own branch - that way if you pull back the latest koans from master, it'll
 be a bit easier to manage the inevitable conflicts if we make changes to
 exercises you've already completed.
 
+You can install the dependencies for the koans (such as Clojure) on your machine,
+or you can use Vagrant and the configuration in this repository to have everything
+you need set up in a virtual machine.
+
+### Installation with Vagrant
+
+Make sure you have [Vagrant](https://www.vagrantup.com/) and
+[VirtualBox](https://www.virtualbox.org) installed.
+In the root directory of the project, execute:
+
+    vagrant up
+    vagrant ssh
+    cd /vagrant
+    lein koan run
+
+### Installation on Your Machine
+
 The only things you'll need to run the Clojure Koans are:
 
 - JRE 1.6 or higher
@@ -30,8 +47,6 @@ automatically install the Clojure jar in the right place. Leiningen will also
 get you a couple more jarfiles, including JLine, which allows you some of the
 functionality of readline (command-line history, for example).
 
-### Installing dependencies
-
 Dependencies are installed automatically with lein 2, but if for some reason
 you're on lein 1 and can't upgrade, you'll need to run
 
@@ -41,7 +56,7 @@ which will download all dependencies you need to run the Clojure koans.
 
 I strongly recommend that you upgrade to lein 2 instead!
 
-### Running the Koans
+## Running the Koans
 
 If you're running from the zipfile, simply run
 
@@ -83,7 +98,7 @@ things pass, you should work thoughtfully, making sure you understand why the
 answer is what it is.  Enjoy your path to Clojure enlightenment!
 
 
-### Trying more things out
+## Trying more things out
 
 There's a REPL (Read-Evaluate-Print Loop) included in the Clojure Koans. Just
 run:
@@ -114,7 +129,7 @@ will show you what those commands mean.
 You can exit the REPL with `CTRL-d` on any OS.
 
 
-### Contributing
+## Contributing
 
 Patches are encouraged!  Make sure the answer sheet still passes
 (`lein koan test`), and send a pull request.
@@ -132,12 +147,12 @@ Feel free to contact me (Colin Jones / trptcolin) on Github or elsewhere if you
 have any questions or want more direction before you start pitching in.
 
 
-### Contributors
+## Contributors
 
 https://github.com/functional-koans/clojure-koans/contributors
 
 
-### Credits
+## Credits
 
 These exercises were started by [Aaron Bedra](http://github.com/abedra) of
 [Relevance, Inc.](http://github.com/relevance) in early 2010, as a learning
@@ -150,7 +165,7 @@ learning a programming language started with the
 [Ruby Koans](http://rubykoans.com) by [EdgeCase](http://github.com/edgecase).
 
 
-### License
+## License
 
 The use and distribution terms for this software are covered by the
 Eclipse Public License 1.0 (http://opensource.org/licenses/eclipse-1.0.php)
