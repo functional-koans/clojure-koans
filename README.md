@@ -20,20 +20,14 @@ your own branch - that way if you pull back the latest koans from master, it'll
 be a bit easier to manage the inevitable conflicts if we make changes to
 exercises you've already completed.
 
-You can install the dependencies for the koans (such as Clojure) on your machine,
-or you can use Vagrant and the configuration in this repository to have everything
-you need set up in a virtual machine.
+You have a few options for installation:
 
-### Installation with Vagrant
+- Install the dependencies for the koans (such as Clojure) on your machine,
+- Use Vagrant and the configuration in this repository
+- Use Docker
 
-Make sure you have [Vagrant](https://www.vagrantup.com/) and
-[VirtualBox](https://www.virtualbox.org) installed.
-In the root directory of the project, execute:
+Instructions for each option are below!
 
-    vagrant up
-    vagrant ssh
-    cd /vagrant
-    lein koan run
 
 ### Installation on Your Machine
 
@@ -55,6 +49,39 @@ you're on lein 1 and can't upgrade, you'll need to run
 which will download all dependencies you need to run the Clojure koans.
 
 I strongly recommend that you upgrade to lein 2 instead!
+
+
+### Installation with Vagrant
+
+Make sure you have [Vagrant](https://www.vagrantup.com/) and
+[VirtualBox](https://www.virtualbox.org) installed.
+In the root directory of the project, execute:
+
+```
+vagrant up
+vagrant ssh
+cd /vagrant
+lein koan run
+```
+
+
+### Installation with Docker
+
+Once you've got [Docker](https://www.docker.com/) installed, you're basically
+all set. You can run these commands to get started:
+
+To run koans:
+
+```
+docker run --rm -it -v $(pwd):/app -w /app clojure lein koan run
+```
+
+To execute REPL:
+
+```
+docker run --rm -it -v $(pwd):/app -w /app clojure lein repl
+```
+
 
 ## Running the Koans
 
@@ -131,20 +158,6 @@ And if those still don't make sense:
 will show you what those commands mean.
 
 You can exit the REPL with `CTRL-d` on any OS.
-
-### Docker
-
-To run koans:
-
-```
-docker run --rm -v $(pwd):/app -w /app clojure lein koan run
-```
-
-To execute REPL:
-
-```
-docker run --rm -it -v $(pwd):/app -w /app clojure lein repl
-```
 
 ## Contributing
 
