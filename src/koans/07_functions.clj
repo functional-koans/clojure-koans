@@ -30,7 +30,7 @@
 
   "Functions can also take other functions as input"
   (= 20 ((fn [f] (f 4 5))
-           #(+ %1 %2)))
+           #(* %1 %2)))
 
   "Higher-order functions take function arguments"
   (= 25 ((fn [f] (f 5))
