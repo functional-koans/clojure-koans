@@ -7,22 +7,15 @@ making tests pass!
 
 ## Getting Started
 
-The easiest and fastest way to get the koans up and running is to [download the
-latest zip file from Github](https://github.com/functional-koans/clojure-koans/releases).
-This way, you'll have all the dependencies you need, including Clojure itself
-and JLine, and you can skip the rest of this section (skip to "Running the
-Koans").
-
-If you're starting from a cloned or forked repo, that's cool too. This way
-you'll be able to track your progress in Git, and see how your answers compare
-to others, by checking out the project's Network tab. You might want to create
-your own branch - that way if you pull back the latest koans from master, it'll
-be a bit easier to manage the inevitable conflicts if we make changes to
-exercises you've already completed.
+I recommend starting from a cloned or forked repo. This way you'll be able to
+track your progress in Git. You might want to create your own branch - that way
+if you pull back the latest koans from master, it'll be a bit easier to manage
+the inevitable conflicts if we make changes to exercises you've already
+completed.
 
 You have a few options for installation:
 
-- Install the dependencies for the koans (such as Clojure) on your machine,
+- Install the dependencies for the koans (such as Clojure) on your machine
 - Use Vagrant and the configuration in this repository
 - Use Docker
 
@@ -33,22 +26,17 @@ Instructions for each option are below!
 
 The only things you'll need to run the Clojure Koans are:
 
-- JRE 1.6 or higher
-- [clojure-1.8.0.jar](http://repo1.maven.org/maven2/org/clojure/clojure/1.8.0/clojure-1.8.0.zip)
+- JDK (I suggest version 8, but anything 6 or above should work fine)
+- [Leiningen](http://github.com/technomancy/leiningen), a build tool for Clojure
 
-You can use [Leiningen](http://github.com/technomancy/leiningen) to
-automatically install the Clojure jar in the right place. Leiningen will also
-get you a couple more jarfiles, including JLine, which allows you some of the
-functionality of readline (command-line history, for example).
+Once you've cloned this repo and installed the dependencies, you can run:
 
-Dependencies are installed automatically with lein 2, but if for some reason
-you're on lein 1 and can't upgrade, you'll need to run
+```
+lein repl
+```
 
-`lein deps`
-
-which will download all dependencies you need to run the Clojure koans.
-
-I strongly recommend that you upgrade to lein 2 instead!
+to make sure all the dependencies get downloaded properly (and then `(exit)`
+when you want to quit). See below for details on the REPL.
 
 
 ### Installation with Vagrant
@@ -76,7 +64,7 @@ To run koans:
 docker run --rm -it -v $(pwd):/app -w /app clojure lein koan run
 ```
 
-To execute REPL:
+To start up a REPL:
 
 ```
 docker run --rm -it -v $(pwd):/app -w /app clojure lein repl
@@ -85,13 +73,7 @@ docker run --rm -it -v $(pwd):/app -w /app clojure lein repl
 
 ## Running the Koans
 
-If you're running from the zipfile, simply run
-
-`script/run` on Mac/\*nix
-
-`script\run` on Windows
-
-If you're running from a checkout using lein 2, run the koans via
+Run the koans via:
 
 `lein koan run`
 
@@ -99,9 +81,9 @@ If want to run directly from a REPL, once you are inside the `lein repl` prompt 
 
 `(exec "run")`
 
-It's an auto-runner, so as you save your files with the correct answers, it will
-advance you to the next koan or file (conveniently, all files are prefixed with
-the sequence that you should follow).
+Either way, it's an auto-runner, so as you save your files with the correct
+answers, it will advance you to the next koan or file (conveniently, all files
+are prefixed with the sequence that you should follow).
 
 You'll see something like this:
 
@@ -131,14 +113,14 @@ answer is what it is.  Enjoy your path to Clojure enlightenment!
 
 ## Trying more things out
 
-There's a REPL (Read-Evaluate-Print Loop) included in the Clojure Koans. Just
-run:
+It's very useful to try things out in a REPL (Read-Evaluate-Print Loop)
+whenever you get stuck or curious. Run:
 
-`script/repl` on Mac/\*nix
+```
+lein repl
+```
 
-`script\repl` on Windows
-
-If you're on lein 2, `lein repl` is what you want instead.
+and you'll be able to type expressions in, and see what output they produce.
 
 Here are some interesting commands you might try, once you're in a running REPL:
 
@@ -157,7 +139,8 @@ And if those still don't make sense:
 
 will show you what those commands mean.
 
-You can exit the REPL with `CTRL-d` on any OS.
+You can exit the REPL with `CTRL-d`, `(exit)`, or `(quit)`.
+
 
 ## Contributing
 
