@@ -1,8 +1,7 @@
 # Clojure Koans
 
-The Clojure Koans are a fun and easy way to get started with Clojure - no
-experience assumed or required.  Just follow the instructions below to start
-making tests pass!
+The Clojure Koans are a fun way to get started with Clojure - no experience
+assumed or required. Follow the instructions below to start making tests pass!
 
 
 ## Getting Started
@@ -94,7 +93,7 @@ You'll see something like this:
     (= __ true)
 
 The output is telling you that you have a failing test in the file named
-`01_equalities.clj`, on line 3. So you just need to open that file up and make
+`01_equalities.clj`, on line 3. So you need to open that file up and make
 it pass!  You'll always be filling in the blanks to make tests pass.
 Sometimes there could be several correct answers (or even an infinite number):
 any of them will work in these cases. Some tests will pass even if you replace
@@ -103,10 +102,10 @@ you give one correct expression to replace each blank.
 
 The koans differ from normal TDD in that the tests are already written for you,
 so you'll have to pay close attention to the failure messages, because up until
-the very end, making a test pass just means that the next failure message comes
+the very end, making a test pass means that the next failure message comes
 up.
 
-While it might be easy (especially at first) to just fill in the blanks making
+While it might be easy (especially at first) to fill in the blanks making
 things pass, you should work thoughtfully, making sure you understand why the
 answer is what it is.  Enjoy your path to Clojure enlightenment!
 
@@ -170,8 +169,8 @@ https://github.com/functional-koans/clojure-koans/contributors
 These exercises were started by [Aaron Bedra](http://github.com/abedra) of
 [Relevance, Inc.](http://github.com/relevance) in early 2010, as a learning
 tool for newcomers to functional programming. Aaron's macro-fu makes these
-koans extremely simple and fun to use, and to improve upon, and without
-Relevance's initiative, this project would not exist.
+koans clear and fun to use and improve upon, and without Relevance's
+initiative, this project would not exist.
 
 Using the [koans](http://en.wikipedia.org/wiki/koan) metaphor as a tool for
 learning a programming language started with the
