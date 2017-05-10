@@ -79,7 +79,7 @@
                 false
                 "February"
                 1 "January"
-                :c 3 
+                :c 3
                 2
                 2010 2014 2018
                 "PyeongChang" "Sochi" "Vancouver"
@@ -90,7 +90,7 @@
                      10
                      60
                      15
-                     30]
+                     "AACC"]
                "___" [+
                       *
                       (fn [f] (f 5))
