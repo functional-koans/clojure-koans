@@ -3,10 +3,10 @@
 Для того чтобы приступить к решению Clojure коанов, следуйте инструкциям ниже.
 
 
-## Getting Started
+## Установка
 
 Прежде всего клонируйте репозиторий или создайте свой форк. Далее вы можете создать отдельную ветку
-чтобы избежать конфликтов при обновлении кланов.
+чтобы избежать конфликтов при обновлении коанов.
 
 Способы установки зависимостей:
 
@@ -86,36 +86,33 @@ docker run --rm -it -v $(pwd):/app -w /app clojure lein repl
     We shall contemplate truth by testing reality, via equality.
     (= __ true)
 
-Программа сообщает вам о том, что в файле `01_equalities.clj`, строка 3 тест не пройдён
+Программа сообщает вам о том, что в файле `01_equalities.clj`, строка 3 тест не пройден
 и коан не решён. Подумайте и внесите изменения!
-Вам всегда будет предложено заполнить пустое место,обозначенное символами подчёркивания.
-Sometimes there could be several correct answers (or even an infinite number):
-any of them will work in these cases. Some tests will pass even if you replace
-the blanks with whitespace (or nothing) instead of the expected answer. Make sure
-you give one correct expression to replace each blank.
+Вам всегда будет предложено заполнить пустое место, обозначенное символами подчёркивания.
+Иногда способов решения несколько, некоторые тесты успешно пройдут даже при замене символов подчёркивания
+на пробел.
 
-The koans differ from normal TDD in that the tests are already written for you,
-so you'll have to pay close attention to the failure messages, because up until
-the very end, making a test pass means that the next failure message comes
-up.
+Коаны отличаются от TDD, т.к. тесты уже написаны за вас.
+Следите за сообщениями о непройденном тесте — они будут появляться вплоть до решения всех коанов.
+Соответственно при прохождении одного коана, вы увидите собщение об ошибке при прохождении следующего,
+ещё не решённого вами коана. Вы решаете следующий и так далее, пока не решите последний.
 
-While it might be easy (especially at first) to fill in the blanks making
-things pass, you should work thoughtfully, making sure you understand why the
-answer is what it is.  Enjoy your path to Clojure enlightenment!
+Постарайтесь обдумывать ваше решение и вполне понимать почему правильный ответ именно таков.
+Наслаждайтесь вашим путём к Clojure-просветлению!
 
 
-## Trying more things out
+## Используйте REPL
 
-It's very useful to try things out in a REPL (Read-Evaluate-Print Loop)
-whenever you get stuck or curious. Run:
+Помимо коанов, практикуйтесь и читайте документацию используя интерактивную командную строку:
 
 ```
 lein repl
 ```
 
-and you'll be able to type expressions in, and see what output they produce.
+Вводите выражения и программа будет сразу выводить результат — это очень удобно и
+ускоряет изучения языка.
 
-Here are some interesting commands you might try, once you're in a running REPL:
+Попробуйте ввести эти команды:
 
 ```clojure
 (find-doc "vec")
@@ -123,16 +120,14 @@ Here are some interesting commands you might try, once you're in a running REPL:
 (doc vec)
 ```
 
-And if those still don't make sense:
+И эти:
 
 ```clojure
 (doc doc)
 (doc find-doc)
 ```
 
-will show you what those commands mean.
-
-You can exit the REPL with `CTRL-d`, `(exit)`, or `(quit)`.
+Для окончания работы с REPL используйте `CTRL-d`, `(exit)`, или `(quit)`.
 
 
 ## Развитие
