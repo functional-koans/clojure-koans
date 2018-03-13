@@ -1,48 +1,43 @@
 # Clojure Koans
 
-The Clojure Koans are a fun way to get started with Clojure - no experience
-assumed or required. Follow the instructions below to start making tests pass!
+Для того чтобы приступить к решению Clojure коанов, следуйте инструкциям ниже.
 
 
 ## Getting Started
 
-I recommend starting from a cloned or forked repo. This way you'll be able to
-track your progress in Git. You might want to create your own branch - that way
-if you pull back the latest koans from master, it'll be a bit easier to manage
-the inevitable conflicts if we make changes to exercises you've already
-completed.
+Прежде всего клонируйте репозиторий или создайте свой форк. Далее вы можете создать отдельную ветку
+чтобы избежать конфликтов при обновлении кланов.
 
-You have a few options for installation:
+Способы установки зависимостей:
 
-- Install the dependencies for the koans (such as Clojure) on your machine
-- Use Vagrant and the configuration in this repository
-- Use Docker
+- Установите все зависимости локально
+- Используйте Vagrant
+- Используйте Docker
 
-Instructions for each option are below!
+Инструкции для каждого для реализации каждого способа ниже.
 
 
-### Installation on Your Machine
+### Локальная установка
 
-The only things you'll need to run the Clojure Koans are:
+Вам необходимо:
 
-- JDK (I suggest version 8, but anything 6 or above should work fine)
-- [Leiningen](http://github.com/technomancy/leiningen), a build tool for Clojure
+- JDK (от 6 до 8 версии)
+- [Leiningen](http://github.com/technomancy/leiningen), инструмент сборки для Clojure
 
-Once you've cloned this repo and installed the dependencies, you can run:
+После этого выполните в клонированной папке:
 
 ```
 lein repl
 ```
 
-to make sure all the dependencies get downloaded properly (and then `(exit)`
-when you want to quit). See below for details on the REPL.
+Leiningen скачает все зависимости, затем наберите `(exit)` чтобы выйти.
 
 
-### Installation with Vagrant
+### Установка, используя Vagrant
 
-Make sure you have [Vagrant](https://www.vagrantup.com/) and
-[VirtualBox](https://www.virtualbox.org) installed.
-In the root directory of the project, execute:
+Установите [Vagrant](https://www.vagrantup.com/) и
+[VirtualBox](https://www.virtualbox.org).
+В корневой директории выполните:
 
 ```
 vagrant up
@@ -52,39 +47,38 @@ lein koan run
 ```
 
 
-### Installation with Docker
+### Установка, используя Docker
 
-Once you've got [Docker](https://www.docker.com/) installed, you're basically
-all set. You can run these commands to get started:
+Установите [Docker](https://www.docker.com/), затем выполните:
 
-To run koans:
+для запуска коанов:
 
 ```
 docker run --rm -it -v $(pwd):/app -w /app clojure lein koan run
 ```
 
-To start up a REPL:
+для запуска REPL:
 
 ```
 docker run --rm -it -v $(pwd):/app -w /app clojure lein repl
 ```
 
 
-## Running the Koans
+## Запуск коанов
 
-Run the koans via:
+Команда:
 
 `lein koan run`
 
-If want to run directly from a REPL, once you are inside the `lein repl` prompt you can run the koans with
+Для запуска из REPL:
 
 `(exec "run")`
 
-Either way, it's an auto-runner, so as you save your files with the correct
-answers, it will advance you to the next koan or file (conveniently, all files
-are prefixed with the sequence that you should follow).
+В любом случае программа запустится и будет ожидать сохранения файла с коанами
+и даст вам знать правильно ли было решение или нет.
+Каждый коан сопровождён указаниями и направляющими вопросами.
 
-You'll see something like this:
+Пример:
 
     Now meditate on /home/colin/Projects/clojure-koans/src/koans/01_equalities.clj:3
     ---------------------
@@ -92,9 +86,9 @@ You'll see something like this:
     We shall contemplate truth by testing reality, via equality.
     (= __ true)
 
-The output is telling you that you have a failing test in the file named
-`01_equalities.clj`, on line 3. So you need to open that file up and make
-it pass!  You'll always be filling in the blanks to make tests pass.
+Программа сообщает вам о том, что в файле `01_equalities.clj`, строка 3 тест не пройдён
+и коан не решён. Подумайте и внесите изменения!
+Вам всегда будет предложено заполнить пустое место,обозначенное символами подчёркивания.
 Sometimes there could be several correct answers (or even an infinite number):
 any of them will work in these cases. Some tests will pass even if you replace
 the blanks with whitespace (or nothing) instead of the expected answer. Make sure
@@ -141,43 +135,40 @@ will show you what those commands mean.
 You can exit the REPL with `CTRL-d`, `(exit)`, or `(quit)`.
 
 
-## Contributing
+## Развитие
 
-Patches are encouraged!  Make sure the answer sheet still passes
-(`lein koan test`), and send a pull request.
+Убедитесь, что (`lein koan test`) пройдены и присылайте патчи в pull request.
 
-The file ideaboard.txt has lots of good ideas for new koans to start, or things
-to add to existing koans.  So write some fun exercises, add your answers to
-`resources/koans.clj`, and we'll get them in there!
+Файл ideaboard.txt содержит различные идеи для реализации новых или изменения текущих коанов.
+Ответы на упражнения пишите в `resources/koans.clj`!
 
-Please follow the guidelines in
-http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html for
-commmit messages, and put your code in a feature branch (not master) before
-making the pull request. This makes patches easier to review.
+Следуйте эти рекомендациям 
+http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html.
+Для упрощения оценки ваших патчей, — сохраняйте код в feature ветку (не master) перед pull request.
 
-Feel free to contact me (Colin Jones / trptcolin) on Github or elsewhere if you
-have any questions or want more direction before you start pitching in.
+Если у вас остались вопросы или нужны рекомендации,
+связывайтесь со мной (Colin Jones / trptcolin) через Github или иным способом.
 
 
-## Contributors
+## Участники
 
 https://github.com/functional-koans/clojure-koans/contributors
 
 
-## Credits
+## Благодарность
 
-These exercises were started by [Aaron Bedra](http://github.com/abedra) of
-[Relevance, Inc.](http://github.com/relevance) in early 2010, as a learning
-tool for newcomers to functional programming. Aaron's macro-fu makes these
-koans clear and fun to use and improve upon, and without Relevance's
-initiative, this project would not exist.
+Эти упражнения создавались [Aaron Bedra](http://github.com/abedra) 
+[Relevance, Inc.](http://github.com/relevance) в начале 2010 как инструмент
+для изучения функционального программирования для новичков.
+Макрос-фу Аарона делали эти коаны доступными для использования и изучения языка,
+а также для их дальнейшей разработки и улучшения.
+Без инициативы со стороны Relevance Inc. этот проект не был бы осуществлён.
 
-Using the [koans](http://en.wikipedia.org/wiki/koan) metaphor as a tool for
-learning a programming language started with the
-[Ruby Koans](http://rubykoans.com) by [EdgeCase](http://github.com/edgecase).
+Использование впервые [коанов](http://en.wikipedia.org/wiki/koan) в качестве метафоры
+для обучающих упражнений было заслугой [Ruby Koans](http://rubykoans.com) от [EdgeCase](http://github.com/edgecase).
 
 
-## License
+## Лицензия
 
 The use and distribution terms for this software are covered by the
 Eclipse Public License 1.0 (http://opensource.org/licenses/eclipse-1.0.php)
