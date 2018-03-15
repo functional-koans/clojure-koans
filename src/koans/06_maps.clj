@@ -2,60 +2,60 @@
   (:require [koan-engine.core :refer :all]))
 
 (meditations
-  "Don't get lost when creating a map"
+  "Не потеряйтесь при создании хэш-карты"
   (= {:a 1 :b 2} (hash-map :a 1 __ __))
 
-  "A value must be supplied for each key"
+  "Каждому ключу — значение"
   (= {:a 1} (hash-map :a __))
 
-  "The size is the number of entries"
+  "Размер определяется числом пар"
   (= __ (count {:a 1 :b 2}))
 
-  "You can look up the value for a given key"
+  "Узнать значение можно по ключу"
   (= __ (get {:a 1 :b 2} :b))
 
-  "Maps can be used as functions to do lookups"
+  "Прямо как функции"
   (= __ ({:a 1 :b 2} :a))
 
-  "And so can keywords"
+  "И ключи тоже"
   (= __ (:a {:a 1 :b 2}))
 
-  "But map keys need not be keywords"
+  "Ключи — не обязательно ключевые слова"
   (= __ ({2010 "Vancouver" 2014 "Sochi" 2018 "PyeongChang"} 2014))
 
-  "You may not be able to find an entry for a key"
+  "Иногда — ни ключа, ни значения"
   (= __ (get {:a 1 :b 2} :c))
 
-  "But you can provide your own default"
+  "На такой случай можно задать что-нибудь на свой вкус"
   (= __ (get {:a 1 :b 2} :c :key-not-found))
 
-  "You can find out if a key is present"
+  "Есть ли ключ?"
   (= __ (contains? {:a nil :b nil} :b))
 
-  "Or if it is missing"
+  "Или нет"
   (= __ (contains? {:a nil :b nil} :c))
 
-  "Maps are immutable, but you can create a new and improved version"
+  "Отображения неизменяемы — с новыми элементами только новые отображения"
   (= {1 "January" 2 __} (assoc {1 "January"} 2 "February"))
 
-  "You can also create a new version with an entry removed"
+  "И при удалении элементов возвращается новое отображение"
   (= {__ __} (dissoc {1 "January" 2 "February"} 2))
 
-  "Create a new map by merging"
+  "И при совмещении"
   (= {:a 1 :b 2 __ __} (merge {:a 1 :b 2} {:c 3}))
 
-  "Specify how to handle entries with same keys when merging"
+  "Можно указать как быть со значениями идентичных ключей"
   (= {:a 1 :b __ :c 3} (merge-with + {:a 1 :b 1} {:b 1 :c 3}))
 
-  "Often you will need to get the keys, but the order is undependable"
+  "Внутри ничего не сортируется. Сортировка по ключам"
   (= (list __ __ __)
      (sort (keys { 2014 "Sochi" 2018 "PyeongChang" 2010 "Vancouver"})))
 
-  "You can get the values in a similar way"
+  "По значениям"
   (= (list __ __ __)
      (sort (vals {2010 "Vancouver" 2014 "Sochi" 2018 "PyeongChang"})))
 
-  "You can even iterate over the map entries as a seq"
+  "Ключ и значение идут друг за другом"
   (= {:a __ :b __}
      (into {}
            (map
