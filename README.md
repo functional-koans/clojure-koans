@@ -150,6 +150,10 @@ http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html.
 https://github.com/functional-koans/clojure-koans/contributors
 
 
+### Перевод на русский язык
+
+[Alex Gorelov](https://github.com/brannx)
+
 ## Благодарность
 
 Эти упражнения создавались [Aaron Bedra](http://github.com/abedra) 
