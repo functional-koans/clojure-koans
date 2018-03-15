@@ -7,34 +7,34 @@
 (defn square [n] (* n n))
 
 (meditations
-  "Calling a function is like giving it a hug with parentheses"
+  "Вызываем функцию «обнимая» её скобками"
   (= __ (square 9))
 
-  "Functions are usually defined before they are used"
+  "Сначала нужно её создать"
   (= __ (multiply-by-ten 2))
 
-  "But they can also be defined inline"
+  "Или использовать анонимную"
   (= __ ((fn [n] (* 5 n)) 2))
 
-  "Or using an even shorter syntax"
+  "Clojure упрощает жизнь и запись анонимных функций"
   (= __ (#(* 15 %) 4))
 
-  "Even anonymous functions may take multiple arguments"
+  "Аргументов — сколько угодно!"
   (= __ (#(+ %1 %2 %3) 4 5 6))
 
-  "Arguments can also be skipped"
+  "Их даже можно не учитывать"
   (= __ (#(str "AA" %2) "bb" "CC"))
 
-  "One function can beget another"
+  "Функция может возвращать функцию"
   (= 9 (((fn [] ___)) 4 5))
 
-  "Functions can also take other functions as input"
+  "Может принимать её в качестве аргумента"
   (= 20 ((fn [f] (f 4 5))
            ___))
 
-  "Higher-order functions take function arguments"
+  "Функции высшего порядка так и делают"
   (= 25 (___
           (fn [n] (* n n))))
 
-  "But they are often better written using the names of functions"
+  "Хотя, иногда неплохо создать функцию заранее, а не создавать анонимную"
   (= 25 (___ square)))
