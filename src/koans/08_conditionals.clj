@@ -9,39 +9,39 @@
         "is that even exercise?"))
 
 (meditations
-  "You will face many decisions"
+  "Нужно принимать решения"
   (= __ (if (false? (= 4 5))
           :a
           :b))
 
-  "Some of them leave you no alternative"
+  "Иногда альтернативы нет"
   (= __ (if (> 4 3)
           []))
 
-  "And in such a situation you may have nothing"
+  "И вы ничего не получаете"
   (= __ (if (nil? 0)
           [:a :b :c]))
 
-  "In others your alternative may be interesting"
+  "Иногда выбор есть"
   (= :glory (if (not (empty? ()))
               :doom
               __))
 
-  "You may have a multitude of possible paths"
+  "И вариантов много"
   (let [x 5]
     (= :your-road (cond (= x __) :road-not-taken
                         (= x __) :another-road-not-taken
                         :else __)))
 
-  "Or your fate may be sealed"
+  "Получаем doom"
   (= 'doom (if-not (zero? __)
           'doom
           'more-doom))
 
-  "In case of emergency, go fast"
+  "Выбирать можно и так"
   (= "pretty fast"
      (explain-exercise-velocity __))
 
-  "But admit it when you don't know what to do"
+  "Можно задавать ответ по-умолчанию"
   (= __
      (explain-exercise-velocity :watching-tv)))

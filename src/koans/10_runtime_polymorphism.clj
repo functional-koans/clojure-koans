@@ -15,28 +15,28 @@
 (defmethod diet :default [a] __)
 
 (meditations
-  "Some functions can be used in different ways - with no arguments"
+  "Полиморфизм. Без аргументов."
   (= __ (hello))
 
-  "With one argument"
+  "Один аргумент"
   (= __ (hello "world"))
 
-  "Or with many arguments"
+  "Тысячи их"
   (= __
      (hello "Peter" "Paul" "Mary"))
 
-  "Multimethods allow more complex dispatching"
+  "Мультиметоды и диспетчеризация. Всё просто."
   (= "Bambi eats veggies."
      (diet {:species "deer" :name "Bambi" :age 1 :eater :herbivore}))
 
-  "Animals have different names"
+  "Имена разные"
   (= "Thumper eats veggies."
      (diet {:species "rabbit" :name "Thumper" :age 1 :eater :herbivore}))
 
-  "Different methods are used depending on the dispatch function result"
+  "Разные методы исходя из вывода"
   (= "Simba eats animals."
      (diet {:species "lion" :name "Simba" :age 1 :eater :carnivore}))
 
-  "You may use a default method when no others match"
+  "Традиционно, есть и метод по-умолчанию"
   (= "I don't know what Rich Hickey eats."
      (diet {:name "Rich Hickey"})))

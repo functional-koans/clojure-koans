@@ -2,34 +2,34 @@
   (:require [koan-engine.core :refer :all]))
 
 (meditations
-  "The map function relates a sequence to another"
+  "Создаём номую последовательность изменяя данную"
   (= [__ __ __] (map (fn [x] (* 4 x)) [1 2 3]))
 
-  "You may create that mapping"
+  "Изменяйте, создаваю свои функции"
   (= [1 4 9 16 25] (map (fn [x] __) [1 2 3 4 5]))
 
-  "Or use the names of existing functions"
+  "Или используйте существующие"
   (= __ (map nil? [:a :b nil :c :d]))
 
-  "A filter can be strong"
+  "Такой фильтр не пропустит ничего"
   (= __ (filter (fn [x] false) '(:anything :goes :here)))
 
-  "Or very weak"
+  "А такой?"
   (= __ (filter (fn [x] true) '(:anything :goes :here)))
 
-  "Or somewhere in between"
+  "Какой фильтр здесь?"
   (= [10 20 30] (filter (fn [x] __) [10 20 30 40 50 60 70 80]))
 
-  "Maps and filters may be combined"
+  "Сначала фильтруем, потом изменяем полученное"
   (= [10 20 30] (map (fn [x] __) (filter (fn [x] __) [1 2 3 4 5 6 7 8])))
 
-  "Reducing can increase the result"
+  "Уменьшаем объём, увеличиваем значение"
   (= __ (reduce (fn [a b] (* a b)) [1 2 3 4]))
 
-  "You can start somewhere else"
+  "Можно указать начальное значение"
   (= 2400 (reduce (fn [a b] (* a b)) __ [1 2 3 4]))
 
-  "Numbers are not the only things one can reduce"
+  "Не только числа"
   (= "longest" (reduce (fn [a b]
                          (if (< __ __) b a))
                        ["which" "word" "is" "longest"])))

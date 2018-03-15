@@ -2,38 +2,38 @@
   (:require [koan-engine.core :refer :all]))
 
 (meditations
-  "We shall contemplate truth by testing reality, via equality"
+  "Критерием истины является тест на равенство"
   (= __ true)
 
-  "To understand reality, we must compare our expectations against reality"
+  "Проверять истинность нужно сравнением исходного с предположением"
   (= __ (+ 1 1))
 
-  "You can test equality of many things"
+  "Тестировать на равенство можно многое"
   (= (+ 3 4) 7 (+ 2 __))
 
-  "Some things may appear different, but be the same"
+  "Что-то может показаться отличным, но оставаться равным"
   (= __ (= 2 2/1))
 
-  "You cannot generally float to heavens of integers"
+  "Целое не равно дробному"
   (= __ (= 2 2.0))
 
-  "But a looser equality is also possible"
+  "Хотя может быть равнозначно"
   (= __ (== 2.0 2))
 
-  "Something is not equal to nothing"
+  "Ничто не равно чему-либо"
   (= __ (not (= 1 nil)))
 
-  "Strings, and keywords, and symbols: oh my!"
+  "Строки, ключи, символы!!!"
   (= __ (= "hello" :hello 'hello))
 
-  "Make a keyword with your keyboard"
+  "Создавайте ключевые слова используя обычные"
   (= :hello (keyword __))
 
-  "Symbolism is all around us"
+  "Кругом символизм"
   (= 'hello (symbol __))
 
-  "What could be equivalent to nothing?"
+  "Так чему же равно ничто?"
   (= __ nil)
 
-  "When things cannot be equal, they must be different"
+  "Разное не равно"
   (not= :fill-in-the-blank __))
