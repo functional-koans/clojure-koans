@@ -3,68 +3,68 @@
             [clojure.string :as string]))
 
 (meditations
-  "A string is nothing more than text surrounded by double quotes"
+  "Строка — это текст, обрамлённый двойными кавычками"
   (= __ "hello")
 
-  "But double quotes are just magic on top of something deeper"
+  "Но это лишь вершина айсберга"
   (= __ (str 'world))
 
-  "You can do more than create strings, you can put them together"
+  "Создавая одну строку можно объединением нескольких"
   (= "Cool right?" (str __ __))
 
-  "You can even get certain characters"
+  "Можно получить символьный литерал"
   (= \C (get "Characters" __))
 
-  "Or even count the characters"
+  "Сосчитать сколько их"
   (= __ (count "Hello World"))
 
-  "But strings and characters are not the same"
+  "Но он — не строка"
   (= __ (= \c "c"))
 
-  "What if you only wanted to get part of a string?"
+  "А что если нужна лишь часть строки?"
   (= "World" (subs "Hello World" __ __))
 
-  "How about joining together elements in a list?"
+  "Объединяем элементы в строку"
   (= __ (string/join '(1 2 3)))
 
-  "What if you wanted to separate them out?"
+  "Объединяем, но разделяя между собой"
   (= "1, 2, 3" (string/join __ '(1 2 3)))
 
-  "Maybe you want to separate out all your lines"
+  "Можно разделить построчно"
   (= [__ __ __] (string/split-lines "1\n2\n3"))
 
-  "You may want to make sure your words are backwards"
+  "Можно инвертировать"
   (= __ (string/reverse "hello"))
 
-  "Maybe you want to find the index of the first occurrence of a substring"
+  "Можно найти индекс первого совпадения"
   (= 0 (string/index-of "hello world" __))
 
-  "Or maybe the last index of the same"
+  "Или последнего"
   (= __ (string/last-index-of "hello world, hello" "hello"))
 
-  "But when something doesn't exist, nothing is found"
+  "А если ничто не совпало, то что мы получим?"
   (= __ (string/index-of "hello world" "bob"))
 
-  "Sometimes you don't want whitespace cluttering the front and back"
+  "Иногда неплохо бы избавиться от пробелов"
   (= __ (string/trim "  \nhello world \t \n"))
 
-  "You can check if something is a char"
+  "Тест на символьный литерал"
   (= __ (char? \c))
 
-  "But it may not be"
+  "Тут точно не пройдёт"
   (= __ (char? "a"))
 
-  "But chars aren't strings"
+  "«Чары» — они не строки"
   (= __ (string? \b))
 
-  "Strings are strings"
+  "А строки — строки"
   (= true (string? __))
 
-  "Some strings may be blank"
+  "Иногда и пустые"
   (= __ (string/blank? ""))
 
-  "Even if at first glance they aren't"
+  "Хотя на первый взгляд и не скажешь"
   (= __ (string/blank? " \n \t  "))
 
-  "However, most strings aren't blank"
+  "Всё же большинство строк не пусты"
   (= __ (string/blank? "hello?\nare you out there?")))
