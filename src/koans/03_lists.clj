@@ -2,43 +2,43 @@
   (:require [koan-engine.core :refer :all]))
 
 (meditations
-  "Lists can be expressed by function or a quoted form"
+  "Списки создаются фукцией или кавычкой"
   (= '(__ __ __ __ __) (list 1 2 3 4 5))
 
-  "They are Clojure seqs (sequences), so they allow access to the first"
+  "Они являются Clojure seqs (последовательностями); можно получить первый элемент"
   (= __ (first '(1 2 3 4 5)))
 
-  "As well as the rest"
+  "И остальные, кроме первого"
   (= __ (rest '(1 2 3 4 5)))
 
-  "Count your blessings"
+  "Сосчитай словечки"
   (= __ (count '(dracula dooku chocula)))
 
-  "Before they are gone"
+  "Если они есть в списке"
   (= __ (count '()))
 
-  "The rest, when nothing is left, is empty"
+  "Когда ни чего кроме списка не осталось, что получаем?"
   (= __ (rest '(100)))
 
-  "Construction by adding an element to the front is easy"
+  "Создаём новый список добавляя элемент в начало списка"
   (= __ (cons :a '(:b :c :d :e)))
 
-  "Conjoining an element to a list isn't hard either"
+  "Соединяем список и элемент — получаем новый список"
   (= __ (conj '(:a :b :c :d) :e))
 
-  "You can use a list like a stack to get the first element"
+  "Список — он как стек, берём с вершины"
   (= __ (peek '(:a :b :c :d :e)))
 
-  "Or the others"
+  "Или всё остальное"
   (= __ (pop '(:a :b :c :d :e)))
 
-  "But watch out if you try to pop nothing"
+  "А когда остального то и нет! Исключение!"
   (= __ (try
           (pop '())
           (catch IllegalStateException e
             "No dice!")))
 
-  "The rest of nothing isn't so strict"
+  "Но не для этой функции. Раз элементов нет, вернёт хоть список"
   (= __ (try
           (rest '())
           (catch IllegalStateException e
