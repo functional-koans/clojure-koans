@@ -2,27 +2,27 @@
   (:require [koan-engine.core :refer :all]))
 
 (meditations
-  "There are many ways to generate a sequence"
+  "Создаём последовательность"
   (= __ (range 1 5))
 
-  "The range starts at the beginning by default"
+  "От нуля до …"
   (= __ (range 5))
 
-  "Only take what you need when the sequence is large"
+  "Ленивые вычисления — взять только то что надо"
   (= [0 1 2 3 4 5 6 7 8 9]
      (take __ (range 100)))
 
-  "Or limit results by dropping what you don't need"
+  "Не брать того что не нужно, да и не хочется"
   (= [95 96 97 98 99]
      (drop __ (range 100)))
 
-  "Iteration provides an infinite lazy sequence"
+  "Если не указать сколько взять, можно переполнить стек. Такая функция."
   (= __ (take 8 (iterate (fn [x] (* x 2)) 1)))
 
-  "Repetition is key"
+  "Повтор"
   (= [:a :a :a :a :a :a :a :a :a :a]
      (repeat 10 __))
 
-  "Iteration can be used for repetition"
+  "Результат идентичен"
   (= (repeat 100 "hello")
      (take 100 (iterate ___ "hello"))))
