@@ -1,4 +1,4 @@
-(defproject clojure-koans "0.5.1-SNAPSHOT"
+(defproject clojure-koans "0.5.1"
   :description "The Clojure koans."
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [koan-engine "0.2.5"]]
