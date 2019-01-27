@@ -37,6 +37,27 @@ lein repl
 to make sure all the dependencies get downloaded properly (and then `(exit)`
 when you want to quit). See below for details on the REPL.
 
+### Installation with SDKMAN!
+
+Ensure that you have [SDKMAN! installed](https://sdkman.io/install) on your machine.
+
+Next run the following command to install the JDK if you don't have it installed:
+
+```
+sdk install java 8.0.201-zulu
+```
+
+Then install the latest version of Leiningen:
+
+```
+sdk install leiningen
+```
+
+As before, once you've cloned this repo and installed the SDKs you can run:
+
+```
+lein repl
+```
 
 ### Installation with Vagrant
 
