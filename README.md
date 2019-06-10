@@ -152,7 +152,7 @@ to add to existing koans.  So write some fun exercises, add your answers to
 
 Please follow the guidelines in
 http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html for
-commmit messages, and put your code in a feature branch (not master) before
+commit messages, and put your code in a feature branch (not master) before
 making the pull request. This makes patches easier to review.
 
 Feel free to contact me (Colin Jones / trptcolin) on Github or elsewhere if you
