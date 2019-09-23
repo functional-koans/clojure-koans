@@ -7,15 +7,11 @@
 (def a-list-with-maps
   '({:a 1} {:a 2} {:a 3}))
 
-(defn function-that-takes-a-map [m a b]
-  (do
-    (println (str "Other unused arguments: " a " " b))
-    (get m :a)))
+(defn function-that-takes-a-map [map a b]
+  (get map :a))
 
 (defn function-that-takes-a-coll [a b coll]
-  (do
-    (println (str "Other unused arguments: " a " " b))
-    (map :a coll)))
+  (map :a coll))
 
 (meditations
  "We can use thread first for more readable sequential operations"
