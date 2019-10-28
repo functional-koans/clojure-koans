@@ -280,4 +280,9 @@
                           [2 4]
                           [2 4]
                           6]}]
+
+ ["27_multimethods" {"__" ["Hello, World!"
+                           "Hello there"
+                           1
+                           6]}]
 ]
