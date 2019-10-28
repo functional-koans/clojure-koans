@@ -25,4 +25,4 @@
 
   "Iteration can be used for repetition"
   (= (repeat 100 "hello")
-     (take 100 (iterate ___ "hello"))))
+     (take 100 (iterate __ "hello"))))

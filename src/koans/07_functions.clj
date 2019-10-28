@@ -26,15 +26,15 @@
   (= __ (#(str "AA" %2) "bb" "CC"))
 
   "One function can beget another"
-  (= 9 (((fn [] ___)) 4 5))
+  (= 9 (((fn [] __)) 4 5))
 
   "Functions can also take other functions as input"
   (= 20 ((fn [f] (f 4 5))
-           ___))
+           __))
 
   "Higher-order functions take function arguments"
-  (= 25 (___
+  (= 25 (__
           (fn [n] (* n n))))
 
   "But they are often better written using the names of functions"
-  (= 25 (___ square)))
+  (= 25 (__ square)))

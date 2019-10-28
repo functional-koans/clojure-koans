@@ -41,4 +41,4 @@
 
   "All together now!"
   (= "Test Testerson, 123 Test Lane, Testerville, TX"
-     (___ ["Test" "Testerson"] test-address)))
+     (__ ["Test" "Testerson"] test-address)))

@@ -9,7 +9,7 @@
   (= __ (.toUpperCase "select * from"))
 
   "But instance method calls are very different from normal functions"
-  (= ["SELECT" "FROM" "WHERE"] (map ___ ["select" "from" "where"]))
+  (= ["SELECT" "FROM" "WHERE"] (map __ ["select" "from" "where"]))
 
   "Constructing might be harder than breaking"
   (= 10 (let [latch (java.util.concurrent.CountDownLatch. __)]
