@@ -39,13 +39,13 @@
                    :e 5})
         (update-in [:c :e] inc)
         (get-in [:c :e])))
- 
+
  "We can use functions we have written ourselves that follow this pattern"
  (= __
     (-> {}
         (assoc :a 1)
         (function-that-takes-a-map "hello" "there")))
- 
+
  "We can also thread last using ->>"
  (= __
     (->> [1 2 3]

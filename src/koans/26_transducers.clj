@@ -6,7 +6,7 @@
 
 (def transforms
   (comp (map inc)
-        (filter even?)))
+     (filter even?)))
 
 (meditations
  "A sequence operation with only one argument often returns a transducer"
@@ -20,7 +20,7 @@
  "We can do this eagerly"
  (= __
     (into [] transforms [1 2 3]))
- 
+
  "Or lazily"
  (= __
     (sequence transforms [1 2 3]))
