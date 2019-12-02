@@ -59,7 +59,7 @@
          (into [])
          (reduce +)))
 
- "We can use funtions we have written ourselves that follow this pattern"
+ "We can use functions we have written ourselves that follow this pattern"
  (= __
     (->> a-list-with-maps
          (function-that-takes-a-coll "hello" "there")
