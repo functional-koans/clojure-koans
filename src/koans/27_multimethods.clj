@@ -25,7 +25,7 @@
 (defmethod multimethod-with-args :path-three [_])
 
 (meditations
- "A multimethod takes an one or more arguments to dispatch on"
+ "A multimethod takes one or more arguments to dispatch on"
  (= __
     (multimethod-without-args :first))
 
