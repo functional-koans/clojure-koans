@@ -1,0 +1,4 @@
+image: clojure
+
+tasks:
+  - command: 'lein koan run'
