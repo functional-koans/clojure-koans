@@ -1,6 +1,5 @@
 image:
-  file: .gitpod.Dockerfile
+  file: clojure
 
 tasks:
-  - init: 'echo "TODO: Replace with init/build command"'
-    command: 'echo "TODO: Replace with command to start project"'
+  - command: 'lein koan run'
