@@ -1,7 +1,9 @@
 (defproject clojure-koans "0.5.2-SNAPSHOT"
   :description "The Clojure koans."
   :dependencies [[org.clojure/clojure "1.10.0"]
-                 [koan-engine "0.2.5"]]
+                 [koan-engine "0.2.5"]
+                 [com.rpl/specter "1.1.3"]
+                 [eidolon "0.1.0"]]
   :dev-dependencies [[lein-koan "0.1.5"]]
   :profiles {:dev {:dependencies [[lein-koan "0.1.5"]]}}
   :repl-options {:init-ns koan-engine.runner
