@@ -1,4 +1,16 @@
-[["01_equalities" {"__" [true
+[["28_specter" {"__" [true
+                         2
+                         5
+                         true
+                         false
+                         true
+                         true
+                         false
+                         "hello"
+                         "hello"
+                         nil
+                         3]}]
+ ["01_equalities" {"__" [true
                       2
                       5
                       true
