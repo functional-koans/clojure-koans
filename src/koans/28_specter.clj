@@ -34,7 +34,9 @@
                         {:doors 2
                          :color "blue"}]
                  :expedition [{:doors 4
-                               :color "red"}]}}})
+                               :color "red"}
+                              {:doors 4
+                               :color "black"}]}}})
 
 ;; The hope of this exercise is to get you more familiar with specter and eidolon
 
@@ -60,6 +62,7 @@
 
  "That was great, but what if we actually just want the maps instead of the vector
  (notice that the previous test is a vector inside of a vector)"
+ ;; kinda confusing that you have to fill in sr/select (maybe would add a hint for sr/ALL?)
  (= [{:doors 2 :color "red"} {:doors 2 :color "blue"}]
     (___ [:cars :ford __ sr/ALL] __))
 
@@ -69,6 +72,7 @@
 
  "multi-path was cool, but imagine if you had 100 keys in the multi-path, that would be terrible
  let's see if we can get there with MAP-VALS"
+ let's see if we can get all the :ford cars with MAP-VALS"
  (= [{:doors 2 :color "red"} {:doors 2 :color "blue"} {:doors 4 :color "red"} {:doors 4 :color "black"}]
     (sr/select [__ __ sr/MAP-VALS __] car-inventory))
 
@@ -80,7 +84,7 @@
 
  "Great, so we can now traverse a map, going either by the absolute path or using some generalized special functions to get where we need to go
  So what is Eidolon?
- Eidolon is a latacora built specter library - Let's check it out
+ Eidolon is a latacora-built specter library - Let's check it out
  eidolon TREE-KEYS will provide all of the keys below whatever point in the map it is called"
  (= [:doors :color :doors :color :doors :color :doors :color :focus :expedition]
     (sr/select [:cars :ford e/TREE-KEYS] __))
@@ -90,7 +94,8 @@
     (sr/select [:cars :ford ___] car-inventory))
 
  "Another eidolon feature is collecting a value and continuing down to the items
- this will return both the collected value and the items in their own vector"
+ this will return both the collected value and the items in their own vector.
+  Complete the below query to get a list of model descriptions for ford "
  (= [[:focus {:doors 2, :color "red"}] [:focus {:doors 2, :color "blue"}] [:expedition {:doors 4, :color "red"}] [:expedition {:doors 4, :color "black"}]]
   (sr/select [:cars __ e/INDEXED __] car-inventory))
 
@@ -102,16 +107,19 @@
  (= {:cars {:ford {:focus [{:doors 2, :color "orange"} {:doors 2, :color "orange"}], :expedition [{:doors 4, :color "red"} {:doors 4, :color "black"}]}}}
   (sr/setval [:cars :ford :focus sr/ALL __] __ car-inventory-ford))
 
- "The new orange ford focuses sell like hot cakes! now that we have sold 2 lets remove them from our inventory"
+ "The new orange ford focuses sell like hot cakes! now that we have sold 2 lets remove them from our inventory
+ with sr/NONE"
  (= {:cars {:ford {:expedition [{:doors 4, :color "red"} {:doors 4, :color "black"}]}}}
     (sr/setval [:cars __ __] sr/NONE car-inventory-ford))
 
  "setval takes a map and returns a map.
- Let's use a thread to remove both of our sold ford focuses and change the color of the expedition to orange to try to sell that faster as well"
- (= {:cars {:ford {:expedition [{:doors 4, :color "orange"}]}}}
-    (___ car-inventory-ford
-         (sr/setval [:cars :ford :focus] ___)
-         (sr/setval [:cars :ford :expedition sr/ALL :color] __)))
+ Let's use a thread to do the following:
+ 1. remove both of our sold ford focuses
+ 2. change the color of the expedition to orange to try to sell that faster as well"
+ ;; TODO using placeholder for the thread macro doesn't play nice w/ the meditate macro (can this be fixed?)
+ ;; TODO: add  two entries to the expected vec
+ (= {:cars {:ford {:expedition [{:doors 4, :color "orange"} {:doors 4, :color "orange"}]}}}
+    (->> car-inventory-ford
 
  "Transform also takes a map and returns a map
  The format of transform is (sr/transform path function map)
@@ -133,9 +141,13 @@
  ;;               car-inventory-ford)
 
 " For this final example let's scope back up to car-inventory, just for fun :)
- Let's say that the government has outlawed all cars with an even amount of doors. To be good to the people, let's just give them an extra one
- latacara is ahead of the curve on this one, so we will specifically exclude them from this transform
- We are going to use eidolon's INDEXED function to collect the name of the brand, and then continue to dig down into the door count. From there, we can check if its even using an even? function and if its true increase the count by one"
+ Let's say that the government has outlawed all cars with an even amount of doors.
+ To be good to the people, let's just give them an extra one. latacara is ahead of
+ the curve on this one, so we will specifically exclude them from this transform
+ We are going to use eidolon's INDEXED function to collect the name of the brand,
+ and then continue to dig down into the door count. From there, we can check if
+ its even using an even? function and if its true increase the count by one
+"
  (= {:cars {:ford {:focus [{:doors 3, :color "red"} {:doors 3, :color "blue"}], :expedition [{:doors 5, :color "red"} {:doors 5, :color "black"}]}, :toyota {:camry [{:doors 3, :color "red"} {:doors 5, :color "tan"}], :rav4 [{:doors 5, :color "blue"} {:doors 5, :color "blue"}]}, :latacara {:prime [{:doors 11, :color "clear"}], :prime-three [{:doors 3, :color "red"} {:doors 3, :color "green"}]}}}
     (sr/transform [:cars ___ ___ sr/ALL :doors]
                   (fn [brand doors]
@@ -154,6 +166,7 @@
  ;;                  (inc %)
  ;;                  %) car-inventory)
 
+ ;; TODO exercise to remove maps that contain keys w/ specific strings
 
  )
 
