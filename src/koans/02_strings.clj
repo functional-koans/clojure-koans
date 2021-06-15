@@ -4,69 +4,67 @@
 
 (meditations
   "A string is nothing more than text surrounded by double quotes"
-  (= "hello" "hello")
+  (= __ "hello")
 
   "But double quotes are just magic on top of something deeper"
-  (= "world" (str 'world))
+  (= __ (str 'world))
 
   "You can do more than create strings, you can put them together"
-  (= "Cool right?" (str "Cool right?"))
+  (= "Cool right?" (str __ __))
 
   "You can even get certain characters"
-  (= nil (get "Characters" "C"))
+  (= \C (get "Characters" __))
 
   "Or even count the characters"
-  (= 11 (count "Hello World"))
+  (= __ (count "Hello World"))
 
   "But strings and characters are not the same"
-  (= false(= \c "c"))
+  (= __ (= \c "c"))
 
   "What if you only wanted to get part of a string?"
-  (= "World" (subs "Hello World" 6 11))
+  (= "World" (subs "Hello World" __ __))
 
   "How about joining together elements in a list?"
-  (= "123"(string/join '(1 2 3)))
+  (= __ (string/join '(1 2 3)))
 
   "What if you wanted to separate them out?"
-  (= "112321233"  (string/join "123" '(1 2 3)))
+  (= "1, 2, 3" (string/join __ '(1 2 3)))
 
   "Maybe you want to separate out all your lines"
-  (= ["1" "2" "3" ] (string/split-lines "1\n2\n3"))
+  (= [__ __ __] (string/split-lines "1\n2\n3"))
 
   "You may want to make sure your words are backwards"
-  (= "olleh"(string/reverse "hello"))
+  (= __ (string/reverse "hello"))
 
   "Maybe you want to find the index of the first occurrence of a substring"
-  (= 0 (string/index-of "hello world" "h"))
+  (= 0 (string/index-of "hello world" __))
 
   "Or maybe the last index of the same"
-  (= 13 (string/last-index-of "hello world, hello" "hello"))
+  (= __ (string/last-index-of "hello world, hello" "hello"))
 
   "But when something doesn't exist, nothing is found"
-  (= nil (string/index-of "hello world" "bob"))
+  (= __ (string/index-of "hello world" "bob"))
 
   "Sometimes you don't want whitespace cluttering the front and back"
-  (= "hello world" (string/trim "  \nhello world \t \n"))
+  (= __ (string/trim "  \nhello world \t \n"))
 
   "You can check if something is a char"
-  (= true (char? \c))
+  (= __ (char? \c))
 
   "But it may not be"
-  (= false (char? "a"))
+  (= __ (char? "a"))
 
   "But chars aren't strings"
-  (= false (string? \b))
+  (= __ (string? \b))
 
   "Strings are strings"
-  (= true (string? ""))
+  (= true (string? __))
 
   "Some strings may be blank"
-  (= true(string/blank? ""))
+  (= __ (string/blank? ""))
 
   "Even if at first glance they aren't"
-  (= true (string/blank? " \n \t  "))
+  (= __ (string/blank? " \n \t  "))
 
   "However, most strings aren't blank"
-  (= false (string/blank? "hello?\nare you out there?"))
-
-  )
+  (= __ (string/blank? "hello?\nare you out there?")))
