@@ -71,7 +71,6 @@
     (sr/select [:cars :ford (sr/multi-path :focus :expedition) __] car-inventory))
 
  "multi-path was cool, but imagine if you had 100 keys in the multi-path, that would be terrible
- let's see if we can get there with MAP-VALS"
  let's see if we can get all the :ford cars with MAP-VALS"
  (= [{:doors 2 :color "red"} {:doors 2 :color "blue"} {:doors 4 :color "red"} {:doors 4 :color "black"}]
     (sr/select [__ __ sr/MAP-VALS __] car-inventory))
@@ -118,8 +117,10 @@
  2. change the color of the expedition to orange to try to sell that faster as well"
  ;; TODO using placeholder for the thread macro doesn't play nice w/ the meditate macro (can this be fixed?)
  ;; TODO: add  two entries to the expected vec
- (= {:cars {:ford {:expedition [{:doors 4, :color "orange"} {:doors 4, :color "orange"}]}}}
-    (->> car-inventory-ford
+ (= {:cars {:ford {:expedition [{:doors 4, :color "orange"}]}}}
+    (___ car-inventory-ford
+         (sr/setval [:cars :ford :focus] ___)
+         (sr/setval [:cars :ford :expedition sr/ALL :color] __)))
 
  "Transform also takes a map and returns a map
  The format of transform is (sr/transform path function map)
@@ -151,7 +152,7 @@
  (= {:cars {:ford {:focus [{:doors 3, :color "red"} {:doors 3, :color "blue"}], :expedition [{:doors 5, :color "red"} {:doors 5, :color "black"}]}, :toyota {:camry [{:doors 3, :color "red"} {:doors 5, :color "tan"}], :rav4 [{:doors 5, :color "blue"} {:doors 5, :color "blue"}]}, :latacara {:prime [{:doors 11, :color "clear"}], :prime-three [{:doors 3, :color "red"} {:doors 3, :color "green"}]}}}
     (sr/transform [:cars ___ ___ sr/ALL :doors]
                   (fn [brand doors]
-                    (if (not= brand:latacara)
+                    (if (not= brand :latacara)
                       (if (___ doors)
                         (___ doors)
                         doors)
@@ -169,7 +170,3 @@
  ;; TODO exercise to remove maps that contain keys w/ specific strings
 
  )
-
-
-
-
