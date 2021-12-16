@@ -15,7 +15,7 @@
 
   "Partial functions allow procrastination"
   (= 20 (let [multiply-by-5 (partial * 5)]
-          (reduce multiply-by-5 2 '(2))))
+          (multiply-by-5 4)))
 
   "Don't forget: first things first"
   (= [:a :b :c :d]
