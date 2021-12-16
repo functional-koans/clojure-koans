@@ -3,10 +3,10 @@
 
 (meditations
   "There are many ways to generate a sequence"
-  (= '(1 2 3 4) (range 1 5))
+  (= [1 2 3 4] (range 1 5))
 
   "The range starts at the beginning by default"
-  (= '(0 1 2 3 4) (range 5))
+  (= [0 1 2 3 4] (range 5))
 
   "Only take what you need when the sequence is large"
   (= [0 1 2 3 4 5 6 7 8 9]
