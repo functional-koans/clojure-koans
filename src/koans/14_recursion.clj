@@ -20,10 +20,10 @@
       (recur tail (conj new-coll head)))))
 
 (defn factorial [n]
-  (loop [n n acc n]
+  (loop [n n acc 1]
     (if (= n 1)
       acc
-      (recur (dec n) (* acc (dec n))))))
+      (recur (dec n) (* acc n)))))
 
 (meditations
   "Recursion ends with a base case"
