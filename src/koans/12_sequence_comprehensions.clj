@@ -20,7 +20,7 @@
      (for [x __ :when (odd? x)]
        x))
 
-  "Combinations of these transformations is trivial"
+  "Combinations of these transformations are trivial"
   (= '(1 9 25 49 81)
      (map (fn [x] (* x x))
           (filter odd? (range 10)))
