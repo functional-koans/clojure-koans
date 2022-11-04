@@ -1,1 +1,0 @@
-["^ ","~$apply-template",["^ ","~:row",30,"~:col",1,"~:fixed-arities",["~#set",[3]],"~:name","^0","~:ns","~$clojure.template","~:top-ns","^7"],"~$do-template",["^ ","^1",45,"^2",1,"~:macro",true,"~:varargs-min-arity",2,"^5","^9","^6","^7","^8","^7"],"~:filename","C:\\Users\\matth\\.m2\\repository\\org\\clojure\\clojure\\1.10.0\\clojure-1.10.0.jar:clojure/template.clj"]
