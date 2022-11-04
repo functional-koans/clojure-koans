@@ -211,3 +211,4 @@ ubuntu-xenial-16.04-cloudimg-console.log
 .gitignore
 .calva/output-window/output.calva-repl
 .clj-kondo/.cache/v1/clj/clojure.string.transit.json
+.clj-kondo/.cache/v1/clj/koan-engine.core.transit.json
