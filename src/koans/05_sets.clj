@@ -7,7 +7,7 @@
   (= #{3} (set '(3)))
 
   "Counting them is like counting other collections"
-  (= 3 (count #{1 2 3}))
+  (= 3 (count #{1 2 3})) 
 
   "Remember that a set is a *mathematical* set"
   (= #{1 2 3 4 5} (set '(1 1 2 2 3 3 4 4 5 5)))
