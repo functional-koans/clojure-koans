@@ -3,7 +3,6 @@ bin
 releases
 *.jar
 .vs
-/.calva/output-window
 /.clj-kondo/.cache
 .calva\output-window
 
@@ -208,3 +207,5 @@ sftp-config.json
 # Vagrant
 .vagrant/
 ubuntu-xenial-16.04-cloudimg-console.log
+.calva/output-window/output.calva-repl
+.gitignore
