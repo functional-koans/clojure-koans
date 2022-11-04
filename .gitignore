@@ -5,7 +5,7 @@ releases
 .vs
 /.calva/output-window
 /.clj-kondo/.cache
-
+/.calva
 
 # Created by https://www.gitignore.io/api/clojure,osx,linux,windows,leiningen,intellij,eclipse,sublimetext
 
