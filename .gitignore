@@ -209,3 +209,5 @@ sftp-config.json
 ubuntu-xenial-16.04-cloudimg-console.log
 .calva/output-window/output.calva-repl
 .gitignore
+.calva/output-window/output.calva-repl
+.clj-kondo/.cache/v1/clj/clojure.string.transit.json

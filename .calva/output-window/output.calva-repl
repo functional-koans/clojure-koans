@@ -18,99 +18,198 @@
 clj꞉koan-engine.runner꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉koan-engine.runner꞉> 
-; Syntax error compiling at (koans.clj:109:35).
-; Unable to resolve symbol: x in this context
-clj꞉user꞉> 
+; Syntax error compiling at (02_strings.clj:52:3).
+; Unable to resolve symbol: = in this context
+clj꞉koans.02-strings꞉> 
+; Syntax error compiling at (02_strings.clj:49:3).
+; Unable to resolve symbol: = in this context
+clj꞉koans.02-strings꞉> 
+; Syntax error compiling at (02_strings.clj:46:3).
+; Unable to resolve symbol: = in this context
+clj꞉koans.02-strings꞉> 
+; Syntax error compiling at (02_strings.clj:43:3).
+; Unable to resolve symbol: = in this context
+clj꞉koans.02-strings꞉> 
+; Syntax error compiling at (02_strings.clj:40:3).
+; Unable to resolve symbol: = in this context
+clj꞉koans.02-strings꞉> 
+; Syntax error compiling at (02_strings.clj:37:3).
+; Unable to resolve symbol: = in this context
+clj꞉koans.02-strings꞉> 
+; Syntax error compiling at (02_strings.clj:52:3).
+; Unable to resolve symbol: = in this context
+clj꞉koans.02-strings꞉> 
+; Syntax error compiling at (02_strings.clj:55:3).
+; Unable to resolve symbol: = in this context
+clj꞉koans.02-strings꞉> 
 nil
-clj꞉koans.01-equalities꞉> 
-nil
-clj꞉koans.01-equalities꞉> 
-nil
-clj꞉koans.01-equalities꞉> 
-nil
-clj꞉koans.01-equalities꞉> 
-nil
-clj꞉koans.01-equalities꞉> 
-nil
-clj꞉koans.01-equalities꞉> 
-; Execution error (ExceptionInfo) at koans.01-equalities/eval6569 (form-init12203358092815251415.clj:4).
-; We shall contemplate truth by testing reality, via equality
-; (= __ true)
-clj꞉koans.01-equalities꞉> 
-; Execution error (ExceptionInfo) at koans.01-equalities/eval6572 (form-init12203358092815251415.clj:4).
-; We shall contemplate truth by testing reality, via equality
-; (= __ true)
-clj꞉koans.01-equalities꞉> 
-; Execution error (ExceptionInfo) at koans.01-equalities/eval6575 (form-init12203358092815251415.clj:4).
-; We shall contemplate truth by testing reality, via equality
-; (= __ true)
-clj꞉koans.01-equalities꞉> 
-; Execution error (ExceptionInfo) at koans.01-equalities/eval6578 (form-init12203358092815251415.clj:4).
-; We shall contemplate truth by testing reality, via equality
-; (= __ true)
-clj꞉koans.01-equalities꞉> 
-nil
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.02-strings꞉> 
 true
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.02-strings꞉> 
 true
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.02-strings꞉> 
 true
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.02-strings꞉> 
 true
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.02-strings꞉> 
 true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+true
+clj꞉koans.02-strings꞉> 
+nil
+clj꞉koans.02-strings꞉> 
+nil
 clj꞉koans.01-equalities꞉> 
+nil
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+; Execution error (ClassCastException) at koans.03-lists/eval8396 (form-init3918932579686800123.clj:12).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
 false
-clj꞉koans.01-equalities꞉> 
-true
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.03-lists꞉> 
 false
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+; Syntax error compiling at (03_lists.clj:24:6).
+; Unable to resolve symbol: a in this context
+clj꞉koans.03-lists꞉> 
 false
-clj꞉koans.01-equalities꞉> 
-; Execution error (ExceptionInfo) at koans.01-equalities/eval8355 (form-init12203358092815251415.clj:4).
-; Some things may appear different, but be the same
-; (= 3 (= 3 2))
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
 false
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.03-lists꞉> 
+nil
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
 false
-clj꞉koans.01-equalities꞉> 
-2
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.03-lists꞉> 
 true
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.03-lists꞉> 
+true
+clj꞉koans.03-lists꞉> 
+nil
+clj꞉koans.03-lists꞉> 
+nil
+clj꞉koans.04-vectors꞉> 
+true
+clj꞉koans.04-vectors꞉> 
+true
+clj꞉koans.04-vectors꞉> 
+true
+clj꞉koans.04-vectors꞉> 
+true
+clj꞉koans.04-vectors꞉> 
+true
+clj꞉koans.04-vectors꞉> 
+true
+clj꞉koans.04-vectors꞉> 
+true
+clj꞉koans.04-vectors꞉> 
 false
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.04-vectors꞉> 
 true
-clj꞉koans.01-equalities꞉> 
-; Syntax error reading source at (REPL:12:25).
-; Unmatched delimiter: )
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.04-vectors꞉> 
+false
+clj꞉koans.04-vectors꞉> 
+false
+clj꞉koans.04-vectors꞉> 
+false
+clj꞉koans.04-vectors꞉> 
+false
+clj꞉koans.04-vectors꞉> 
+false
+clj꞉koans.04-vectors꞉> 
+false
+clj꞉koans.04-vectors꞉> 
 true
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.04-vectors꞉> 
+nil
+clj꞉koans.04-vectors꞉> 
+nil
+clj꞉koans.05-sets꞉> 
+; Execution error (IllegalArgumentException) at koans.05-sets/eval8560 (form-init3918932579686800123.clj:7).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉koans.05-sets꞉> 
+; Syntax error reading source at (REPL:7:19).
+; Map literal must contain an even number of forms
+clj꞉koans.05-sets꞉> 
 true
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.05-sets꞉> 
 true
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.05-sets꞉> 
 true
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.05-sets꞉> 
+; Syntax error reading source at (REPL:13:28).
+; Duplicate key: 1
+clj꞉koans.05-sets꞉> 
 true
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.05-sets꞉> 
+false
+clj꞉koans.05-sets꞉> 
 true
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.05-sets꞉> 
 true
-clj꞉koans.01-equalities꞉> 
-true
-clj꞉koans.01-equalities꞉> 
-true
-clj꞉koans.01-equalities꞉> 
-true
-clj꞉koans.01-equalities꞉> 
-true
-clj꞉koans.01-equalities꞉> 
-true
-clj꞉koans.01-equalities꞉> 
-true
-clj꞉koans.01-equalities꞉> 
+clj꞉koans.05-sets꞉> 
+nil
+clj꞉koans.05-sets꞉> 
