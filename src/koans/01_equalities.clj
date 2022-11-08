@@ -3,7 +3,7 @@
 
 (meditations
   "We shall contemplate truth by testing reality, via equality"
-  (= true true) 
+  (= true true)
 
   "To understand reality, we must compare our expectations against reality"
   (= 2 (+ 1 1))
