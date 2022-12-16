@@ -29,7 +29,7 @@
      (let [[first-name last-name :as full-name] ["Stephen" "Hawking"]]
        __))
 
-  "Break up maps by key"
+  "Break up maps by keys"
   (= "123 Test Lane, Testerville, TX"
      (let [{street-address :street-address, city :city, state :state} test-address]
        __))

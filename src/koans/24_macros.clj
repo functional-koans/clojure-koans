@@ -38,7 +38,7 @@
   "You can do better than that - hand crafting FTW!"
   (= '(* 10 2) (macroexpand '(infix-concise (10 * 2))))
 
-  "Things don't always work as you would like them to... "
+  "Things don't always work as you would like them to"
   (= '(+ 10 (2 * 3)) (macroexpand '(infix-concise (10 + (2 * 3)))))
 
   "Really, you don't understand recursion until you understand recursion"
