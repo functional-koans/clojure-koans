@@ -35,10 +35,10 @@
   "Yet it becomes more difficult the more steps you take"
   (= '(6 5 4 3 2) (recursive-reverse [2 3 4 5 6]))
 
-  "Simple things may appear simple."
+  "Simple things may appear simple"
   (= 1 (factorial 1))
 
-  "They may require other simple steps."
+  "They may require other simple steps"
   (= 2 (factorial 2))
 
   "Sometimes a slightly bigger step is necessary"

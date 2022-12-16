@@ -39,7 +39,7 @@
   "Maybe you want to find the index of the first occurrence of a substring"
   (= 0 (string/index-of "hello world" __))
 
-  "Or maybe the last index of the same"
+  "Or maybe the last index of the same substring"
   (= __ (string/last-index-of "hello world, hello" "hello"))
 
   "But when something doesn't exist, nothing is found"
