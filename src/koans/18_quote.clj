@@ -4,10 +4,10 @@
 
 (meditations
   "Wrap a quote around a list to suppress evaluation"
-  (= (quote (1 2 3 4 5)) __)
+  (= (quote '(1 2 3 4 5)) '(1 2 3 4 5))
 
   "There is a shortcut too!"
-  (= (quote __) '(1 2 3 4 5))
+  (= (quote ) '(1 2 3 4 5))
 
   "You can quote symbols as well as lists... without evaluation!"
   (= __ (let [age 9] (quote age)))
