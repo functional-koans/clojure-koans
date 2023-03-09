@@ -14,9 +14,10 @@ completed.
 
 You have a few options for installation:
 
-- Install the dependencies for the koans (such as Clojure) on your machine
-- Use Vagrant and the configuration in this repository
-- Use Docker
+- Install the dependencies for the koans (such as Clojure) on your machine.
+- Use Vagrant and the configuration in this repository.
+- Use Docker.
+- Use Nix Develop environment.
 
 Instructions for each option are below!
 
@@ -69,6 +70,21 @@ To start up a REPL:
 docker run --rm -it -v $(pwd):/app -w /app clojure lein repl
 ```
 
+### Installation with Nix Develop Environment
+
+Make sure you have [nix](https://nixos.wiki/wiki/Nix_Installation_Guide) setup,
+then run: 
+
+```
+nix --experimental-features 'nix-command flakes' develop
+```
+
+This will drop you into a shell with all the required dependencies installed.
+To run koans, in the root of the repository run:
+
+```
+lein koan run
+```
 
 ## Running the Koans
 
