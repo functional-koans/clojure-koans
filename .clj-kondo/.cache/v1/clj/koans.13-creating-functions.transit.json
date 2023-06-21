@@ -1,0 +1,1 @@
+["^ ","~$square",["^ ","~:row",4,"~:col",1,"~:fixed-arities",["~#set",[1]],"~:name","^0","~:ns","~$koans.13-creating-functions","~:top-ns","^7","~:arities",["^ ","~i1",["^ ","~:ret","~:number","~:arglist-str","[x]"]],"~:type","~:fn"],"~:filename","/Users/ahouraradpey/Testing/Clojure Practice/clojure-koans/src/koans/13_creating_functions.clj"]
